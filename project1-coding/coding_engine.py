@@ -943,6 +943,7 @@ def assess_prior_auth(cpt_suggestions, insurer, total_cost):
         'summary':                  summary
     }
 
+
 def suggest_codes(context):
     """
     Call Claude API with encounter context and return
@@ -952,7 +953,7 @@ def suggest_codes(context):
         context: dict from build_encounter_context()
 
     Returns:
-        dict: structured coding suggestions
+        dict: structured coding suggestions (icd10, cpt coding, prior auth flag, medication review flag, confidence level, notes)
     """
 
     client = anthropic.Anthropic(

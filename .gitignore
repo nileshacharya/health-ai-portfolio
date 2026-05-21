@@ -1,0 +1,10 @@
+.env
+pycache/
+*.pyc
+venv/
+.venv/
+project1-coding/archive/
+# macOS
+.DS_Store
+project1-coding/.DS_Store
+data/synthea/

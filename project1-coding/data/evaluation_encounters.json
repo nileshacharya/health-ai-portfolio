@@ -1,0 +1,14 @@
+evaluation_encounter_ids = [
+    '9917e9f0-753a-4673-da3f-ca0de161db03',  # COVID IMP — 4 conditions
+    'dcbb1003-d8e9-765a-3b63-31305c2a99fe',  # COVID IMP — 3 conditions
+    'dc267ebd-eaef-eb60-8ac0-c09fc4083f30',  # Renal transplant IMP
+    '78068a3a-2b8c-f9bc-ce77-abb09f0e9fee',  # CABG history IMP
+    '53beb3a8-f127-5329-4026-de1cc62ac908',  # CABG history IMP
+    '38fc3405-cc74-0d6b-5409-659f0af674f5',  # CABG history IMP
+    'af00c0f2-6af8-ea2e-c487-c9f36f89a943',  # CABG history IMP
+    '4c5ae2f5-7f9f-19ae-8c5b-0ce06c9f529c',  # Anemia AMB — 4 conditions
+    '51716af3-8671-a19b-ed20-3006e887392d',  # Diabetic CKD AMB — 7 conditions
+    '633d2472-8519-8a45-5473-23758e741f0f',  # Check-up AMB — 4 conditions
+    'ab585563-a667-be77-37b0-e36396b22486',  # Urgent care AMB — 5 conditions
+    'fcdec534-36f9-6899-77c9-1fe0eb549f50',  # Check-up AMB — 3 conditions
+]
