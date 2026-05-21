@@ -8,3 +8,6 @@ project1-coding/archive/
 .DS_Store
 project1-coding/.DS_Store
 data/synthea/
+.ipynb_checkpoints/
+__pycache__/
+.ipynb_checkpoints/
