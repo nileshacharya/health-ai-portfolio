@@ -1,0 +1,466 @@
+{
+  "metadata": {
+    "created_at": "2026-05-26T18:41:06.637920",
+    "total_samples": 20,
+    "categories": {
+      "SIMPLE": 5,
+      "MODERATE": 5,
+      "COMPLEX": 5,
+      "RARE/EDGE": 5
+    },
+    "description": "Balanced evaluation batch for ambient documentation",
+    "evaluation_approach": "5 simple, 5 moderate, 5 complex, 5 rare/edge cases"
+  },
+  "batch": [
+    {
+      "index": 1,
+      "conversation_id": "0U15DA7ozgp2",
+      "sample_name": "Sleep Apnea",
+      "category": "SIMPLE",
+      "complexity_score": 22.4,
+      "features": {
+        "diagnoses": 0,
+        "symptoms": 1,
+        "medications": 0,
+        "procedures": 0,
+        "system_count": 4,
+        "systems_involved": [
+          "hematologic",
+          "respiratory",
+          "cardiac",
+          "gastrointestinal"
+        ],
+        "estimated_conditions": 1
+      }
+    },
+    {
+      "index": 2,
+      "conversation_id": "CN4XhgsJj8UU",
+      "sample_name": "Possible Spider Bite",
+      "category": "SIMPLE",
+      "complexity_score": 28.0,
+      "features": {
+        "diagnoses": 0,
+        "symptoms": 6,
+        "medications": 4,
+        "procedures": 0,
+        "system_count": 3,
+        "systems_involved": [
+          "hematologic",
+          "cardiac",
+          "gastrointestinal"
+        ],
+        "estimated_conditions": 1
+      }
+    },
+    {
+      "index": 3,
+      "conversation_id": "S0hRoqZCct2O",
+      "sample_name": "Trouble breathing",
+      "category": "MODERATE",
+      "complexity_score": 40.8,
+      "features": {
+        "diagnoses": 0,
+        "symptoms": 20,
+        "medications": 2,
+        "procedures": 0,
+        "system_count": 4,
+        "systems_involved": [
+          "hematologic",
+          "respiratory",
+          "cardiac",
+          "gastrointestinal"
+        ],
+        "estimated_conditions": 1
+      }
+    },
+    {
+      "index": 4,
+      "conversation_id": "u7qOicVQWbsj",
+      "sample_name": "Thrombocytopenia - SOAP Note",
+      "category": "MODERATE",
+      "complexity_score": 42.8,
+      "features": {
+        "diagnoses": 2,
+        "symptoms": 6,
+        "medications": 4,
+        "procedures": 0,
+        "system_count": 3,
+        "systems_involved": [
+          "hematologic",
+          "cardiac",
+          "gastrointestinal"
+        ],
+        "estimated_conditions": 2
+      }
+    },
+    {
+      "index": 5,
+      "conversation_id": "B3YKBkDgcBnT",
+      "sample_name": "Normal Male Exam Template - 2",
+      "category": "MODERATE",
+      "complexity_score": 44.0,
+      "features": {
+        "diagnoses": 1,
+        "symptoms": 12,
+        "medications": 0,
+        "procedures": 0,
+        "system_count": 6,
+        "systems_involved": [
+          "psychiatric",
+          "endocrine",
+          "gastrointestinal",
+          "respiratory",
+          "cardiac",
+          "hematologic"
+        ],
+        "estimated_conditions": 1
+      }
+    },
+    {
+      "index": 6,
+      "conversation_id": "CEDgXx9DgFbC",
+      "sample_name": "Obesity Hypoventilation Syndrome",
+      "category": "RARE/EDGE",
+      "complexity_score": 52.8,
+      "features": {
+        "diagnoses": 0,
+        "symptoms": 10,
+        "medications": 2,
+        "procedures": 2,
+        "system_count": 6,
+        "systems_involved": [
+          "psychiatric",
+          "gastrointestinal",
+          "cardiac",
+          "respiratory",
+          "neurological",
+          "hematologic"
+        ],
+        "estimated_conditions": 1
+      }
+    },
+    {
+      "index": 7,
+      "conversation_id": "Y9BsOifbX6cR",
+      "sample_name": "Recurrent Abscesses - Consult",
+      "category": "MODERATE",
+      "complexity_score": 54.8,
+      "features": {
+        "diagnoses": 6,
+        "symptoms": 7,
+        "medications": 0,
+        "procedures": 0,
+        "system_count": 3,
+        "systems_involved": [
+          "respiratory",
+          "cardiac",
+          "gastrointestinal"
+        ],
+        "estimated_conditions": 4
+      }
+    },
+    {
+      "index": 8,
+      "conversation_id": "bLiHoeCVVrjp",
+      "sample_name": "Normal Physical Exam Template - 5",
+      "category": "MODERATE",
+      "complexity_score": 56.0,
+      "features": {
+        "diagnoses": 2,
+        "symptoms": 14,
+        "medications": 0,
+        "procedures": 0,
+        "system_count": 7,
+        "systems_involved": [
+          "psychiatric",
+          "endocrine",
+          "gastrointestinal",
+          "cardiac",
+          "respiratory",
+          "neurological",
+          "hematologic"
+        ],
+        "estimated_conditions": 2
+      }
+    },
+    {
+      "index": 9,
+      "conversation_id": "Ixe2I3lrKFYK",
+      "sample_name": "Pain from Hernia - ER Consult",
+      "category": "RARE/EDGE",
+      "complexity_score": 57.6,
+      "features": {
+        "diagnoses": 2,
+        "symptoms": 15,
+        "medications": 0,
+        "procedures": 2,
+        "system_count": 5,
+        "systems_involved": [
+          "gastrointestinal",
+          "cardiac",
+          "respiratory",
+          "neurological",
+          "hematologic"
+        ],
+        "estimated_conditions": 2
+      }
+    },
+    {
+      "index": 10,
+      "conversation_id": "Xs4GRIFhjHJT",
+      "sample_name": "Normal Newborn H&P Template",
+      "category": "MODERATE",
+      "complexity_score": 58.8,
+      "features": {
+        "diagnoses": 4,
+        "symptoms": 2,
+        "medications": 0,
+        "procedures": 2,
+        "system_count": 6,
+        "systems_involved": [
+          "gastrointestinal",
+          "renal",
+          "cardiac",
+          "respiratory",
+          "neurological",
+          "hematologic"
+        ],
+        "estimated_conditions": 3
+      }
+    },
+    {
+      "index": 11,
+      "conversation_id": "2qeiMvG87y1M",
+      "sample_name": "Tongue Swelling",
+      "category": "COMPLEX",
+      "complexity_score": 72.4,
+      "features": {
+        "diagnoses": 2,
+        "symptoms": 21,
+        "medications": 3,
+        "procedures": 4,
+        "system_count": 6,
+        "systems_involved": [
+          "endocrine",
+          "gastrointestinal",
+          "cardiac",
+          "respiratory",
+          "neurological",
+          "hematologic"
+        ],
+        "estimated_conditions": 2
+      }
+    },
+    {
+      "index": 12,
+      "conversation_id": "Win8pvy0nQpc",
+      "sample_name": "Airway Compromise & Foreign Body - ER Visit",
+      "category": "COMPLEX",
+      "complexity_score": 74.4,
+      "features": {
+        "diagnoses": 8,
+        "symptoms": 7,
+        "medications": 0,
+        "procedures": 2,
+        "system_count": 6,
+        "systems_involved": [
+          "endocrine",
+          "gastrointestinal",
+          "renal",
+          "respiratory",
+          "cardiac",
+          "hematologic"
+        ],
+        "estimated_conditions": 5
+      }
+    },
+    {
+      "index": 13,
+      "conversation_id": "Chp9WGwltx0p",
+      "sample_name": "Normal ROS Template - 4",
+      "category": "COMPLEX",
+      "complexity_score": 77.2,
+      "features": {
+        "diagnoses": 3,
+        "symptoms": 35,
+        "medications": 0,
+        "procedures": 0,
+        "system_count": 6,
+        "systems_involved": [
+          "gastrointestinal",
+          "renal",
+          "cardiac",
+          "respiratory",
+          "neurological",
+          "hematologic"
+        ],
+        "estimated_conditions": 2
+      }
+    },
+    {
+      "index": 14,
+      "conversation_id": "q5dVhK86R6je",
+      "sample_name": "Normal Physical Exam Template - 7",
+      "category": "RARE/EDGE",
+      "complexity_score": 78.4,
+      "features": {
+        "diagnoses": 4,
+        "symptoms": 15,
+        "medications": 0,
+        "procedures": 0,
+        "system_count": 8,
+        "systems_involved": [
+          "psychiatric",
+          "endocrine",
+          "gastrointestinal",
+          "renal",
+          "cardiac",
+          "respiratory",
+          "neurological",
+          "hematologic"
+        ],
+        "estimated_conditions": 3
+      }
+    },
+    {
+      "index": 15,
+      "conversation_id": "OJJLdMsb4iqO",
+      "sample_name": "Refractory Hypertension - Followup",
+      "category": "COMPLEX",
+      "complexity_score": 80.8,
+      "features": {
+        "diagnoses": 5,
+        "symptoms": 28,
+        "medications": 1,
+        "procedures": 0,
+        "system_count": 7,
+        "systems_involved": [
+          "psychiatric",
+          "gastrointestinal",
+          "renal",
+          "cardiac",
+          "respiratory",
+          "neurological",
+          "hematologic"
+        ],
+        "estimated_conditions": 3
+      }
+    },
+    {
+      "index": 16,
+      "conversation_id": "C1ymAgLDI2nF",
+      "sample_name": "Shortness Of Breath - Progress Note",
+      "category": "COMPLEX",
+      "complexity_score": 90.8,
+      "features": {
+        "diagnoses": 8,
+        "symptoms": 14,
+        "medications": 6,
+        "procedures": 6,
+        "system_count": 4,
+        "systems_involved": [
+          "psychiatric",
+          "respiratory",
+          "cardiac",
+          "gastrointestinal"
+        ],
+        "estimated_conditions": 5
+      }
+    },
+    {
+      "index": 17,
+      "conversation_id": "TCMSkaDOazcc",
+      "sample_name": "Pneumonia - Discharge Summary",
+      "category": "COMPLEX",
+      "complexity_score": 96.4,
+      "features": {
+        "diagnoses": 13,
+        "symptoms": 10,
+        "medications": 0,
+        "procedures": 4,
+        "system_count": 4,
+        "systems_involved": [
+          "renal",
+          "respiratory",
+          "cardiac",
+          "gastrointestinal"
+        ],
+        "estimated_conditions": 7
+      }
+    },
+    {
+      "index": 18,
+      "conversation_id": "qbvbY8tgvuDW",
+      "sample_name": "Not Feeling Well - ER Visit",
+      "category": "COMPLEX",
+      "complexity_score": 100,
+      "features": {
+        "diagnoses": 11,
+        "symptoms": 49,
+        "medications": 0,
+        "procedures": 4,
+        "system_count": 8,
+        "systems_involved": [
+          "psychiatric",
+          "endocrine",
+          "gastrointestinal",
+          "renal",
+          "cardiac",
+          "respiratory",
+          "neurological",
+          "hematologic"
+        ],
+        "estimated_conditions": 6
+      }
+    },
+    {
+      "index": 19,
+      "conversation_id": "HMwd9FKxndyx",
+      "sample_name": "Normal ROS Template",
+      "category": "COMPLEX",
+      "complexity_score": 100,
+      "features": {
+        "diagnoses": 4,
+        "symptoms": 73,
+        "medications": 0,
+        "procedures": 0,
+        "system_count": 8,
+        "systems_involved": [
+          "psychiatric",
+          "endocrine",
+          "gastrointestinal",
+          "renal",
+          "cardiac",
+          "respiratory",
+          "neurological",
+          "hematologic"
+        ],
+        "estimated_conditions": 3
+      }
+    },
+    {
+      "index": 20,
+      "conversation_id": "0X6AyPbbHl7k",
+      "sample_name": "Sleepiness - Consult",
+      "category": "RARE/EDGE",
+      "complexity_score": 100,
+      "features": {
+        "diagnoses": 7,
+        "symptoms": 31,
+        "medications": 7,
+        "procedures": 7,
+        "system_count": 6,
+        "systems_involved": [
+          "endocrine",
+          "gastrointestinal",
+          "renal",
+          "cardiac",
+          "neurological",
+          "hematologic"
+        ],
+        "estimated_conditions": 4
+      }
+    }
+  ]
+}
