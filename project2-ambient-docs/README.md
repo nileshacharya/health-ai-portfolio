@@ -157,28 +157,28 @@ PLAN:
 
 > Rubric: Does it read like a real clinical note? How many edits needed? Would you sign it?
 
-| Sample ID | Complexity | Reads Natural? | Edits Needed | Hallucinations | Would Sign? |
+| Sample ID | Complexity | Reads Natural? | Hallucinations | Edits Needed | Would Sign? |
 | --- | --- | --- | --- | --- | --- |
-| sample_001 | Simple | *TBD* | *TBD* | *TBD* | *TBD* |
-| sample_002 | Simple | *TBD* | *TBD* | *TBD* | *TBD* |
-| sample_003 | Simple | *TBD* | *TBD* | *TBD* | *TBD* |
-| sample_004 | Simple | *TBD* | *TBD* | *TBD* | *TBD* |
-| sample_005 | Simple | *TBD* | *TBD* | *TBD* | *TBD* |
-| sample_006 | Moderate | *TBD* | *TBD* | *TBD* | *TBD* |
-| sample_007 | Moderate | *TBD* | *TBD* | *TBD* | *TBD* |
-| sample_008 | Moderate | *TBD* | *TBD* | *TBD* | *TBD* |
-| sample_009 | Moderate | *TBD* | *TBD* | *TBD* | *TBD* |
-| sample_010 | Moderate | *TBD* | *TBD* | *TBD* | *TBD* |
-| sample_011 | Complex | *TBD* | *TBD* | *TBD* | *TBD* |
-| sample_012 | Complex | *TBD* | *TBD* | *TBD* | *TBD* |
-| sample_013 | Complex | *TBD* | *TBD* | *TBD* | *TBD* |
-| sample_014 | Complex | *TBD* | *TBD* | *TBD* | *TBD* |
-| sample_015 | Complex | *TBD* | *TBD* | *TBD* | *TBD* |
-| sample_016 | Edge Case | *TBD* | *TBD* | *TBD* | *TBD* |
-| sample_017 | Edge Case | *TBD* | *TBD* | *TBD* | *TBD* |
-| sample_018 | Edge Case | *TBD* | *TBD* | *TBD* | *TBD* |
-| sample_019 | Edge Case | *TBD* | *TBD* | *TBD* | *TBD* |
-| sample_020 | Edge Case | *TBD* | *TBD* | *TBD* | *TBD* |
+| 0U15DA7ozgp2 | Simple | *Yes* | *2* |  | *TBD* |
+| CN4XhgsJj8UU | Simple | *Yes* | *3* |  | *TBD* |
+| S0hRoqZCct2O | Simple | *Yes* | *5* |  | *TBD* |
+| u7qOicVQWbsj | Moderate | *Yes* | 3 |  | *TBD* |
+| B3YKBkDgcBnT | Moderate | *Yes* | *0* |  | *TBD* |
+| CEDgXx9DgFbC | Rare/Edge | Yes | 7 |  | *TBD* |
+| Y9BsOifbX6cR | Moderate | *Yes* | *2* |  | *TBD* |
+| bLiHoeCVVrjp | Moderate | Yes | 3 |  | *TBD* |
+| Ixe2I3lrKFYK | Rare/Edge | *Yes* | 4 |  | *TBD* |
+| Xs4GRIFhjHJT | Moderate | *Yes* | *2* |  | *TBD* |
+| 2qeiMvG87y1M | Complex | Yes | 6 |  | *TBD* |
+| Win8pvy0nQpc | Complex | *Yes* | *8* |  | *TBD* |
+| Chp9WGwltx0p | Complex | Yes | 6 |  | *TBD* |
+| q5dVhK86R6je | Rare/Edge | Yes | 1 |  | *TBD* |
+| OJJLdMsb4iqO | Complex | *Yes* | *5* |  | *TBD* |
+| C1ymAgLDI2nF | Complex | *Yes* | *5* |  | *TBD* |
+| TCMSkaDOazcc | Complex | Yes | 7 |  | *TBD* |
+| qbvbY8tgvuDW | Complex | *Yes* | 5 |  | *TBD* |
+| HMwd9FKxndyx | Complex | *Yes* | 0 |  | *TBD* |
+| 0X6AyPbbHl7k | Rare/Edge | Yes | 4 |  | *TBD* |
 
 ---
 
