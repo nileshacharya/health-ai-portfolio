@@ -99,11 +99,19 @@ python orchestrate_minimal.py
 # Generates a SOAP note for the default conversation and prints to terminal
 ```
 
-### Launch the UI
+### Launch Demo App (recommended)
+```bash
+streamlit run app_unified.py
+# Demo Mode: instant results, no API key needed
+# Live Mode: real-time generation, requires ANTHROPIC_API_KEY
+```
+
+### Launch Live App (requires API Key) 
 ```bash
 streamlit run app.py
 # Opens Streamlit UI in browser
 ```
+
 
 ---
 
@@ -146,10 +154,10 @@ PLAN:
 
 | Metric | Target | Actual |
 | --- | --- | --- |
-| Hallucination Rate | < 5% | 27.4% ⚠️ |
+| Hallucination Rate* | < 5% | 27.4% ⚠️ |
 | Source Attribution Coverage | > 90% | 72.6% |
 | SOAP Completeness | 100% | 100% |
-| Quality Score Distribution | — | Excellent: 2 / High: 1 / Medium: 5 / Low: 12 |
+| Quality Score Distribution* | — | Excellent: 2 / High: 1 / Medium: 5 / Low: 12 |
 > **Note on Hallucination Rate:** The 27.4% rate reflects a limitation of the attribution 
 > method, not solely LLM hallucinations. The keyword-based matching requires an exact or 
 > near-exact string match between the SOAP note and the source conversation. Clinically 
@@ -157,6 +165,9 @@ PLAN:
 > is flagged as unattributed — inflating the hallucination count. A semantic similarity 
 > approach (e.g. sentence embeddings) would more accurately distinguish true hallucinations 
 > from legitimate clinical inference. This is a known V2 improvement.
+
+Quality score is per-conversation, based on hallucination rate + attribution confidence.
+
 
 Manual Review Results
 
