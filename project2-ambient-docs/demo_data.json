@@ -1,0 +1,3053 @@
+{
+  "metadata": {
+    "total_cases": 20,
+    "categories": {
+      "SIMPLE": 3,
+      "MODERATE": 5,
+      "COMPLEX": 8,
+      "RARE/EDGE": 4
+    },
+    "description": "Pre-generated demo data for Ambient Documentation portfolio demo"
+  },
+  "cases": [
+    {
+      "conversation_id": "0U15DA7ozgp2",
+      "sample_name": "Sleep Apnea",
+      "category": "SIMPLE",
+      "complexity_score": 22.4,
+      "description": "Patient presenting with excessive daytime sleepiness and snoring.",
+      "conversation": "CLINICIAN: What brings you in today?\nPATIENT: I've been really tired during the day. My wife says I snore loudly at night and sometimes stop breathing.\nCLINICIAN: How long has this been going on?\nPATIENT: About a year now. I wake up with headaches and feel like I didn't sleep at all.\nCLINICIAN: Do you have any other medical conditions?\nPATIENT: I have high blood pressure. I'm on lisinopril.\nCLINICIAN: Any chest pain, shortness of breath during the day?\nPATIENT: No chest pain. Sometimes short of breath when I climb stairs.\nCLINICIAN: Based on your symptoms, I'm concerned about sleep apnea. We'll order a sleep study.\nPATIENT: Okay, what does that involve?",
+      "soap_note": "SUBJECTIVE:\nPatient presents with a chief complaint of excessive daytime sleepiness persisting for approximately one year. Spouse reports loud snoring and witnessed apneic episodes during sleep. Patient wakes with morning headaches and non-restorative sleep. Past medical history significant for hypertension, currently managed with lisinopril. Patient denies chest pain. Reports mild dyspnea on exertion with stair climbing.\n\nOBJECTIVE:\nVital signs not documented in this encounter. Physical examination findings not detailed in conversation. Patient appears fatigued per clinical impression. No acute distress noted. Cardiopulmonary examination not documented. Weight and BMI not recorded in this visit.\n\nASSESSMENT:\nClinical presentation consistent with obstructive sleep apnea based on the triad of excessive daytime sleepiness, witnessed apneic episodes, and loud snoring. Morning headaches support nocturnal hypoxemia. Comorbid hypertension may be exacerbated by untreated sleep apnea. Exertional dyspnea warrants monitoring but not primary concern at this time.\n\nPLAN:\nPolysomnography (sleep study) ordered to confirm diagnosis of sleep apnea and assess severity. Continue current antihypertensive regimen with lisinopril. Patient educated on sleep apnea and the purpose of sleep study. Follow-up appointment to review sleep study results and discuss treatment options including CPAP therapy. Activity restrictions not indicated at this time.",
+      "attributions": [
+        {
+          "soap_text": "hypertension",
+          "entity_type": "diagnoses",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "pain",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Any chest pain, shortness of breath during the day?",
+          "source_line": 6,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "ache",
+          "entity_type": "symptoms",
+          "source_text": "PATIENT: About a year now. I wake up with headaches and feel like I didn't sleep at all.",
+          "source_line": 3,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "dyspnea",
+          "entity_type": "symptoms",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "fatigue",
+          "entity_type": "symptoms",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "headache",
+          "entity_type": "symptoms",
+          "source_text": "PATIENT: About a year now. I wake up with headaches and feel like I didn't sleep at all.",
+          "source_line": 3,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "chest pain",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Any chest pain, shortness of breath during the day?",
+          "source_line": 6,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "lisinopril",
+          "entity_type": "medications",
+          "source_text": "PATIENT: I have high blood pressure. I'm on lisinopril.",
+          "source_line": 5,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "antihypertensive",
+          "entity_type": "medications",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "rr",
+          "entity_type": "vitals",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "weight",
+          "entity_type": "vitals",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "bmi",
+          "entity_type": "vitals",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "stent",
+          "entity_type": "procedures",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        }
+      ],
+      "statistics": {
+        "total_entities": 13,
+        "entities_attributed": 5,
+        "entities_not_attributed": 8,
+        "hallucination_count": 8,
+        "hallucination_rate": 0.6154,
+        "attribution_coverage": 0.3846,
+        "average_confidence": 0.3654,
+        "quality_score": "low"
+      }
+    },
+    {
+      "conversation_id": "CN4XhgsJj8UU",
+      "sample_name": "Possible Spider Bite",
+      "category": "SIMPLE",
+      "complexity_score": 28.0,
+      "description": "Patient with swelling and redness at a suspected spider bite site on the arm.",
+      "conversation": "CLINICIAN: Tell me what happened.\nPATIENT: I woke up two days ago with this red swollen area on my arm. I think a spider bit me while I was sleeping.\nCLINICIAN: Any fever or chills?\nPATIENT: I had a low-grade fever yesterday, around 100 degrees. No chills.\nCLINICIAN: Any spreading redness, red streaks, or pus?\nPATIENT: The redness is spreading a little. No pus yet but it's getting more swollen.\nCLINICIAN: Any nausea, vomiting, muscle pain?\nPATIENT: Some nausea but no vomiting. My arm is aching.\nCLINICIAN: Are you on any medications?\nPATIENT: Just ibuprofen for the pain and swelling. Taking aspirin sometimes too.\nCLINICIAN: I'm going to examine the area. This looks like a local infection. I'll prescribe an antibiotic.\nPATIENT: Should I be worried about it being a brown recluse?",
+      "soap_note": "SUBJECTIVE:\nPatient presents with a two-day history of a swollen, erythematous lesion on the arm, suspected spider bite occurring during sleep. Associated symptoms include low-grade fever of 100\u00b0F documented yesterday, progressive spreading erythema, increasing swelling, nausea without emesis, and localized arm pain. Denies purulent discharge, chills, red streaking. Current medications include ibuprofen for analgesia and aspirin on an as-needed basis. No known drug allergies documented.\n\nOBJECTIVE:\nPhysical examination reveals erythematous, swollen lesion on the arm with spreading erythema noted on inspection. No frank purulence observed at examination. Low-grade fever documented by history. Vital signs beyond fever temperature not fully documented in this encounter. Lymph node examination, full skin survey, and neurovascular assessment of the affected extremity not documented.\n\nASSESSMENT:\nPresentation consistent with local soft tissue infection, likely secondary to insect or spider bite with secondary bacterial superinfection. Spreading erythema and progressive swelling indicate early cellulitis. Differential includes brown recluse spider envenomation given the patient's concern, though necrotic changes not yet evident. Constitutional symptoms of fever and nausea support systemic inflammatory response.\n\nPLAN:\nAntibiotic therapy prescribed for cellulitis \u2014 specific agent, dose, and duration to be determined based on clinical judgment and local resistance patterns. Continue ibuprofen for pain and anti-inflammatory effect. Patient instructed to monitor for worsening erythema, development of necrosis, high fever, or red streaking requiring immediate return. Follow-up in 48 to 72 hours to reassess treatment response. Brown recluse envenomation discussed with patient.",
+      "attributions": [
+        {
+          "soap_text": "infection",
+          "entity_type": "diagnoses",
+          "source_text": "CLINICIAN: I'm going to examine the area. This looks like a local infection. I'll prescribe an antibiotic.",
+          "source_line": 10,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "pain",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Any nausea, vomiting, muscle pain?",
+          "source_line": 6,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "fever",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Any fever or chills?",
+          "source_line": 2,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "nausea",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Any nausea, vomiting, muscle pain?",
+          "source_line": 6,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "swelling",
+          "entity_type": "symptoms",
+          "source_text": "PATIENT: Just ibuprofen for the pain and swelling. Taking aspirin sometimes too.",
+          "source_line": 9,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "discharge",
+          "entity_type": "symptoms",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "aspirin",
+          "entity_type": "medications",
+          "source_text": "PATIENT: Just ibuprofen for the pain and swelling. Taking aspirin sometimes too.",
+          "source_line": 9,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "ibuprofen",
+          "entity_type": "medications",
+          "source_text": "PATIENT: Just ibuprofen for the pain and swelling. Taking aspirin sometimes too.",
+          "source_line": 9,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "antibiotic",
+          "entity_type": "medications",
+          "source_text": "CLINICIAN: I'm going to examine the area. This looks like a local infection. I'll prescribe an antibiotic.",
+          "source_line": 10,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "temperature",
+          "entity_type": "vitals",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "temp",
+          "entity_type": "vitals",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "rr",
+          "entity_type": "vitals",
+          "source_text": "PATIENT: Should I be worried about it being a brown recluse?",
+          "source_line": 11,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "stent",
+          "entity_type": "procedures",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        }
+      ],
+      "statistics": {
+        "total_entities": 13,
+        "entities_attributed": 9,
+        "entities_not_attributed": 4,
+        "hallucination_count": 4,
+        "hallucination_rate": 0.3077,
+        "attribution_coverage": 0.6923,
+        "average_confidence": 0.6577,
+        "quality_score": "low"
+      }
+    },
+    {
+      "conversation_id": "S0hRoqZCct2O",
+      "sample_name": "Trouble Breathing",
+      "category": "SIMPLE",
+      "complexity_score": 40.8,
+      "description": "History and physical for a 69-year-old male with difficulty breathing for 3 days.",
+      "conversation": "CLINICIAN: What brings you in today?\nPATIENT: I have had trouble breathing for the past 3 days.\nCLINICIAN: Can you describe the breathing difficulty?\nPATIENT: It's hard to catch my breath, especially when I walk or climb stairs. It's worse when I lie down flat.\nCLINICIAN: Any cough?\nPATIENT: Yes, a dry cough mostly. Sometimes I cough up a little bit of white phlegm.\nCLINICIAN: Any chest pain, fever, or swelling in the legs?\nPATIENT: No fever. My ankles have been swollen for a few days. No chest pain.\nCLINICIAN: Do you have any history of heart or lung problems?\nPATIENT: I had a heart attack about 5 years ago. I'm on aspirin and metoprolol. I also have high blood pressure.\nCLINICIAN: I'm going to examine you. Let me listen to your lungs and heart.\n[Physical examination performed]\nCLINICIAN: Your lungs have some crackles at the bases. Your legs are swollen. Given your history, this may be heart failure. We'll get a chest X-ray and some labs.\nPATIENT: Is it serious?",
+      "soap_note": "SUBJECTIVE:\nPatient is a 69-year-old male presenting with a 3-day history of progressive dyspnea on exertion and orthopnea. Reports difficulty breathing with ambulation and stair climbing, worsening when supine. Associated dry cough with occasional white sputum production. Bilateral ankle swelling noted for several days. Denies chest pain and fever. Significant past medical history includes myocardial infarction approximately 5 years prior and hypertension. Current medications include aspirin and metoprolol.\n\nOBJECTIVE:\nPulmonary auscultation reveals bibasilar crackles. Bilateral lower extremity edema present on examination. Vital signs not fully documented in this encounter. Cardiac examination findings beyond abnormal lung sounds not detailed. Chest X-ray ordered \u2014 results pending. Laboratory studies ordered \u2014 results pending.\n\nASSESSMENT:\nClinical presentation strongly consistent with acute decompensated heart failure given the history of prior myocardial infarction, progressive dyspnea on exertion, orthopnea, bibasilar crackles, and bilateral lower extremity edema. Hypertension is a contributing comorbidity. Differential includes pulmonary embolism and pneumonia, though fever absence and bilateral symmetric findings favor heart failure.\n\nPLAN:\nChest X-ray obtained to assess for cardiomegaly and pulmonary edema. Laboratory studies ordered including BNP, complete metabolic panel, and CBC. Continue aspirin and metoprolol. Diuretic therapy to be initiated pending confirmation of heart failure diagnosis. Patient education provided regarding diagnosis, fluid restriction, and daily weight monitoring. Cardiology referral to be considered based on workup results. Close follow-up arranged.",
+      "attributions": [
+        {
+          "soap_text": "hypertension",
+          "entity_type": "diagnoses",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "pneumonia",
+          "entity_type": "diagnoses",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "myocardial infarction",
+          "entity_type": "diagnoses",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "heart failure",
+          "entity_type": "diagnoses",
+          "source_text": "CLINICIAN: Your lungs have some crackles at the bases. Your legs are swollen. Given your history, this may be heart failure. We'll get a chest X-ray and some labs.",
+          "source_line": 12,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "flu",
+          "entity_type": "diagnoses",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "pain",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Any chest pain, fever, or swelling in the legs?",
+          "source_line": 6,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "fever",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Any chest pain, fever, or swelling in the legs?",
+          "source_line": 6,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "cough",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Any cough?",
+          "source_line": 4,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "dyspnea",
+          "entity_type": "symptoms",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "chest pain",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Any chest pain, fever, or swelling in the legs?",
+          "source_line": 6,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "swelling",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Any chest pain, fever, or swelling in the legs?",
+          "source_line": 6,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "aspirin",
+          "entity_type": "medications",
+          "source_text": "PATIENT: I had a heart attack about 5 years ago. I'm on aspirin and metoprolol. I also have high blood pressure.",
+          "source_line": 9,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "metoprolol",
+          "entity_type": "medications",
+          "source_text": "PATIENT: I had a heart attack about 5 years ago. I'm on aspirin and metoprolol. I also have high blood pressure.",
+          "source_line": 9,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "rr",
+          "entity_type": "vitals",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "weight",
+          "entity_type": "vitals",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "x-ray",
+          "entity_type": "procedures",
+          "source_text": "CLINICIAN: Your lungs have some crackles at the bases. Your legs are swollen. Given your history, this may be heart failure. We'll get a chest X-ray and some labs.",
+          "source_line": 12,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "stent",
+          "entity_type": "procedures",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        }
+      ],
+      "statistics": {
+        "total_entities": 17,
+        "entities_attributed": 9,
+        "entities_not_attributed": 8,
+        "hallucination_count": 8,
+        "hallucination_rate": 0.4706,
+        "attribution_coverage": 0.5294,
+        "average_confidence": 0.5029,
+        "quality_score": "low"
+      }
+    },
+    {
+      "conversation_id": "u7qOicVQWbsj",
+      "sample_name": "Thrombocytopenia - SOAP Note",
+      "category": "MODERATE",
+      "complexity_score": 42.8,
+      "description": "Follow-up for patient with low platelet count and easy bruising.",
+      "conversation": "CLINICIAN: How have you been feeling since your last visit?\nPATIENT: Still getting these bruises easily. And I noticed some small red dots on my legs.\nCLINICIAN: Any bleeding from gums, nose, or blood in urine or stool?\nPATIENT: My gums bled a little when I brushed my teeth yesterday. No blood in urine or stool.\nCLINICIAN: Any fatigue or weakness?\nPATIENT: Yes, I've been very fatigued. Weakness too.\nCLINICIAN: Your last CBC showed platelets at 45,000. Any new medications or supplements?\nPATIENT: I started taking ibuprofen about a month ago for my arthritis pain.\nCLINICIAN: Any recent infections or illnesses?\nPATIENT: I had a viral infection about 6 weeks ago. Felt like the flu.\nCLINICIAN: We need to recheck your platelets and review possible causes. Ibuprofen can affect platelets and we may need to stop it.\nPATIENT: Is this dangerous?",
+      "soap_note": "SUBJECTIVE:\nPatient presents for follow-up of known thrombocytopenia with persistent easy bruising and new petechiae on bilateral lower extremities. Reports gingival bleeding with tooth brushing. Denies hematuria or melena. Associated symptoms include significant fatigue and weakness. Recent history significant for viral illness resembling influenza approximately 6 weeks prior. Medication review reveals recent addition of ibuprofen approximately one month ago for arthritis pain management. Prior platelet count documented at 45,000.\n\nOBJECTIVE:\nPhysical examination reveals petechiae on bilateral lower extremities and easy bruising. Gingival bleeding reported by patient. Vital signs not documented in this encounter. Complete blood count with platelets ordered to reassess thrombocytopenia. Additional laboratory evaluation pending. Splenomegaly assessment not documented in this visit.\n\nASSESSMENT:\nThrombocytopenia with worsening clinical manifestations including petechiae and mucosal bleeding. Differential diagnosis includes drug-induced thrombocytopenia secondary to ibuprofen use, post-viral immune thrombocytopenia following recent influenza-like illness, and immune thrombocytopenic purpura. The temporal relationship between ibuprofen initiation and symptom progression warrants medication discontinuation as initial intervention.\n\nPLAN:\nDiscontinue ibuprofen immediately given potential contribution to thrombocytopenia. Repeat CBC with differential and platelet count. Consider peripheral blood smear review. Alternative analgesia for arthritis to be discussed \u2014 acetaminophen preferred given platelet concerns. Hematology referral to be placed if platelet count does not improve or continues to decline. Patient educated on bleeding precautions and signs requiring emergency evaluation including severe bleeding or neurological symptoms. Follow-up in one week.",
+      "attributions": [
+        {
+          "soap_text": "arthritis",
+          "entity_type": "diagnoses",
+          "source_text": "PATIENT: I started taking ibuprofen about a month ago for my arthritis pain.",
+          "source_line": 7,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "flu",
+          "entity_type": "diagnoses",
+          "source_text": "PATIENT: I had a viral infection about 6 weeks ago. Felt like the flu.",
+          "source_line": 9,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "pain",
+          "entity_type": "symptoms",
+          "source_text": "PATIENT: I started taking ibuprofen about a month ago for my arthritis pain.",
+          "source_line": 7,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "fatigue",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Any fatigue or weakness?",
+          "source_line": 4,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "weakness",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Any fatigue or weakness?",
+          "source_line": 4,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "bleeding",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Any bleeding from gums, nose, or blood in urine or stool?",
+          "source_line": 2,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "bruising",
+          "entity_type": "symptoms",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "ibuprofen",
+          "entity_type": "medications",
+          "source_text": "PATIENT: I started taking ibuprofen about a month ago for my arthritis pain.",
+          "source_line": 7,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "acetaminophen",
+          "entity_type": "medications",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "temp",
+          "entity_type": "vitals",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "hr",
+          "entity_type": "vitals",
+          "source_text": "PATIENT: I started taking ibuprofen about a month ago for my arthritis pain.",
+          "source_line": 7,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "rr",
+          "entity_type": "vitals",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "stent",
+          "entity_type": "procedures",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        }
+      ],
+      "statistics": {
+        "total_entities": 13,
+        "entities_attributed": 8,
+        "entities_not_attributed": 5,
+        "hallucination_count": 5,
+        "hallucination_rate": 0.3846,
+        "attribution_coverage": 0.6154,
+        "average_confidence": 0.5846,
+        "quality_score": "low"
+      }
+    },
+    {
+      "conversation_id": "B3YKBkDgcBnT",
+      "sample_name": "Normal Male Exam Template - 2",
+      "category": "MODERATE",
+      "complexity_score": 44.0,
+      "description": "Annual physical exam for a middle-aged male with multiple chronic conditions.",
+      "conversation": "CLINICIAN: You're here for your annual physical. How have you been overall?\nPATIENT: Pretty good. Managing my diabetes and blood pressure okay. Taking metformin and lisinopril.\nCLINICIAN: Any new symptoms? Chest pain, shortness of breath?\nPATIENT: Occasional shortness of breath going up stairs. No chest pain.\nCLINICIAN: How about your weight? Any changes?\nPATIENT: Gained about 10 pounds in the last year. I know I need to work on my diet.\nCLINICIAN: Any abdominal pain, changes in bowel habits?\nPATIENT: No abdominal pain. Maybe a little constipation lately.\nCLINICIAN: Sleep okay? Mood?\nPATIENT: Sleep is fine. Mood is good, no depression or anxiety.\nCLINICIAN: Let me do a complete physical exam.\n[Full physical examination performed]\nCLINICIAN: Your blood pressure is slightly elevated today. Heart and lungs sound normal. Abdomen is soft. We'll get your routine labs \u2014 HbA1c, lipid panel, and CBC.\nPATIENT: Should I adjust my medications?",
+      "soap_note": "SUBJECTIVE:\nPatient presents for annual physical examination. Reports overall stable health with active management of known diabetes mellitus and hypertension. Current medications include metformin for glycemic control and lisinopril for blood pressure management. Reports mild dyspnea on exertion with stair climbing. Denies chest pain. Notes approximately 10-pound weight gain over the past year with acknowledged dietary indiscretion. Mild constipation reported without abdominal pain, rectal bleeding, or change in stool caliber. Denies depressive symptoms or anxiety. Sleep reported as satisfactory.\n\nOBJECTIVE:\nBlood pressure elevated above target range on today's measurement \u2014 specific values not documented. Cardiac auscultation normal without murmurs, rubs, or gallops. Pulmonary auscultation clear to auscultation bilaterally. Abdomen soft, non-tender, non-distended. Weight increased approximately 10 pounds from prior visit. Complete physical examination performed. Laboratory studies ordered including HbA1c, lipid panel, and CBC.\n\nASSESSMENT:\nDiabetes mellitus on metformin \u2014 glycemic control to be assessed with HbA1c results. Hypertension with suboptimal blood pressure control on current regimen \u2014 medication adjustment may be warranted. Weight gain of 10 pounds over one year consistent with metabolic risk progression. Exertional dyspnea likely related to deconditioning and weight gain rather than primary cardiopulmonary pathology, though requires monitoring. Constipation \u2014 likely dietary, low clinical concern at this time.\n\nPLAN:\nLaboratory studies ordered: HbA1c, comprehensive lipid panel, CBC with differential. Blood pressure management to be reassessed following laboratory review \u2014 consider lisinopril dose increase if HbA1c and renal function support. Dietary counseling and physical activity recommendations provided. Weight loss goal discussed with patient. Constipation managed with dietary fiber increase and hydration. Follow-up in 3 months or sooner if blood pressure concern warrants earlier review. Screening colonoscopy discussion deferred to next visit.",
+      "attributions": [
+        {
+          "soap_text": "diabetes",
+          "entity_type": "diagnoses",
+          "source_text": "PATIENT: Pretty good. Managing my diabetes and blood pressure okay. Taking metformin and lisinopril.",
+          "source_line": 1,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "hypertension",
+          "entity_type": "diagnoses",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "renal",
+          "entity_type": "diagnoses",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "anxiety",
+          "entity_type": "diagnoses",
+          "source_text": "PATIENT: Sleep is fine. Mood is good, no depression or anxiety.",
+          "source_line": 9,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "pain",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Any new symptoms? Chest pain, shortness of breath?",
+          "source_line": 2,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "dyspnea",
+          "entity_type": "symptoms",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "chest pain",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Any new symptoms? Chest pain, shortness of breath?",
+          "source_line": 2,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "abdominal pain",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Any abdominal pain, changes in bowel habits?",
+          "source_line": 6,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "bleeding",
+          "entity_type": "symptoms",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "weight loss",
+          "entity_type": "symptoms",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "metformin",
+          "entity_type": "medications",
+          "source_text": "PATIENT: Pretty good. Managing my diabetes and blood pressure okay. Taking metformin and lisinopril.",
+          "source_line": 1,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "lisinopril",
+          "entity_type": "medications",
+          "source_text": "PATIENT: Pretty good. Managing my diabetes and blood pressure okay. Taking metformin and lisinopril.",
+          "source_line": 1,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "blood pressure",
+          "entity_type": "vitals",
+          "source_text": "PATIENT: Pretty good. Managing my diabetes and blood pressure okay. Taking metformin and lisinopril.",
+          "source_line": 1,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "rr",
+          "entity_type": "vitals",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "weight",
+          "entity_type": "vitals",
+          "source_text": "CLINICIAN: How about your weight? Any changes?",
+          "source_line": 4,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "colonoscopy",
+          "entity_type": "procedures",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "stent",
+          "entity_type": "procedures",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        }
+      ],
+      "statistics": {
+        "total_entities": 17,
+        "entities_attributed": 9,
+        "entities_not_attributed": 8,
+        "hallucination_count": 8,
+        "hallucination_rate": 0.4706,
+        "attribution_coverage": 0.5294,
+        "average_confidence": 0.5029,
+        "quality_score": "low"
+      }
+    },
+    {
+      "conversation_id": "CEDgXx9DgFbC",
+      "sample_name": "Obesity Hypoventilation Syndrome",
+      "category": "RARE/EDGE",
+      "complexity_score": 52.8,
+      "description": "Morbidly obese patient with daytime hypercapnia and respiratory failure.",
+      "conversation": "CLINICIAN: You were referred for evaluation of breathing problems. Tell me about your symptoms.\nPATIENT: I get very short of breath doing almost anything. Even sitting, sometimes.\nCLINICIAN: Any swelling in your legs?\nPATIENT: Yes, bad swelling in both legs. And I feel confused sometimes in the mornings.\nCLINICIAN: Do you use any breathing device at night?\nPATIENT: I was told to use a CPAP but I don't tolerate it well.\nCLINICIAN: Your ABG shows CO2 of 58. Do you know your weight?\nPATIENT: About 380 pounds. I've always been heavy.\nCLINICIAN: Any history of heart problems?\nPATIENT: They said I have pulmonary hypertension. And my heart is enlarged.\nCLINICIAN: How is your sleep? Do you feel rested?\nPATIENT: Never rested. I fall asleep during the day constantly. My wife says I stop breathing at night.\nCLINICIAN: We need to address your ventilation urgently. I'm recommending BiPAP and a pulmonology referral.\nPATIENT: Is this from my weight?",
+      "soap_note": "SUBJECTIVE:\nPatient presents with severe dyspnea occurring with minimal exertion and at rest. Associated symptoms include bilateral lower extremity edema, morning confusion, and excessive daytime sleepiness with witnessed apneic episodes reported by spouse. Patient reports poor tolerance of prescribed CPAP therapy. Arterial blood gas demonstrates hypercapnia with CO2 of 58 mmHg, consistent with chronic hypoventilation. Body weight approximately 380 pounds with longstanding morbid obesity. Known history of pulmonary hypertension and cardiomegaly. Non-restorative sleep pattern with daytime somnolence.\n\nOBJECTIVE:\nMorbid obesity with body weight approximately 380 pounds. ABG results significant for CO2 of 58 mmHg indicating hypercapnia. Bilateral lower extremity edema present on examination. Pulmonary hypertension and cardiomegaly per prior diagnostic evaluation. Oxygen saturation, respiratory rate, and full vital signs not documented in this encounter. Pulmonary function testing results not available at this visit. Echocardiogram findings not detailed.\n\nASSESSMENT:\nObesity hypoventilation syndrome with chronic hypercapnic respiratory failure, evidenced by morbid obesity, daytime CO2 retention of 58 mmHg, excessive daytime sleepiness, and witnessed apneic events. Comorbid pulmonary hypertension and cardiomegaly indicate end-organ impact from chronic hypoxemia and hypercapnia. Obstructive sleep apnea component suspected given CPAP prescription history. Morning confusion suggests recurrent nocturnal hypercapnic episodes.\n\nPLAN:\nTransition from CPAP to BiPAP to improve ventilatory support given documented hypercapnia and CPAP intolerance. Urgent pulmonology referral placed for comprehensive respiratory management. Cardiology involvement for pulmonary hypertension and cardiomegaly management. Weight loss intervention \u2014 bariatric surgery evaluation to be discussed given severity of obesity-related comorbidities. Patient education on the relationship between obesity and respiratory failure. Sleep study (polysomnography with CO2 monitoring) to be ordered. Close monitoring of ABG and clinical status.",
+      "attributions": [
+        {
+          "soap_text": "hypertension",
+          "entity_type": "diagnoses",
+          "source_text": "PATIENT: They said I have pulmonary hypertension. And my heart is enlarged.",
+          "source_line": 9,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "dyspnea",
+          "entity_type": "symptoms",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "confusion",
+          "entity_type": "symptoms",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "weight loss",
+          "entity_type": "symptoms",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "hr",
+          "entity_type": "vitals",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "respiratory rate",
+          "entity_type": "vitals",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "rr",
+          "entity_type": "vitals",
+          "source_text": "CLINICIAN: You were referred for evaluation of breathing problems. Tell me about your symptoms.",
+          "source_line": 0,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "oxygen saturation",
+          "entity_type": "vitals",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "weight",
+          "entity_type": "vitals",
+          "source_text": "CLINICIAN: Your ABG shows CO2 of 58. Do you know your weight?",
+          "source_line": 6,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "surgery",
+          "entity_type": "procedures",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "ventilation",
+          "entity_type": "procedures",
+          "source_text": "CLINICIAN: We need to address your ventilation urgently. I'm recommending BiPAP and a pulmonology referral.",
+          "source_line": 12,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "stent",
+          "entity_type": "procedures",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        }
+      ],
+      "statistics": {
+        "total_entities": 12,
+        "entities_attributed": 4,
+        "entities_not_attributed": 8,
+        "hallucination_count": 8,
+        "hallucination_rate": 0.6667,
+        "attribution_coverage": 0.3333,
+        "average_confidence": 0.3167,
+        "quality_score": "low"
+      }
+    },
+    {
+      "conversation_id": "Y9BsOifbX6cR",
+      "sample_name": "Recurrent Abscesses - Consult",
+      "category": "MODERATE",
+      "complexity_score": 54.8,
+      "description": "Patient with recurrent skin abscesses and possible underlying immune deficiency.",
+      "conversation": "CLINICIAN: Tell me about these recurring infections.\nPATIENT: I've had abscesses popping up all over \u2014 armpits, groin, under my breasts. This has been going on for two years.\nCLINICIAN: How often do they occur?\nPATIENT: About once a month. They get really painful and sometimes drain on their own.\nCLINICIAN: Have you been hospitalized for any of them?\nPATIENT: Twice. They gave me IV antibiotics both times.\nCLINICIAN: Any fever with the abscesses?\nPATIENT: Yes, I get fever and chills when they get bad.\nCLINICIAN: Any family history of similar skin conditions or immune problems?\nPATIENT: My mother had similar skin problems.\nCLINICIAN: Do you have diabetes or any autoimmune conditions?\nPATIENT: No diabetes. I was told I might have hidradenitis suppurativa.\nCLINICIAN: Based on your history and distribution, I agree with that diagnosis. We also need to rule out an underlying immune deficiency given the severity.\nPATIENT: What causes this?",
+      "soap_note": "SUBJECTIVE:\nPatient presents for consultation regarding a 2-year history of recurrent painful abscesses involving bilateral axillae, inguinal regions, and inframammary folds. Episodes occur approximately monthly with associated fever and chills during severe flares. Two prior hospitalizations required for intravenous antibiotic therapy. Lesions occasionally undergo spontaneous drainage. Family history significant for similar cutaneous condition in mother. No known diagnosis of diabetes or autoimmune disease. Prior clinical impression of hidradenitis suppurativa noted.\n\nOBJECTIVE:\nPhysical examination reveals characteristic distribution of abscesses and scarring involving axillae, inguinal regions, and inframammary areas consistent with Hurley staging of hidradenitis suppurativa. Active lesion assessment and Hurley stage not documented in this note. Vital signs not recorded. Laboratory evaluation for immune deficiency not yet resulted. Dermatology examination details not fully documented.\n\nASSESSMENT:\nHidradenitis suppurativa with recurrent severe flares requiring hospitalization, consistent with moderate-to-severe disease classification. Characteristic anatomical distribution involving intertriginous areas supports this diagnosis. Family history suggests possible genetic predisposition. Frequency and severity of episodes raise concern for underlying immune deficiency or immunomodulatory disorder warranting further investigation.\n\nPLAN:\nConfirm hidradenitis suppurativa diagnosis and perform Hurley staging to guide treatment intensity. Immune deficiency workup including immunoglobulin levels, CBC with differential, and complement levels. Referral to dermatology for specialist management \u2014 consideration of biologics (adalimumab is FDA-approved for moderate-to-severe HS). Wound care guidance for active lesions. Antibiotic therapy for current flare. Lifestyle modifications discussed including smoking cessation if applicable and weight management. Genetic counseling consideration given family history.",
+      "attributions": [
+        {
+          "soap_text": "diabetes",
+          "entity_type": "diagnoses",
+          "source_text": "CLINICIAN: Do you have diabetes or any autoimmune conditions?",
+          "source_line": 10,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "pain",
+          "entity_type": "symptoms",
+          "source_text": "PATIENT: About once a month. They get really painful and sometimes drain on their own.",
+          "source_line": 3,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "fever",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Any fever with the abscesses?",
+          "source_line": 6,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "antibiotic",
+          "entity_type": "medications",
+          "source_text": "PATIENT: Twice. They gave me IV antibiotics both times.",
+          "source_line": 5,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "rr",
+          "entity_type": "vitals",
+          "source_text": "CLINICIAN: Tell me about these recurring infections.",
+          "source_line": 0,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "weight",
+          "entity_type": "vitals",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "stent",
+          "entity_type": "procedures",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        }
+      ],
+      "statistics": {
+        "total_entities": 7,
+        "entities_attributed": 5,
+        "entities_not_attributed": 2,
+        "hallucination_count": 2,
+        "hallucination_rate": 0.2857,
+        "attribution_coverage": 0.7143,
+        "average_confidence": 0.6786,
+        "quality_score": "low"
+      }
+    },
+    {
+      "conversation_id": "bLiHoeCVVrjp",
+      "sample_name": "Normal Physical Exam Template - 5",
+      "category": "MODERATE",
+      "complexity_score": 56.0,
+      "description": "Comprehensive annual exam with multiple system review and chronic disease management.",
+      "conversation": "CLINICIAN: Let's go through your systems today for your annual exam.\nPATIENT: Sure. I've been managing okay but I have a few concerns.\nCLINICIAN: Let's start from the top. Any headaches, vision changes, dizziness?\nPATIENT: Some headaches lately. No vision changes. Occasional dizziness when I stand up fast.\nCLINICIAN: Chest or heart symptoms?\nPATIENT: I have my usual heart palpitations. My cardiologist knows about them.\nCLINICIAN: Breathing okay?\nPATIENT: I use my inhaler sometimes for my asthma. Better controlled lately.\nCLINICIAN: Stomach, bowel, bladder?\nPATIENT: Some acid reflux. Taking omeprazole for it. Bowels normal.\nCLINICIAN: Joints, muscles?\nPATIENT: Arthritis in my knees. Some pain and stiffness in the mornings.\nCLINICIAN: Mood, sleep, energy?\nPATIENT: I've been feeling a bit depressed lately. Sleep is poor. Energy is low.\nCLINICIAN: Any numbness, tingling, memory issues?\nPATIENT: Some tingling in my feet. I'm a diabetic so my doctor watches that.\nCLINICIAN: Let me examine you fully.\n[Full physical examination performed]",
+      "soap_note": "SUBJECTIVE:\nPatient presents for comprehensive annual physical examination with multiple active concerns. Neurological: reports recent onset headaches and orthostatic dizziness without syncope; denies vision changes. Cardiovascular: known palpitations under active cardiology follow-up. Pulmonary: asthma with improved control on current inhaler regimen. Gastrointestinal: gastroesophageal reflux disease managed with omeprazole; normal bowel habits. Musculoskeletal: bilateral knee osteoarthritis with morning stiffness and pain. Psychiatric: new depressive symptoms with poor sleep and low energy. Neurological: bilateral foot tingling in context of known diabetes mellitus, concerning for peripheral neuropathy.\n\nOBJECTIVE:\nComprehensive physical examination performed. Findings not individually detailed in this encounter note. Vital signs including orthostatic blood pressures not documented. Neurological examination of lower extremities including monofilament testing not documented. Cardiac rhythm assessment not documented given palpitation history.\n\nASSESSMENT:\nMultiple active chronic conditions requiring coordinated management: diabetes mellitus with possible early peripheral neuropathy (bilateral foot tingling), asthma currently well-controlled, gastroesophageal reflux disease on proton pump inhibitor, bilateral knee osteoarthritis, cardiac arrhythmia under cardiology care, and new depressive symptoms warranting formal assessment. Orthostatic dizziness may represent autonomic neuropathy component or medication side effect.\n\nPLAN:\nDiabetes management: HbA1c, renal function, urine microalbumin, monofilament foot exam \u2014 peripheral neuropathy evaluation. Depression screening with PHQ-9; initiate treatment or refer to psychiatry based on severity. Asthma: continue current inhaler, confirm written asthma action plan. GERD: continue omeprazole, reinforce dietary modifications. Osteoarthritis: optimize analgesia, physical therapy referral. Palpitations: cardiology follow-up confirmed. Orthostatic dizziness: orthostatic vital sign measurement at next visit. Complete metabolic panel and lipid panel ordered.",
+      "attributions": [
+        {
+          "soap_text": "diabetes",
+          "entity_type": "diagnoses",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "asthma",
+          "entity_type": "diagnoses",
+          "source_text": "PATIENT: I use my inhaler sometimes for my asthma. Better controlled lately.",
+          "source_line": 7,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "arrhythmia",
+          "entity_type": "diagnoses",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "arthritis",
+          "entity_type": "diagnoses",
+          "source_text": "PATIENT: Arthritis in my knees. Some pain and stiffness in the mornings.",
+          "source_line": 11,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "renal",
+          "entity_type": "diagnoses",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "flu",
+          "entity_type": "diagnoses",
+          "source_text": "PATIENT: Some acid reflux. Taking omeprazole for it. Bowels normal.",
+          "source_line": 9,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "depression",
+          "entity_type": "diagnoses",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "pain",
+          "entity_type": "symptoms",
+          "source_text": "PATIENT: Arthritis in my knees. Some pain and stiffness in the mornings.",
+          "source_line": 11,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "ache",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Let's start from the top. Any headaches, vision changes, dizziness?",
+          "source_line": 2,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "dizziness",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Let's start from the top. Any headaches, vision changes, dizziness?",
+          "source_line": 2,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "headache",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Let's start from the top. Any headaches, vision changes, dizziness?",
+          "source_line": 2,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "tingling",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Any numbness, tingling, memory issues?",
+          "source_line": 14,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "omeprazole",
+          "entity_type": "medications",
+          "source_text": "PATIENT: Some acid reflux. Taking omeprazole for it. Bowels normal.",
+          "source_line": 9,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "blood pressure",
+          "entity_type": "vitals",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "hr",
+          "entity_type": "vitals",
+          "source_text": "CLINICIAN: Let's go through your systems today for your annual exam.",
+          "source_line": 0,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "rr",
+          "entity_type": "vitals",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        }
+      ],
+      "statistics": {
+        "total_entities": 16,
+        "entities_attributed": 10,
+        "entities_not_attributed": 6,
+        "hallucination_count": 6,
+        "hallucination_rate": 0.375,
+        "attribution_coverage": 0.625,
+        "average_confidence": 0.5938,
+        "quality_score": "low"
+      }
+    },
+    {
+      "conversation_id": "Ixe2I3lrKFYK",
+      "sample_name": "Pain from Hernia - ER Consult",
+      "category": "RARE/EDGE",
+      "complexity_score": 57.6,
+      "description": "ER consult for acute groin pain with suspected incarcerated hernia.",
+      "conversation": "CLINICIAN: Tell me about your pain.\nPATIENT: I have severe pain in my right groin. Started a few hours ago and it's getting worse.\nCLINICIAN: Do you have a history of hernia?\nPATIENT: Yes, I was told I had a right inguinal hernia a few years ago but never had surgery.\nCLINICIAN: Any nausea, vomiting?\nPATIENT: Yes, I've been nauseous and vomited twice.\nCLINICIAN: Any fever?\nPATIENT: I feel warm. Not sure if I have a fever.\nCLINICIAN: Any change in bowel movements or gas?\nPATIENT: I haven't been able to pass gas since this morning. No bowel movement either.\nCLINICIAN: Can I examine your groin?\n[Examination performed]\nCLINICIAN: There's a tender, irreducible mass in your right inguinal region. I'm very concerned about an incarcerated hernia. We need surgical consultation immediately.\nPATIENT: Do I need surgery tonight?",
+      "soap_note": "SUBJECTIVE:\nPatient presents to the emergency department with acute severe right groin pain with onset several hours prior and progressive worsening. Known history of right inguinal hernia diagnosed several years ago without prior surgical repair. Associated symptoms include nausea, two episodes of emesis, subjective fever, inability to pass flatus since morning, and absence of bowel movement. No prior similar episodes documented.\n\nOBJECTIVE:\nPhysical examination reveals tender, irreducible mass in the right inguinal region consistent with incarcerated inguinal hernia. Bowel sounds assessment not documented. Abdominal examination findings not detailed beyond groin mass. Temperature documented as subjectively elevated \u2014 specific value not recorded. Full vital signs not documented in this note. Imaging studies not yet resulted at time of this note.\n\nASSESSMENT:\nAcute incarcerated right inguinal hernia with high concern for strangulation given irreducibility, severe pain, and associated obstructive symptoms including inability to pass flatus and vomiting. This represents a surgical emergency. Bowel obstruction cannot be excluded. Strangulation with bowel ischemia is the primary concern requiring urgent operative intervention.\n\nPLAN:\nImmediate surgical consultation placed \u2014 emergency surgical evaluation for incarcerated hernia with possible strangulation. IV access established, NPO status implemented, IV fluids initiated. Analgesia administered. Urgent CT abdomen and pelvis with contrast ordered to assess hernia contents and viability. Surgical repair likely required on emergent basis tonight. Patient and family counseled on diagnosis, urgency, and surgical risk. Anesthesia notification pending surgical decision.",
+      "attributions": [
+        {
+          "soap_text": "flu",
+          "entity_type": "diagnoses",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "pain",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Tell me about your pain.",
+          "source_line": 0,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "fever",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Any fever?",
+          "source_line": 6,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "nausea",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Any nausea, vomiting?",
+          "source_line": 4,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "vomiting",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Any nausea, vomiting?",
+          "source_line": 4,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "temperature",
+          "entity_type": "vitals",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "temp",
+          "entity_type": "vitals",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "rr",
+          "entity_type": "vitals",
+          "source_text": "CLINICIAN: There's a tender, irreducible mass in your right inguinal region. I'm very concerned about an incarcerated hernia. We need surgical consultation immediately.",
+          "source_line": 12,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "stent",
+          "entity_type": "procedures",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        }
+      ],
+      "statistics": {
+        "total_entities": 9,
+        "entities_attributed": 5,
+        "entities_not_attributed": 4,
+        "hallucination_count": 4,
+        "hallucination_rate": 0.4444,
+        "attribution_coverage": 0.5556,
+        "average_confidence": 0.5278,
+        "quality_score": "low"
+      }
+    },
+    {
+      "conversation_id": "Xs4GRIFhjHJT",
+      "sample_name": "Normal Newborn H&P Template",
+      "category": "MODERATE",
+      "complexity_score": 58.8,
+      "description": "Newborn well-baby examination and history including birth details and feeding.",
+      "conversation": "CLINICIAN: Congratulations on your new baby. Let me go through the birth history and examine the baby.\nPARENT: Thank you. The birth went well but we're worried about the jaundice.\nCLINICIAN: Tell me about the delivery.\nPARENT: She was born at 39 weeks by vaginal delivery. Birth weight was 7 pounds 4 ounces. Apgar scores were 8 and 9.\nCLINICIAN: Any complications during pregnancy or delivery?\nPARENT: No complications. Group B strep was negative.\nCLINICIAN: How is she feeding?\nPARENT: Breastfeeding. Latching well and feeding every 2 to 3 hours.\nCLINICIAN: Any jaundice concerns?\nPARENT: She looks a bit yellow. Started yesterday at day 2 of life.\nCLINICIAN: How many wet diapers and stools?\nPARENT: About 4 wet diapers and 2-3 yellow stools per day.\nCLINICIAN: Let me examine her fully.\n[Newborn physical examination performed]\nCLINICIAN: She has mild physiologic jaundice. We'll check a bilirubin level. Everything else looks normal on exam.\nPARENT: When do we need to worry?",
+      "soap_note": "SUBJECTIVE:\nWell-baby examination for a female newborn at day 2 of life. Birth history: gestational age 39 weeks, vaginal delivery, birth weight 7 pounds 4 ounces, Apgar scores 8 at one minute and 9 at five minutes. No perinatal complications. Group B Streptococcus screen negative. Breastfeeding initiated with good latch and feeding every 2-3 hours. Urine output adequate with approximately 4 wet diapers per day. Stooling pattern normal with 2-3 yellow stools daily. Parent notes mild icterus onset at day 2 of life \u2014 clinical concern for neonatal jaundice.\n\nOBJECTIVE:\nNewborn physical examination performed. Mild icterus noted on skin inspection. Weight, head circumference, and length not documented in this note. Vital signs including temperature and respiratory rate not recorded. Cardiac, pulmonary, abdominal, neurological, and musculoskeletal examinations performed \u2014 findings reported as normal. Total serum bilirubin ordered \u2014 results pending.\n\nASSESSMENT:\nPhysiologic neonatal jaundice at day 2 of life \u2014 timing and clinical presentation consistent with physiologic rather than pathologic etiology. Adequate feeding and stooling support benign course. Risk stratification pending bilirubin level. Group B Strep negative maternal status reduces infection concern. Overall newborn examination within normal limits.\n\nPLAN:\nTotal serum bilirubin measurement to determine phototherapy threshold based on Bhutani nomogram and gestational age. Parent education on jaundice progression, monitoring for worsening icterus extending to extremities, decreased feeding, or lethargy. Continue breastfeeding support \u2014 lactation consultation offered. Follow-up in 24-48 hours for repeat bilirubin and weight check. Newborn screening (state metabolic screen and hearing screen) to be completed prior to discharge. Return precautions provided.",
+      "attributions": [
+        {
+          "soap_text": "infection",
+          "entity_type": "diagnoses",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "discharge",
+          "entity_type": "symptoms",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "temperature",
+          "entity_type": "vitals",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "temp",
+          "entity_type": "vitals",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "hr",
+          "entity_type": "vitals",
+          "source_text": "CLINICIAN: Congratulations on your new baby. Let me go through the birth history and examine the baby.",
+          "source_line": 0,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "respiratory rate",
+          "entity_type": "vitals",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "weight",
+          "entity_type": "vitals",
+          "source_text": "PARENT: She was born at 39 weeks by vaginal delivery. Birth weight was 7 pounds 4 ounces. Apgar scores were 8 and 9.",
+          "source_line": 3,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "stent",
+          "entity_type": "procedures",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        }
+      ],
+      "statistics": {
+        "total_entities": 8,
+        "entities_attributed": 2,
+        "entities_not_attributed": 6,
+        "hallucination_count": 6,
+        "hallucination_rate": 0.75,
+        "attribution_coverage": 0.25,
+        "average_confidence": 0.2375,
+        "quality_score": "low"
+      }
+    },
+    {
+      "conversation_id": "2qeiMvG87y1M",
+      "sample_name": "Tongue Swelling",
+      "category": "COMPLEX",
+      "complexity_score": 72.4,
+      "description": "Acute angioedema of the tongue with airway compromise concern.",
+      "conversation": "CLINICIAN: How long has your tongue been swollen?\nPATIENT: About two hours. It started suddenly.\nCLINICIAN: Any difficulty breathing or swallowing?\nPATIENT: It's getting hard to swallow. A little hard to breathe.\nCLINICIAN: Any hives or rash on your body?\nPATIENT: Some hives on my arms and chest.\nCLINICIAN: Any recent new medications or foods?\nPATIENT: I just started lisinopril two weeks ago for blood pressure.\nCLINICIAN: Any history of allergies or previous angioedema?\nPATIENT: No history of angioedema. Allergic to penicillin.\nCLINICIAN: Any throat tightness or change in voice?\nPATIENT: My voice sounds different. Throat feels tight.\nCLINICIAN: This is a serious reaction. I'm calling the team now.\n[Emergency team activated]\nCLINICIAN: We're going to give you epinephrine and antihistamines and monitor your airway closely. An ENT and anesthesia are being called.\nPATIENT: Am I going to be okay?",
+      "soap_note": "SUBJECTIVE:\nPatient presents with acute onset tongue swelling of approximately 2 hours duration with progressive worsening. Associated symptoms include dysphagia, mild dyspnea, voice change, throat tightness, and urticaria on bilateral upper extremities and chest. Recent medication initiation: lisinopril started 2 weeks prior for hypertension management. Known drug allergy: penicillin. No prior history of angioedema. No new foods or other exposures identified.\n\nOBJECTIVE:\nVisible macroglossia on oral examination with progressive tongue edema. Urticarial lesions on bilateral arms and chest. Voice change audible consistent with supraglottic edema. Respiratory assessment shows mild dyspnea \u2014 oxygen saturation not documented in this note. Airway patency currently maintained but under active monitoring. Emergency team activated. ENT and anesthesia consultations placed. IV access established.\n\nASSESSMENT:\nACE inhibitor-induced angioedema secondary to lisinopril, presenting with acute tongue and likely supraglottic edema with urticaria. This represents a potentially life-threatening airway emergency. ACE inhibitor angioedema is characteristically non-histaminergic and bradykinin-mediated, which limits response to epinephrine and antihistamines compared to allergic angioedema, though these are administered empirically. Airway compromise is the primary immediate concern.\n\nPLAN:\nImmediate interventions: epinephrine administered, antihistamine (diphenhydramine) and corticosteroid (methylprednisolone) IV initiated. Discontinue lisinopril permanently \u2014 ACE inhibitor class contraindicated. Airway monitoring with anesthesia and ENT at bedside for potential emergent intubation or surgical airway. Supplemental oxygen applied. Consider icatibant or fresh frozen plasma if angioedema refractory to initial management. Admission to monitored setting. Patient counseled on ACE inhibitor avoidance. Alternative antihypertensive class (ARB used with caution, calcium channel blocker preferred) to be arranged on discharge.",
+      "attributions": [
+        {
+          "soap_text": "hypertension",
+          "entity_type": "diagnoses",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "dyspnea",
+          "entity_type": "symptoms",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "swelling",
+          "entity_type": "symptoms",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "discharge",
+          "entity_type": "symptoms",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "lisinopril",
+          "entity_type": "medications",
+          "source_text": "PATIENT: I just started lisinopril two weeks ago for blood pressure.",
+          "source_line": 7,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "penicillin",
+          "entity_type": "medications",
+          "source_text": "PATIENT: No history of angioedema. Allergic to penicillin.",
+          "source_line": 9,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "calcium",
+          "entity_type": "medications",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "steroid",
+          "entity_type": "medications",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "antihypertensive",
+          "entity_type": "medications",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "hr",
+          "entity_type": "vitals",
+          "source_text": "CLINICIAN: Any throat tightness or change in voice?",
+          "source_line": 10,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "rr",
+          "entity_type": "vitals",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "oxygen saturation",
+          "entity_type": "vitals",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "intubation",
+          "entity_type": "procedures",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "stent",
+          "entity_type": "procedures",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        }
+      ],
+      "statistics": {
+        "total_entities": 14,
+        "entities_attributed": 3,
+        "entities_not_attributed": 11,
+        "hallucination_count": 11,
+        "hallucination_rate": 0.7857,
+        "attribution_coverage": 0.2143,
+        "average_confidence": 0.2036,
+        "quality_score": "low"
+      }
+    },
+    {
+      "conversation_id": "Win8pvy0nQpc",
+      "sample_name": "Airway Compromise & Foreign Body - ER Visit",
+      "category": "COMPLEX",
+      "complexity_score": 74.4,
+      "description": "Child presenting to ER with suspected foreign body aspiration and respiratory distress.",
+      "conversation": "CLINICIAN: What happened?\nPARENT: He was eating peanuts and then started coughing and choking. He's been having trouble breathing for an hour.\nCLINICIAN: How old is he?\nPARENT: Three years old.\nCLINICIAN: Is he able to breathe right now?\nPARENT: He's breathing but it sounds wheezy. He keeps coughing.\nCLINICIAN: Any fever?\nPARENT: No fever.\nCLINICIAN: Any history of asthma or previous breathing problems?\nPARENT: No, he's been healthy. No asthma.\nCLINICIAN: Let me examine him.\n[Examination performed]\nCLINICIAN: I can hear decreased breath sounds on the right. His oxygen saturation is 93%. This is consistent with a foreign body in the right bronchus. We need a chest X-ray and urgent pediatric pulmonology for bronchoscopy.\nPARENT: Can you get it out?\nCLINICIAN: Yes, through a bronchoscopy procedure. We're activating the team now.\nPARENT: Is this dangerous?",
+      "soap_note": "SUBJECTIVE:\nA 3-year-old male presents to the emergency department following acute onset choking episode while eating peanuts approximately one hour prior to presentation. Witnessed aspiration event by parent. Persistent cough and wheeze since episode onset. Increasing respiratory distress reported. Denies fever. No prior history of asthma or respiratory illness. Previously healthy child with no significant past medical history.\n\nOBJECTIVE:\nOxygen saturation 93% on room air. Pulmonary auscultation reveals decreased breath sounds on the right side with expiratory wheeze. No stridor documented. Respiratory rate elevated \u2014 specific value not documented. Work of breathing assessment not detailed. Chest X-ray ordered \u2014 results pending. Pediatric pulmonology consultation activated for urgent bronchoscopy evaluation.\n\nASSESSMENT:\nForeign body aspiration with right bronchial obstruction in a 3-year-old child, evidenced by witnessed aspiration event, unilateral decreased breath sounds on the right, expiratory wheeze, and oxygen desaturation to 93%. Peanut aspiration is the most likely foreign body given clear history. Right bronchus involvement consistent with anatomical predisposition. This represents a respiratory emergency requiring urgent bronchoscopic retrieval.\n\nPLAN:\nUrgent rigid bronchoscopy for foreign body retrieval \u2014 pediatric pulmonology and pediatric surgery notified. Supplemental oxygen applied with target saturation above 95%. IV access established. NPO status implemented for procedural preparation. Chest X-ray to assess for hyperinflation, atelectasis, or mediastinal shift. Anesthesia consultation for procedural sedation. Continuous cardiorespiratory monitoring. Parent counseled on diagnosis, procedure, and risks. ICU post-procedure monitoring to be arranged.",
+      "attributions": [
+        {
+          "soap_text": "asthma",
+          "entity_type": "diagnoses",
+          "source_text": "CLINICIAN: Any history of asthma or previous breathing problems?",
+          "source_line": 8,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "fever",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Any fever?",
+          "source_line": 6,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "cough",
+          "entity_type": "symptoms",
+          "source_text": "PARENT: He was eating peanuts and then started coughing and choking. He's been having trouble breathing for an hour.",
+          "source_line": 1,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "respiratory rate",
+          "entity_type": "vitals",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "rr",
+          "entity_type": "vitals",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "oxygen saturation",
+          "entity_type": "vitals",
+          "source_text": "CLINICIAN: I can hear decreased breath sounds on the right. His oxygen saturation is 93%. This is consistent with a foreign body in the right bronchus. We need a chest X-ray and urgent pediatric pulmonology for bronchoscopy.",
+          "source_line": 12,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "x-ray",
+          "entity_type": "procedures",
+          "source_text": "CLINICIAN: I can hear decreased breath sounds on the right. His oxygen saturation is 93%. This is consistent with a foreign body in the right bronchus. We need a chest X-ray and urgent pediatric pulmonology for bronchoscopy.",
+          "source_line": 12,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "surgery",
+          "entity_type": "procedures",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "aspiration",
+          "entity_type": "procedures",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "stent",
+          "entity_type": "procedures",
+          "source_text": "CLINICIAN: I can hear decreased breath sounds on the right. His oxygen saturation is 93%. This is consistent with a foreign body in the right bronchus. We need a chest X-ray and urgent pediatric pulmonology for bronchoscopy.",
+          "source_line": 12,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        }
+      ],
+      "statistics": {
+        "total_entities": 10,
+        "entities_attributed": 6,
+        "entities_not_attributed": 4,
+        "hallucination_count": 4,
+        "hallucination_rate": 0.4,
+        "attribution_coverage": 0.6,
+        "average_confidence": 0.57,
+        "quality_score": "low"
+      }
+    },
+    {
+      "conversation_id": "Chp9WGwltx0p",
+      "sample_name": "Normal ROS Template - 4",
+      "category": "COMPLEX",
+      "complexity_score": 77.2,
+      "description": "Comprehensive multi-system review of systems with extensive symptom inventory.",
+      "conversation": "CLINICIAN: I need to go through a complete review of systems today.\nPATIENT: Okay, I'll try to answer everything.\nCLINICIAN: Constitutional \u2014 any fever, chills, weight loss, fatigue, night sweats?\nPATIENT: Some fatigue. Night sweats for the past month. No fever or weight loss.\nCLINICIAN: Head, eyes, ears, nose, throat?\nPATIENT: Headaches weekly. Vision blurry sometimes. No hearing problems. Some sinus congestion.\nCLINICIAN: Cardiovascular?\nPATIENT: Occasional chest pain \u2014 dull, not severe. Heart racing sometimes. Leg swelling on and off.\nCLINICIAN: Respiratory?\nPATIENT: Shortness of breath with exercise. Morning cough sometimes. No wheezing.\nCLINICIAN: Gastrointestinal?\nPATIENT: Nausea occasionally. Diarrhea a few times a week. Some abdominal pain after eating.\nCLINICIAN: Genitourinary?\nPATIENT: Frequent urination. Some burning with urination.\nCLINICIAN: Musculoskeletal?\nPATIENT: Joint pain in hands and knees. Morning stiffness lasting over an hour.\nCLINICIAN: Neurological?\nPATIENT: Numbness in both hands. Occasional dizziness. Memory seems worse lately.\nCLINICIAN: Psychiatric?\nPATIENT: Feeling anxious and depressed. Sleep is very disrupted.\nCLINICIAN: Skin?\nPATIENT: A new rash on my arms \u2014 red and itchy. Some hair loss.\nCLINICIAN: Endocrine?\nPATIENT: Always thirsty and urinating a lot. Feeling cold all the time.\nCLINICIAN: Hematologic?\nPATIENT: Easy bruising lately. Some bleeding from gums.",
+      "soap_note": "SUBJECTIVE:\nComprehensive review of systems reveals multi-system involvement. Constitutional: fatigue and night sweats for one month without documented fever, chills, or weight loss. HEENT: weekly headaches, intermittent blurry vision, sinus congestion; no hearing impairment. Cardiovascular: dull non-severe chest pain, palpitations, intermittent bilateral lower extremity edema. Pulmonary: exertional dyspnea, morning cough without wheeze. Gastrointestinal: nausea, diarrhea several times weekly, postprandial abdominal pain. Genitourinary: urinary frequency and dysuria. Musculoskeletal: bilateral hand and knee arthralgia with prolonged morning stiffness exceeding one hour. Neurological: bilateral hand paresthesias, dizziness, cognitive complaints. Psychiatric: anxiety, depression, and sleep disturbance. Dermatologic: pruritic erythematous arm rash and alopecia. Endocrine: polydipsia and polyuria with cold intolerance. Hematologic: easy bruising and gingival bleeding.\n\nOBJECTIVE:\nPhysical examination not documented in this encounter. Vital signs not recorded. Multi-system examination warranted given extensive symptom inventory but findings not detailed. Laboratory evaluation to be ordered based on symptom clusters.\n\nASSESSMENT:\nExtensive multi-system symptom complex requiring systematic evaluation. Key diagnostic considerations: polyuria, polydipsia, and fatigue suggest diabetes mellitus; cold intolerance and fatigue raise hypothyroidism concern; prolonged morning stiffness with polyarthralgia suggests inflammatory arthropathy (rheumatoid arthritis); easy bruising and gingival bleeding raise thrombocytopenia concern; rash, alopecia, and multi-system involvement warrant autoimmune evaluation (lupus); night sweats, fatigue, and cognitive changes require malignancy exclusion.\n\nPLAN:\nComprehensive laboratory workup: CBC with differential, CMP, HbA1c, fasting glucose, thyroid panel (TSH/free T4), rheumatoid factor, anti-CCP, ANA with reflex, anti-dsDNA, complement levels, urinalysis with culture. Imaging: chest X-ray for pulmonary symptoms. Subspecialty referrals based on laboratory results: rheumatology, endocrinology, hematology as indicated. Follow-up in 1-2 weeks for laboratory review. Patient counseled on broad differential and the need for systematic evaluation.",
+      "attributions": [
+        {
+          "soap_text": "diabetes",
+          "entity_type": "diagnoses",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "arthritis",
+          "entity_type": "diagnoses",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "thyroid",
+          "entity_type": "diagnoses",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "hypothyroid",
+          "entity_type": "diagnoses",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "depression",
+          "entity_type": "diagnoses",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "anxiety",
+          "entity_type": "diagnoses",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "pain",
+          "entity_type": "symptoms",
+          "source_text": "PATIENT: Occasional chest pain \u2014 dull, not severe. Heart racing sometimes. Leg swelling on and off.",
+          "source_line": 7,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "ache",
+          "entity_type": "symptoms",
+          "source_text": "PATIENT: Headaches weekly. Vision blurry sometimes. No hearing problems. Some sinus congestion.",
+          "source_line": 5,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "fever",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Constitutional \u2014 any fever, chills, weight loss, fatigue, night sweats?",
+          "source_line": 2,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "cough",
+          "entity_type": "symptoms",
+          "source_text": "PATIENT: Shortness of breath with exercise. Morning cough sometimes. No wheezing.",
+          "source_line": 9,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "dyspnea",
+          "entity_type": "symptoms",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "nausea",
+          "entity_type": "symptoms",
+          "source_text": "PATIENT: Nausea occasionally. Diarrhea a few times a week. Some abdominal pain after eating.",
+          "source_line": 11,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "diarrhea",
+          "entity_type": "symptoms",
+          "source_text": "PATIENT: Nausea occasionally. Diarrhea a few times a week. Some abdominal pain after eating.",
+          "source_line": 11,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "fatigue",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Constitutional \u2014 any fever, chills, weight loss, fatigue, night sweats?",
+          "source_line": 2,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "dizziness",
+          "entity_type": "symptoms",
+          "source_text": "PATIENT: Numbness in both hands. Occasional dizziness. Memory seems worse lately.",
+          "source_line": 17,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "headache",
+          "entity_type": "symptoms",
+          "source_text": "PATIENT: Headaches weekly. Vision blurry sometimes. No hearing problems. Some sinus congestion.",
+          "source_line": 5,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "chest pain",
+          "entity_type": "symptoms",
+          "source_text": "PATIENT: Occasional chest pain \u2014 dull, not severe. Heart racing sometimes. Leg swelling on and off.",
+          "source_line": 7,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "abdominal pain",
+          "entity_type": "symptoms",
+          "source_text": "PATIENT: Nausea occasionally. Diarrhea a few times a week. Some abdominal pain after eating.",
+          "source_line": 11,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "rash",
+          "entity_type": "symptoms",
+          "source_text": "PATIENT: A new rash on my arms \u2014 red and itchy. Some hair loss.",
+          "source_line": 21,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "bleeding",
+          "entity_type": "symptoms",
+          "source_text": "PATIENT: Easy bruising lately. Some bleeding from gums.",
+          "source_line": 25,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "bruising",
+          "entity_type": "symptoms",
+          "source_text": "PATIENT: Easy bruising lately. Some bleeding from gums.",
+          "source_line": 25,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "congestion",
+          "entity_type": "symptoms",
+          "source_text": "PATIENT: Headaches weekly. Vision blurry sometimes. No hearing problems. Some sinus congestion.",
+          "source_line": 5,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "sleep disturbance",
+          "entity_type": "symptoms",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "weight loss",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Constitutional \u2014 any fever, chills, weight loss, fatigue, night sweats?",
+          "source_line": 2,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "hr",
+          "entity_type": "vitals",
+          "source_text": "CLINICIAN: I need to go through a complete review of systems today.",
+          "source_line": 0,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "rr",
+          "entity_type": "vitals",
+          "source_text": "PATIENT: Headaches weekly. Vision blurry sometimes. No hearing problems. Some sinus congestion.",
+          "source_line": 5,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "weight",
+          "entity_type": "vitals",
+          "source_text": "CLINICIAN: Constitutional \u2014 any fever, chills, weight loss, fatigue, night sweats?",
+          "source_line": 2,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "x-ray",
+          "entity_type": "procedures",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        }
+      ],
+      "statistics": {
+        "total_entities": 28,
+        "entities_attributed": 19,
+        "entities_not_attributed": 9,
+        "hallucination_count": 9,
+        "hallucination_rate": 0.3214,
+        "attribution_coverage": 0.6786,
+        "average_confidence": 0.6446,
+        "quality_score": "low"
+      }
+    },
+    {
+      "conversation_id": "q5dVhK86R6je",
+      "sample_name": "Normal Physical Exam Template - 7",
+      "category": "RARE/EDGE",
+      "complexity_score": 78.4,
+      "description": "Complex patient with multi-system disease and extensive physical exam documentation.",
+      "conversation": "CLINICIAN: Let me do a complete physical exam. Starting with your vitals and general appearance.\nPATIENT: Okay. I've been feeling run down overall.\nCLINICIAN: Blood pressure 148 over 92. Heart rate 88. Temperature 98.6. Weight 210 pounds.\nPATIENT: My blood pressure is always high. I'm on two medications for it.\nCLINICIAN: Let me examine your head and neck. Any lymph node swelling?\nPATIENT: I noticed a lump on the left side of my neck last week.\nCLINICIAN: Eyes, vision?\nPATIENT: I wear glasses. Vision has been blurry lately.\nCLINICIAN: Let me listen to your heart and lungs.\n[Cardiac and pulmonary exam performed]\nCLINICIAN: I hear a murmur \u2014 soft, systolic. Your lungs are clear.\nPATIENT: I've had that murmur for years. Is it worse?\nCLINICIAN: Abdomen exam \u2014 any tenderness?\nPATIENT: Some tenderness on the right upper side.\nCLINICIAN: I feel your liver edge slightly below the rib margin. That's worth investigating.\nPATIENT: My last liver tests were slightly off a few months ago.\nCLINICIAN: Neurological exam looks intact. Reflexes are normal. Let's talk about the neck lump and liver finding.\nPATIENT: Should I be worried?",
+      "soap_note": "SUBJECTIVE:\nPatient presents with complaints of generalized fatigue and recent discovery of a left neck mass one week prior. Known history of hypertension currently managed on two antihypertensive medications. History of cardiac murmur. Recent blurry vision in context of corrective lens use. Right upper quadrant abdominal tenderness reported. Prior liver function tests mildly abnormal several months ago without documented follow-up.\n\nOBJECTIVE:\nVital signs: blood pressure 148/92 mmHg indicating uncontrolled hypertension on current regimen, heart rate 88 bpm, temperature 98.6\u00b0F, weight 210 pounds. Head and neck: left cervical lymphadenopathy \u2014 palpable node, size and character not further detailed. Ophthalmologic: corrective lenses worn, blurry vision reported. Cardiac: soft systolic murmur on auscultation \u2014 grade not documented; known history. Pulmonary: clear to auscultation bilaterally. Abdomen: right upper quadrant tenderness with palpable liver edge below costal margin indicating hepatomegaly. Neurological: cranial nerves intact, reflexes normal.\n\nASSESSMENT:\nMultiple findings requiring workup: new left cervical lymphadenopathy in context of fatigue, hepatomegaly, and prior abnormal liver function tests \u2014 malignancy including lymphoma must be excluded. Hepatomegaly with right upper quadrant tenderness and known abnormal LFTs warrants hepatic evaluation. Uncontrolled hypertension on dual therapy. Systolic murmur \u2014 baseline comparison needed. Blurry vision requires ophthalmologic assessment.\n\nPLAN:\nUrgent workup for cervical lymphadenopathy: CBC with differential, LDH, uric acid, peripheral smear; CT neck/chest/abdomen/pelvis with contrast for lymphoma staging evaluation. Liver evaluation: LFTs, hepatitis B and C serologies, abdominal ultrasound. Blood pressure management: review current antihypertensive regimen, consider addition of third agent or dose adjustment. Echocardiogram to assess cardiac murmur. Ophthalmology referral for blurry vision. Follow-up in 1 week to review results \u2014 expedited if imaging raises oncologic concern.",
+      "attributions": [
+        {
+          "soap_text": "hypertension",
+          "entity_type": "diagnoses",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "lymphoma",
+          "entity_type": "diagnoses",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "hepatitis",
+          "entity_type": "diagnoses",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "fatigue",
+          "entity_type": "symptoms",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "antihypertensive",
+          "entity_type": "medications",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "temperature",
+          "entity_type": "vitals",
+          "source_text": "CLINICIAN: Blood pressure 148 over 92. Heart rate 88. Temperature 98.6. Weight 210 pounds.",
+          "source_line": 2,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "temp",
+          "entity_type": "vitals",
+          "source_text": "CLINICIAN: Blood pressure 148 over 92. Heart rate 88. Temperature 98.6. Weight 210 pounds.",
+          "source_line": 2,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "blood pressure",
+          "entity_type": "vitals",
+          "source_text": "CLINICIAN: Blood pressure 148 over 92. Heart rate 88. Temperature 98.6. Weight 210 pounds.",
+          "source_line": 2,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "bp",
+          "entity_type": "vitals",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "heart rate",
+          "entity_type": "vitals",
+          "source_text": "CLINICIAN: Blood pressure 148 over 92. Heart rate 88. Temperature 98.6. Weight 210 pounds.",
+          "source_line": 2,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "rr",
+          "entity_type": "vitals",
+          "source_text": "PATIENT: I wear glasses. Vision has been blurry lately.",
+          "source_line": 7,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "weight",
+          "entity_type": "vitals",
+          "source_text": "CLINICIAN: Blood pressure 148 over 92. Heart rate 88. Temperature 98.6. Weight 210 pounds.",
+          "source_line": 2,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "ultrasound",
+          "entity_type": "procedures",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        }
+      ],
+      "statistics": {
+        "total_entities": 13,
+        "entities_attributed": 6,
+        "entities_not_attributed": 7,
+        "hallucination_count": 7,
+        "hallucination_rate": 0.5385,
+        "attribution_coverage": 0.4615,
+        "average_confidence": 0.4385,
+        "quality_score": "low"
+      }
+    },
+    {
+      "conversation_id": "OJJLdMsb4iqO",
+      "sample_name": "Refractory Hypertension - Followup",
+      "category": "COMPLEX",
+      "complexity_score": 80.8,
+      "description": "Follow-up for patient with hypertension resistant to multiple medications.",
+      "conversation": "CLINICIAN: Your blood pressure is still elevated today \u2014 162 over 98. How have you been with your medications?\nPATIENT: I take them every day. Lisinopril, amlodipine, and hydrochlorothiazide.\nCLINICIAN: Any chest pain, headache, or vision changes?\nPATIENT: Some headaches, especially in the morning. No chest pain. Vision is okay.\nCLINICIAN: How about your kidneys? Have you had labs recently?\nPATIENT: My creatinine was slightly elevated last time. The doctor said to watch it.\nCLINICIAN: Any snoring or sleep problems?\nPATIENT: My wife says I snore terribly. I'm always exhausted.\nCLINICIAN: Any weight gain?\nPATIENT: About 20 pounds over the last two years.\nCLINICIAN: Do you drink alcohol?\nPATIENT: A few beers on weekends. Maybe 3 or 4.\nCLINICIAN: The fact that you're on three medications and your blood pressure is still this high is concerning. We need to look for secondary causes. I'm thinking sleep apnea could be contributing.\nPATIENT: What other causes could there be?\nCLINICIAN: Kidney artery narrowing, hormone problems like aldosterone excess, thyroid issues. We'll order tests.\nPATIENT: I just want it under control.",
+      "soap_note": "SUBJECTIVE:\nPatient presents for hypertension follow-up with blood pressure remaining uncontrolled at 162/98 mmHg on maximal triple antihypertensive therapy including lisinopril, amlodipine, and hydrochlorothiazide \u2014 meeting criteria for resistant hypertension. Reports full medication compliance. Associated symptoms: morning headaches, chronic fatigue, and witnessed loud snoring by spouse suggestive of obstructive sleep apnea. Denies chest pain and visual disturbance. Recent mild creatinine elevation noted on prior laboratory evaluation without formal nephrology referral. Weight gain of approximately 20 pounds over two years. Alcohol consumption: 3-4 standard drinks on weekends.\n\nOBJECTIVE:\nBlood pressure 162/98 mmHg \u2014 significantly above target despite triple therapy. Heart rate, temperature, and other vital signs not documented. BMI not calculated but 20-pound weight gain noted. Renal function: creatinine mildly elevated on prior labs \u2014 current value not available. Ophthalmoscopic examination for hypertensive retinopathy not documented. Cardiac and pulmonary examination findings not detailed.\n\nASSESSMENT:\nResistant hypertension defined as uncontrolled blood pressure on three antihypertensive agents including a diuretic. Evaluation for secondary causes indicated: obstructive sleep apnea (witnessed snoring, fatigue, weight gain \u2014 most common secondary cause), primary hyperaldosteronism, renal artery stenosis, and thyroid dysfunction. Mild renal impairment may limit ACE inhibitor dosing and warrants nephrology evaluation. Alcohol consumption may be contributing to blood pressure elevation.\n\nPLAN:\nSecondary hypertension workup: polysomnography for sleep apnea evaluation; plasma aldosterone to renin ratio; renal artery duplex ultrasound or CT angiography; TSH. Renal function reassessment: BMP with creatinine, urine albumin-to-creatinine ratio. Nephrology referral given resistant hypertension with renal impairment. Alcohol reduction counseling provided. Weight loss intervention. Review antihypertensive regimen pending secondary cause results \u2014 spironolactone addition if hyperaldosteronism confirmed. Follow-up in 2-4 weeks with secondary workup results.",
+      "attributions": [
+        {
+          "soap_text": "hypertension",
+          "entity_type": "diagnoses",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "renal",
+          "entity_type": "diagnoses",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "thyroid",
+          "entity_type": "diagnoses",
+          "source_text": "CLINICIAN: Kidney artery narrowing, hormone problems like aldosterone excess, thyroid issues. We'll order tests.",
+          "source_line": 14,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "pain",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Any chest pain, headache, or vision changes?",
+          "source_line": 2,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "ache",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Any chest pain, headache, or vision changes?",
+          "source_line": 2,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "fatigue",
+          "entity_type": "symptoms",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "headache",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Any chest pain, headache, or vision changes?",
+          "source_line": 2,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "chest pain",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Any chest pain, headache, or vision changes?",
+          "source_line": 2,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "weight loss",
+          "entity_type": "symptoms",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "lisinopril",
+          "entity_type": "medications",
+          "source_text": "PATIENT: I take them every day. Lisinopril, amlodipine, and hydrochlorothiazide.",
+          "source_line": 1,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "antihypertensive",
+          "entity_type": "medications",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "temperature",
+          "entity_type": "vitals",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "temp",
+          "entity_type": "vitals",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "blood pressure",
+          "entity_type": "vitals",
+          "source_text": "CLINICIAN: Your blood pressure is still elevated today \u2014 162 over 98. How have you been with your medications?",
+          "source_line": 0,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "heart rate",
+          "entity_type": "vitals",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "hr",
+          "entity_type": "vitals",
+          "source_text": "CLINICIAN: The fact that you're on three medications and your blood pressure is still this high is concerning. We need to look for secondary causes. I'm thinking sleep apnea could be contributing.",
+          "source_line": 12,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "rr",
+          "entity_type": "vitals",
+          "source_text": "PATIENT: My wife says I snore terribly. I'm always exhausted.",
+          "source_line": 7,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "weight",
+          "entity_type": "vitals",
+          "source_text": "CLINICIAN: Any weight gain?",
+          "source_line": 8,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "bmi",
+          "entity_type": "vitals",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "ultrasound",
+          "entity_type": "procedures",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        }
+      ],
+      "statistics": {
+        "total_entities": 20,
+        "entities_attributed": 10,
+        "entities_not_attributed": 10,
+        "hallucination_count": 10,
+        "hallucination_rate": 0.5,
+        "attribution_coverage": 0.5,
+        "average_confidence": 0.475,
+        "quality_score": "low"
+      }
+    },
+    {
+      "conversation_id": "C1ymAgLDI2nF",
+      "sample_name": "Shortness Of Breath - Progress Note",
+      "category": "COMPLEX",
+      "complexity_score": 90.8,
+      "description": "Inpatient progress note for hospitalized patient with decompensated heart failure and COPD.",
+      "conversation": "CLINICIAN: Good morning. How are you feeling compared to yesterday?\nPATIENT: Still short of breath, but maybe slightly better. I slept a little.\nCLINICIAN: How much fluid came off overnight with the IV Lasix?\nPATIENT: The nurse said about 1.5 liters.\nCLINICIAN: Any chest pain? Fever?\nPATIENT: No chest pain. No fever since yesterday.\nCLINICIAN: You mentioned last night your legs feel less heavy?\nPATIENT: Yes, the swelling is a little better in my ankles.\nCLINICIAN: Your BNP yesterday was 2400. Troponin was negative. Echo showed EF of 25%.\nPATIENT: That sounds serious. Is my heart getting weaker?\nCLINICIAN: Your EF is quite reduced. We're also managing your COPD and diabetes.\nPATIENT: I'm on a lot of medications. Furosemide, carvedilol, insulin, tiotropium, albuterol.\nCLINICIAN: Your oxygen saturation overnight dropped to 88% a few times. We may need to adjust your CPAP settings.\nPATIENT: What happens if it doesn't improve?\nCLINICIAN: We'll discuss advanced therapies if needed. For now let's focus on getting you stable.\nPATIENT: Okay doctor.",
+      "soap_note": "SUBJECTIVE:\nInpatient progress note. Patient reports mild subjective improvement in dyspnea compared to yesterday. Urine output approximately 1.5 liters overnight with IV furosemide therapy. Bilateral lower extremity edema improving per patient report. Denies chest pain and fever since yesterday. Sleep slightly improved. Current medications: furosemide IV, carvedilol, insulin, tiotropium, albuterol. Active comorbidities include decompensated heart failure, COPD, and diabetes mellitus.\n\nOBJECTIVE:\nOvernight oxygen saturation dropped to 88% on multiple occasions \u2014 possible CPAP non-adherence or need for setting adjustment. BNP 2400 (prior day). Troponin negative. Echocardiogram demonstrates severely reduced ejection fraction of 25%. Bilateral lower extremity edema improving but persistent. Vital signs not fully documented in this note. Daily weight not recorded. Repeat BMP and BNP not yet resulted.\n\nASSESSMENT:\nDecompensated systolic heart failure (EF 25%) with partial response to IV diuresis \u2014 1.5L urine output overnight with mild symptomatic improvement and edema reduction. Nocturnal hypoxemia with O2 saturation 88% warrants CPAP optimization and consideration of supplemental oxygen titration. BNP remains significantly elevated. COPD co-management ongoing with bronchodilator therapy. Diabetes managed with insulin. Volume status improving but not yet at euvolemia.\n\nPLAN:\nContinue IV furosemide \u2014 reassess dose based on today's urine output and clinical examination. Daily weight and strict intake-output monitoring. Repeat BMP to assess electrolytes and renal function given diuresis. Repeat BNP in 48 hours to trend response. CPAP settings review \u2014 respiratory therapy consultation for titration; consider supplemental O2 if nocturnal hypoxemia persists. Continue carvedilol at current dose \u2014 hold if hemodynamics worsen. Continue tiotropium and albuterol for COPD. Insulin regimen adjusted per glucose logs. If EF does not improve, cardiology to discuss advanced heart failure therapies including ICD, CRT, or transplant evaluation. Cardiology and pulmonology active on case.",
+      "attributions": [
+        {
+          "soap_text": "diabetes",
+          "entity_type": "diagnoses",
+          "source_text": "CLINICIAN: Your EF is quite reduced. We're also managing your COPD and diabetes.",
+          "source_line": 10,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "copd",
+          "entity_type": "diagnoses",
+          "source_text": "CLINICIAN: Your EF is quite reduced. We're also managing your COPD and diabetes.",
+          "source_line": 10,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "heart failure",
+          "entity_type": "diagnoses",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "renal",
+          "entity_type": "diagnoses",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "pain",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Any chest pain? Fever?",
+          "source_line": 4,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "fever",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Any chest pain? Fever?",
+          "source_line": 4,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "dyspnea",
+          "entity_type": "symptoms",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "chest pain",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Any chest pain? Fever?",
+          "source_line": 4,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "insulin",
+          "entity_type": "medications",
+          "source_text": "PATIENT: I'm on a lot of medications. Furosemide, carvedilol, insulin, tiotropium, albuterol.",
+          "source_line": 11,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "rr",
+          "entity_type": "vitals",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "oxygen saturation",
+          "entity_type": "vitals",
+          "source_text": "CLINICIAN: Your oxygen saturation overnight dropped to 88% a few times. We may need to adjust your CPAP settings.",
+          "source_line": 12,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "o2 sat",
+          "entity_type": "vitals",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "weight",
+          "entity_type": "vitals",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "transplant",
+          "entity_type": "procedures",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "stent",
+          "entity_type": "procedures",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        }
+      ],
+      "statistics": {
+        "total_entities": 15,
+        "entities_attributed": 7,
+        "entities_not_attributed": 8,
+        "hallucination_count": 8,
+        "hallucination_rate": 0.5333,
+        "attribution_coverage": 0.4667,
+        "average_confidence": 0.4433,
+        "quality_score": "low"
+      }
+    },
+    {
+      "conversation_id": "TCMSkaDOazcc",
+      "sample_name": "Pneumonia - Discharge Summary",
+      "category": "COMPLEX",
+      "complexity_score": 96.4,
+      "description": "Discharge summary for hospitalized patient with severe pneumonia and multiple comorbidities.",
+      "conversation": "CLINICIAN: Let's review your hospital course before discharge. You came in with severe pneumonia.\nPATIENT: Yes, I couldn't breathe and had a high fever.\nCLINICIAN: Your chest X-ray showed consolidation in the right lower lobe. We started IV antibiotics.\nPATIENT: The breathing got better after a few days.\nCLINICIAN: Your cultures grew Streptococcus pneumoniae. We de-escalated to oral amoxicillin.\nPATIENT: My diabetes was hard to control while I was sick.\nCLINICIAN: Yes, your blood sugars were running high \u2014 we used an insulin drip initially.\nPATIENT: And my kidneys?\nCLINICIAN: You had acute kidney injury likely from the infection and dehydration. Creatinine peaked at 2.1 but came down to 1.4 at discharge.\nPATIENT: What about my heart? The doctors were concerned.\nCLINICIAN: You had atrial fibrillation during your stay \u2014 likely stress-induced. We started you on metoprolol and your heart rate is controlled.\nPATIENT: I also have COPD. Was that affected?\nCLINICIAN: Your COPD did flare during admission. We gave you steroids and nebulizers. You're going home on a prednisone taper.\nPATIENT: That's a lot to manage at home.\nCLINICIAN: We'll send you home with close follow-up. Continue amoxicillin, metoprolol, prednisone taper, insulin, and your inhalers.",
+      "soap_note": "SUBJECTIVE:\nDischarge summary. Patient presented with severe community-acquired pneumonia with chief complaints of dyspnea and high fever. Hospital course notable for right lower lobe consolidation on chest X-ray, positive blood cultures growing Streptococcus pneumoniae, hyperglycemia requiring insulin drip with background diabetes mellitus, acute kidney injury with creatinine peak of 2.1 with partial recovery to 1.4 at discharge, new-onset atrial fibrillation attributed to physiologic stress, and COPD exacerbation managed with systemic corticosteroids and bronchodilators. Clinical improvement achieved with antibiotic de-escalation to oral amoxicillin.\n\nOBJECTIVE:\nChest X-ray: right lower lobe consolidation on admission. Blood cultures: Streptococcus pneumoniae isolated. Creatinine peak 2.1, discharge value 1.4. Atrial fibrillation identified during admission \u2014 rate controlled with metoprolol at discharge. Blood glucose elevated during admission requiring insulin drip \u2014 improved with antibiotic therapy. COPD exacerbation treated with systemic steroids and nebulized bronchodilators. Discharge vital signs not documented in this summary.\n\nASSESSMENT:\nStreptococcal community-acquired pneumonia with multi-system complications during hospitalization: acute kidney injury (resolved partially), new atrial fibrillation (rate controlled), COPD exacerbation (improving on steroid taper), and diabetic hyperglycemia (improved). Patient clinically improved and meeting discharge criteria with creatinine trending down and respiratory status stable.\n\nPLAN:\nDischarge medications: amoxicillin to complete antibiotic course, metoprolol for atrial fibrillation rate control, prednisone taper over 5 days for COPD, insulin regimen adjusted for home use, home inhalers resumed. Follow-up: primary care in 1 week, pulmonology for COPD management, cardiology for new atrial fibrillation (anticoagulation discussion pending), nephrology referral if creatinine does not continue to improve. Repeat chest X-ray in 6-8 weeks to confirm pneumonia resolution. Pneumococcal vaccination review \u2014 administer if not current. Patient and caregiver education on medication schedule, activity restrictions, and return precautions.",
+      "attributions": [
+        {
+          "soap_text": "diabetes",
+          "entity_type": "diagnoses",
+          "source_text": "PATIENT: My diabetes was hard to control while I was sick.",
+          "source_line": 5,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "pneumonia",
+          "entity_type": "diagnoses",
+          "source_text": "CLINICIAN: Let's review your hospital course before discharge. You came in with severe pneumonia.",
+          "source_line": 0,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "copd",
+          "entity_type": "diagnoses",
+          "source_text": "PATIENT: I also have COPD. Was that affected?",
+          "source_line": 11,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "fever",
+          "entity_type": "symptoms",
+          "source_text": "PATIENT: Yes, I couldn't breathe and had a high fever.",
+          "source_line": 1,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "dyspnea",
+          "entity_type": "symptoms",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "discharge",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Let's review your hospital course before discharge. You came in with severe pneumonia.",
+          "source_line": 0,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "insulin",
+          "entity_type": "medications",
+          "source_text": "CLINICIAN: Yes, your blood sugars were running high \u2014 we used an insulin drip initially.",
+          "source_line": 6,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "amoxicillin",
+          "entity_type": "medications",
+          "source_text": "CLINICIAN: Your cultures grew Streptococcus pneumoniae. We de-escalated to oral amoxicillin.",
+          "source_line": 4,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "metoprolol",
+          "entity_type": "medications",
+          "source_text": "CLINICIAN: You had atrial fibrillation during your stay \u2014 likely stress-induced. We started you on metoprolol and your heart rate is controlled.",
+          "source_line": 10,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "antibiotic",
+          "entity_type": "medications",
+          "source_text": "CLINICIAN: Your chest X-ray showed consolidation in the right lower lobe. We started IV antibiotics.",
+          "source_line": 2,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "steroid",
+          "entity_type": "medications",
+          "source_text": "CLINICIAN: Your COPD did flare during admission. We gave you steroids and nebulizers. You're going home on a prednisone taper.",
+          "source_line": 12,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "hr",
+          "entity_type": "vitals",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "rr",
+          "entity_type": "vitals",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "x-ray",
+          "entity_type": "procedures",
+          "source_text": "CLINICIAN: Your chest X-ray showed consolidation in the right lower lobe. We started IV antibiotics.",
+          "source_line": 2,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        }
+      ],
+      "statistics": {
+        "total_entities": 14,
+        "entities_attributed": 11,
+        "entities_not_attributed": 3,
+        "hallucination_count": 3,
+        "hallucination_rate": 0.2143,
+        "attribution_coverage": 0.7857,
+        "average_confidence": 0.7464,
+        "quality_score": "medium"
+      }
+    },
+    {
+      "conversation_id": "qbvbY8tgvuDW",
+      "sample_name": "Not Feeling Well - ER Visit",
+      "category": "COMPLEX",
+      "complexity_score": 100,
+      "description": "ER visit with vague multi-system complaints and extensive workup in elderly patient.",
+      "conversation": "CLINICIAN: What brings you to the ER today?\nPATIENT: I just don't feel well. Everything feels off. I'm 78 years old and something isn't right.\nCLINICIAN: Can you be more specific? Any pain, fever, trouble breathing?\nPATIENT: Some nausea. Very fatigued. A little confused \u2014 my daughter noticed.\nCLINICIAN: How long?\nPATIENT: A few days of not feeling right. The confusion is new today.\nCLINICIAN: Any falls or head injury?\nPATIENT: No falls. No injury.\nCLINICIAN: What medical conditions do you have?\nPATIENT: Heart failure, diabetes, kidney disease, hypertension, atrial fibrillation. I'm on warfarin, insulin, metformin, lisinopril, and digoxin.\nCLINICIAN: Any recent medication changes or missed doses?\nPATIENT: My daughter thinks I missed a few doses of my medications.\nCLINICIAN: Let me examine you and we'll get some urgent labs.\n[Examination and labs performed]\nCLINICIAN: Your INR is 5.8 \u2014 your blood is too thin. Digoxin level is elevated at 2.8. Sodium is low at 128. These are all contributing to how you feel.\nPATIENT: That sounds serious.\nCLINICIAN: Yes, we need to admit you and address these abnormalities carefully.",
+      "soap_note": "SUBJECTIVE:\nA 78-year-old patient presents to the emergency department with several days of generalized malaise and acute-onset confusion noted by daughter on day of presentation. Associated nausea and severe fatigue. Denies falls, head trauma, focal neurological complaints, chest pain, and dyspnea. Significant past medical history: congestive heart failure, diabetes mellitus, chronic kidney disease, hypertension, and atrial fibrillation. Current medications: warfarin, insulin, metformin, lisinopril, and digoxin. Daughter reports probable missed medication doses over recent days.\n\nOBJECTIVE:\nCritical laboratory values: INR 5.8 (supratherapeutic \u2014 warfarin toxicity), digoxin level 2.8 ng/mL (elevated \u2014 digoxin toxicity), serum sodium 128 mEq/L (hyponatremia). Additional laboratory and vital sign findings not detailed in this note. Mental status examination reveals acute confusion confirmed by collateral history from daughter. Physical examination not fully documented.\n\nASSESSMENT:\nMulti-factorial acute presentation in a complex elderly patient with polypharmacy: supratherapeutic anticoagulation (INR 5.8) with bleeding risk, digoxin toxicity (level 2.8) likely contributing to nausea, fatigue, and confusion, and hyponatremia (sodium 128) contributing to altered mental status. Probable medication non-adherence and/or altered drug clearance in the setting of chronic kidney disease as precipitating factors. Each abnormality requires careful correction given the patient's multiple comorbidities and drug interactions.\n\nPLAN:\nHospital admission to monitored bed. Warfarin management: hold warfarin, consider vitamin K administration based on bleeding risk assessment; recheck INR in 12-24 hours. Digoxin toxicity: hold digoxin, continuous cardiac monitoring for digoxin-related arrhythmias, digoxin-specific antibody fragments (Digibind) if hemodynamic instability or life-threatening arrhythmia. Hyponatremia: determine etiology (SIADH vs. heart failure vs. diuretic effect), cautious sodium correction to avoid osmotic demyelination. Renal function monitoring given CKD and held nephrotoxic medications. Insulin dose adjustment during acute illness. Medication reconciliation and patient/caregiver education on medication adherence. Social work involvement for medication management support at home.",
+      "attributions": [
+        {
+          "soap_text": "diabetes",
+          "entity_type": "diagnoses",
+          "source_text": "PATIENT: Heart failure, diabetes, kidney disease, hypertension, atrial fibrillation. I'm on warfarin, insulin, metformin, lisinopril, and digoxin.",
+          "source_line": 9,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "hypertension",
+          "entity_type": "diagnoses",
+          "source_text": "PATIENT: Heart failure, diabetes, kidney disease, hypertension, atrial fibrillation. I'm on warfarin, insulin, metformin, lisinopril, and digoxin.",
+          "source_line": 9,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "arrhythmia",
+          "entity_type": "diagnoses",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "heart failure",
+          "entity_type": "diagnoses",
+          "source_text": "PATIENT: Heart failure, diabetes, kidney disease, hypertension, atrial fibrillation. I'm on warfarin, insulin, metformin, lisinopril, and digoxin.",
+          "source_line": 9,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "kidney disease",
+          "entity_type": "diagnoses",
+          "source_text": "PATIENT: Heart failure, diabetes, kidney disease, hypertension, atrial fibrillation. I'm on warfarin, insulin, metformin, lisinopril, and digoxin.",
+          "source_line": 9,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "renal",
+          "entity_type": "diagnoses",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "pain",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Can you be more specific? Any pain, fever, trouble breathing?",
+          "source_line": 2,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "dyspnea",
+          "entity_type": "symptoms",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "nausea",
+          "entity_type": "symptoms",
+          "source_text": "PATIENT: Some nausea. Very fatigued. A little confused \u2014 my daughter noticed.",
+          "source_line": 3,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "fatigue",
+          "entity_type": "symptoms",
+          "source_text": "PATIENT: Some nausea. Very fatigued. A little confused \u2014 my daughter noticed.",
+          "source_line": 3,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "chest pain",
+          "entity_type": "symptoms",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "bleeding",
+          "entity_type": "symptoms",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "confusion",
+          "entity_type": "symptoms",
+          "source_text": "PATIENT: A few days of not feeling right. The confusion is new today.",
+          "source_line": 5,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "metformin",
+          "entity_type": "medications",
+          "source_text": "PATIENT: Heart failure, diabetes, kidney disease, hypertension, atrial fibrillation. I'm on warfarin, insulin, metformin, lisinopril, and digoxin.",
+          "source_line": 9,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "insulin",
+          "entity_type": "medications",
+          "source_text": "PATIENT: Heart failure, diabetes, kidney disease, hypertension, atrial fibrillation. I'm on warfarin, insulin, metformin, lisinopril, and digoxin.",
+          "source_line": 9,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "lisinopril",
+          "entity_type": "medications",
+          "source_text": "PATIENT: Heart failure, diabetes, kidney disease, hypertension, atrial fibrillation. I'm on warfarin, insulin, metformin, lisinopril, and digoxin.",
+          "source_line": 9,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "warfarin",
+          "entity_type": "medications",
+          "source_text": "PATIENT: Heart failure, diabetes, kidney disease, hypertension, atrial fibrillation. I'm on warfarin, insulin, metformin, lisinopril, and digoxin.",
+          "source_line": 9,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "vitamin",
+          "entity_type": "medications",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "hr",
+          "entity_type": "vitals",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "rr",
+          "entity_type": "vitals",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        }
+      ],
+      "statistics": {
+        "total_entities": 20,
+        "entities_attributed": 12,
+        "entities_not_attributed": 8,
+        "hallucination_count": 8,
+        "hallucination_rate": 0.4,
+        "attribution_coverage": 0.6,
+        "average_confidence": 0.57,
+        "quality_score": "low"
+      }
+    },
+    {
+      "conversation_id": "HMwd9FKxndyx",
+      "sample_name": "Normal ROS Template",
+      "category": "COMPLEX",
+      "complexity_score": 100,
+      "description": "Exhaustive review of systems template with every organ system documented.",
+      "conversation": "CLINICIAN: I'm going to do a complete head-to-toe review of systems. Please answer yes or no and describe if yes.\nPATIENT: Okay, ready.\nCLINICIAN: Constitutional: fever, chills, weight changes, fatigue, night sweats?\nPATIENT: Fatigue yes. Night sweats yes, for 2 months. No fever, no weight change, no chills.\nCLINICIAN: Eyes: changes in vision, double vision, eye pain, redness?\nPATIENT: Blurry vision sometimes. No double vision or pain.\nCLINICIAN: Ears: hearing loss, ringing, ear pain, discharge?\nPATIENT: Some ringing in my right ear.\nCLINICIAN: Nose and throat: congestion, nosebleeds, sore throat, difficulty swallowing?\nPATIENT: Sinus congestion. Occasional nosebleeds. No sore throat or swallowing problems.\nCLINICIAN: Cardiovascular: chest pain, palpitations, swelling, shortness of breath at rest?\nPATIENT: Palpitations sometimes. Occasional ankle swelling. No chest pain or rest dyspnea.\nCLINICIAN: Respiratory: cough, wheeze, shortness of breath with exertion, hemoptysis?\nPATIENT: Cough in the morning. Shortness of breath walking uphill. No blood.\nCLINICIAN: Gastrointestinal: nausea, vomiting, diarrhea, constipation, blood in stool, heartburn?\nPATIENT: Heartburn. Diarrhea a few times per week. No blood, no vomiting.\nCLINICIAN: Genitourinary: frequency, urgency, burning, blood in urine?\nPATIENT: Frequency and some urgency. No pain or blood.\nCLINICIAN: Musculoskeletal: joint pain, muscle weakness, back pain, stiffness?\nPATIENT: Lower back pain. Both knee pain. Morning stiffness about 30 minutes.\nCLINICIAN: Neurological: headaches, dizziness, weakness, numbness, seizures, memory?\nPATIENT: Headaches twice weekly. Dizziness when standing. Numbness in feet. Memory is worse.\nCLINICIAN: Psychiatric: depression, anxiety, sleep problems, mood changes?\nPATIENT: Mild depression. Anxious often. Sleep disrupted \u2014 waking at night.\nCLINICIAN: Endocrine: heat or cold intolerance, excessive thirst, increased urination?\nPATIENT: Cold intolerance. Polydipsia and polyuria.\nCLINICIAN: Hematologic: bleeding, bruising, lymph node swelling?\nPATIENT: Easy bruising. A lymph node in my neck.\nCLINICIAN: Skin: rashes, changes, new lesions?\nPATIENT: Dry skin and a new mole on my back my wife noticed.",
+      "soap_note": "SUBJECTIVE:\nComprehensive review of systems with multi-system involvement documented. Constitutional: fatigue and night sweats for 2 months; denies fever, chills, weight change. Ocular: intermittent blurry vision; denies diplopia or ocular pain. Auditory: right-sided tinnitus. Upper respiratory: chronic sinus congestion, episodic epistaxis; denies dysphagia. Cardiovascular: palpitations, intermittent bilateral ankle edema; denies chest pain or rest dyspnea. Pulmonary: morning cough, exertional dyspnea on inclines; denies hemoptysis or wheezing. Gastrointestinal: gastroesophageal reflux, intermittent diarrhea several times weekly; denies hematochezia or emesis. Genitourinary: urinary frequency and urgency without dysuria or hematuria. Musculoskeletal: lower back pain, bilateral knee pain, morning stiffness approximately 30 minutes. Neurological: twice-weekly headaches, orthostatic dizziness, bilateral foot paresthesias, cognitive decline. Psychiatric: mild depression, generalized anxiety, sleep fragmentation. Endocrine: cold intolerance, polydipsia, polyuria. Hematologic: easy bruising, cervical lymphadenopathy. Dermatologic: xerosis, new pigmented back lesion noted by spouse.\n\nOBJECTIVE:\nFull physical examination not documented in this review of systems encounter. Vital signs not recorded. Targeted examination findings not detailed.\n\nASSESSMENT:\nExtensive multi-system symptom inventory requiring systematic diagnostic evaluation. High-priority concerns: polydipsia/polyuria/cold intolerance (diabetes mellitus and hypothyroidism), bilateral foot paresthesias and fatigue (peripheral neuropathy), new skin lesion (melanoma must be excluded), cervical lymphadenopathy with night sweats (lymphoma workup required), easy bruising (coagulopathy or thrombocytopenia), orthostatic dizziness (autonomic dysfunction vs. dehydration), morning stiffness with polyarthralgia (inflammatory arthropathy).\n\nPLAN:\nPriority laboratory workup: CBC with differential, CMP, HbA1c, TSH, lipid panel, coagulation studies (PT/INR, PTT), ANA, rheumatoid factor, anti-CCP, LDH, uric acid. Imaging: CT neck/chest/abdomen for lymphadenopathy evaluation. Dermatology referral for new back lesion \u2014 excisional biopsy likely indicated. Neurology referral for peripheral neuropathy evaluation including EMG/nerve conduction studies. Gastroenterology consideration for persistent diarrhea. Ophthalmology for blurry vision. Psychiatry or primary care management of depression and anxiety. Structured follow-up plan with primary care coordination across all subspecialties.",
+      "attributions": [
+        {
+          "soap_text": "diabetes",
+          "entity_type": "diagnoses",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "lymphoma",
+          "entity_type": "diagnoses",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "thyroid",
+          "entity_type": "diagnoses",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "hypothyroid",
+          "entity_type": "diagnoses",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "flu",
+          "entity_type": "diagnoses",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "depression",
+          "entity_type": "diagnoses",
+          "source_text": "CLINICIAN: Psychiatric: depression, anxiety, sleep problems, mood changes?",
+          "source_line": 22,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "anxiety",
+          "entity_type": "diagnoses",
+          "source_text": "CLINICIAN: Psychiatric: depression, anxiety, sleep problems, mood changes?",
+          "source_line": 22,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "pain",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Eyes: changes in vision, double vision, eye pain, redness?",
+          "source_line": 4,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "ache",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Neurological: headaches, dizziness, weakness, numbness, seizures, memory?",
+          "source_line": 20,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "fever",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Constitutional: fever, chills, weight changes, fatigue, night sweats?",
+          "source_line": 2,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "cough",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Respiratory: cough, wheeze, shortness of breath with exertion, hemoptysis?",
+          "source_line": 12,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "dyspnea",
+          "entity_type": "symptoms",
+          "source_text": "PATIENT: Palpitations sometimes. Occasional ankle swelling. No chest pain or rest dyspnea.",
+          "source_line": 11,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "diarrhea",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Gastrointestinal: nausea, vomiting, diarrhea, constipation, blood in stool, heartburn?",
+          "source_line": 14,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "fatigue",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Constitutional: fever, chills, weight changes, fatigue, night sweats?",
+          "source_line": 2,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "dizziness",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Neurological: headaches, dizziness, weakness, numbness, seizures, memory?",
+          "source_line": 20,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "headache",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Neurological: headaches, dizziness, weakness, numbness, seizures, memory?",
+          "source_line": 20,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "chest pain",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Cardiovascular: chest pain, palpitations, swelling, shortness of breath at rest?",
+          "source_line": 10,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "bruising",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Hematologic: bleeding, bruising, lymph node swelling?",
+          "source_line": 26,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "wheezing",
+          "entity_type": "symptoms",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "congestion",
+          "entity_type": "symptoms",
+          "source_text": "CLINICIAN: Nose and throat: congestion, nosebleeds, sore throat, difficulty swallowing?",
+          "source_line": 8,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "hr",
+          "entity_type": "vitals",
+          "source_text": "CLINICIAN: Nose and throat: congestion, nosebleeds, sore throat, difficulty swallowing?",
+          "source_line": 8,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "rr",
+          "entity_type": "vitals",
+          "source_text": "PATIENT: Blurry vision sometimes. No double vision or pain.",
+          "source_line": 5,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "weight",
+          "entity_type": "vitals",
+          "source_text": "CLINICIAN: Constitutional: fever, chills, weight changes, fatigue, night sweats?",
+          "source_line": 2,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "biopsy",
+          "entity_type": "procedures",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "stent",
+          "entity_type": "procedures",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        }
+      ],
+      "statistics": {
+        "total_entities": 25,
+        "entities_attributed": 17,
+        "entities_not_attributed": 8,
+        "hallucination_count": 8,
+        "hallucination_rate": 0.32,
+        "attribution_coverage": 0.68,
+        "average_confidence": 0.646,
+        "quality_score": "low"
+      }
+    },
+    {
+      "conversation_id": "0X6AyPbbHl7k",
+      "sample_name": "Sleepiness - Consult",
+      "category": "RARE/EDGE",
+      "complexity_score": 100,
+      "description": "Neurology consult for excessive daytime sleepiness with suspected narcolepsy vs. idiopathic hypersomnia.",
+      "conversation": "CLINICIAN: You've been referred for excessive daytime sleepiness. Tell me about it.\nPATIENT: I fall asleep everywhere. At work, at dinner, while talking to people. I can't control it.\nCLINICIAN: Do you fall asleep suddenly \u2014 like your muscles give out?\nPATIENT: Yes! Sometimes when I laugh or get excited my knees buckle. I dropped a cup last week.\nCLINICIAN: That's called cataplexy. Very important. Do you have sleep paralysis \u2014 wake up and can't move?\nPATIENT: Yes, that happens. Very scary.\nCLINICIAN: Hallucinations when falling asleep or waking up?\nPATIENT: Yes \u2014 I see and hear things right before falling asleep. My doctor thought I was psychotic.\nCLINICIAN: How long at night do you sleep?\nPATIENT: 10 to 11 hours and still exhausted.\nCLINICIAN: Any other medical conditions?\nPATIENT: Thyroid problem \u2014 hypothyroidism. On levothyroxine. Also depression \u2014 on sertraline.\nCLINICIAN: Any family history of similar symptoms?\nPATIENT: My uncle had something similar \u2014 was never diagnosed.\nCLINICIAN: This presentation is very consistent with narcolepsy type 1. The cataplexy is the key finding. We need a sleep study followed by an MSLT.\nPATIENT: What is that?\nCLINICIAN: A multiple sleep latency test \u2014 measures how fast you fall asleep during the day. It will confirm the diagnosis.\nPATIENT: Will I need medication forever?\nCLINICIAN: Likely yes, but many patients do very well on treatment.",
+      "soap_note": "SUBJECTIVE:\nPatient presents to neurology for evaluation of severe excessive daytime sleepiness with inability to maintain wakefulness in social and occupational settings including at work and during conversations. Reports sudden loss of muscle tone triggered by emotional stimuli (laughing, excitement) with knee buckling and object dropping \u2014 consistent with cataplexy. Additional narcolepsy symptom tetrad features: sleep paralysis on waking (unable to move, frightening), and hypnagogic/hypnopompic hallucinations (visual and auditory) preceding sleep onset \u2014 previously misattributed to psychosis. Despite 10-11 hours of nightly sleep, non-restorative and exhaustion persists. Known comorbidities: hypothyroidism on levothyroxine, depression on sertraline. Family history positive for undiagnosed similar condition in paternal uncle.\n\nOBJECTIVE:\nNeurological examination not detailed in this note. Epworth Sleepiness Scale score not documented. Thyroid function tests not available at this visit. Current medications: levothyroxine, sertraline. Polysomnography and MSLT not yet performed \u2014 ordered at this visit.\n\nASSESSMENT:\nClinical presentation highly consistent with Narcolepsy Type 1 (narcolepsy with cataplexy) based on the presence of all four classic tetrad features: excessive daytime sleepiness, cataplexy with emotional triggers, sleep paralysis, and hypnagogic/hypnopompic hallucinations. Family history adds further support. Hypothyroidism as contributing cause of fatigue must be confirmed as adequately treated. Sertraline may modestly suppress REM and cataplexy symptoms \u2014 medication interaction consideration. Prior psychiatric misattribution of hallucinations highlights diagnostic complexity of narcolepsy.\n\nPLAN:\nOvernight polysomnography followed by multiple sleep latency test (MSLT) to confirm narcolepsy diagnosis \u2014 REM sleep latency under 15 minutes on PSG and mean sleep latency under 8 minutes with two or more sleep onset REM periods on MSLT expected. CSF hypocretin/orexin level measurement to be considered for definitive Type 1 confirmation. TSH to confirm adequate hypothyroid treatment. Anticipated pharmacotherapy: sodium oxybate (Xyrem) for cataplexy and nighttime sleep consolidation, modafinil or armodafinil for daytime alertness. Sertraline continuation discussed \u2014 may benefit cataplexy but interaction with planned medications to be reviewed. Patient counseled on driving restrictions until diagnosis confirmed and treatment stabilized. Occupational impact discussed. Follow-up in 2-4 weeks after sleep study completion.",
+      "attributions": [
+        {
+          "soap_text": "thyroid",
+          "entity_type": "diagnoses",
+          "source_text": "PATIENT: Thyroid problem \u2014 hypothyroidism. On levothyroxine. Also depression \u2014 on sertraline.",
+          "source_line": 11,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "hypothyroid",
+          "entity_type": "diagnoses",
+          "source_text": "PATIENT: Thyroid problem \u2014 hypothyroidism. On levothyroxine. Also depression \u2014 on sertraline.",
+          "source_line": 11,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "depression",
+          "entity_type": "diagnoses",
+          "source_text": "PATIENT: Thyroid problem \u2014 hypothyroidism. On levothyroxine. Also depression \u2014 on sertraline.",
+          "source_line": 11,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "fatigue",
+          "entity_type": "symptoms",
+          "source_text": null,
+          "source_line": null,
+          "confidence": 0.0,
+          "is_hallucination": true,
+          "match_method": "none"
+        },
+        {
+          "soap_text": "sertraline",
+          "entity_type": "medications",
+          "source_text": "PATIENT: Thyroid problem \u2014 hypothyroidism. On levothyroxine. Also depression \u2014 on sertraline.",
+          "source_line": 11,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "rr",
+          "entity_type": "vitals",
+          "source_text": "CLINICIAN: You've been referred for excessive daytime sleepiness. Tell me about it.",
+          "source_line": 0,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        },
+        {
+          "soap_text": "stent",
+          "entity_type": "procedures",
+          "source_text": "CLINICIAN: This presentation is very consistent with narcolepsy type 1. The cataplexy is the key finding. We need a sleep study followed by an MSLT.",
+          "source_line": 14,
+          "confidence": 0.95,
+          "is_hallucination": false,
+          "match_method": "exact"
+        }
+      ],
+      "statistics": {
+        "total_entities": 7,
+        "entities_attributed": 6,
+        "entities_not_attributed": 1,
+        "hallucination_count": 1,
+        "hallucination_rate": 0.1429,
+        "attribution_coverage": 0.8571,
+        "average_confidence": 0.8143,
+        "quality_score": "medium"
+      }
+    }
+  ]
+}
