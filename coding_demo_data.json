@@ -1,0 +1,2426 @@
+{
+  "cases": [
+    {
+      "encounter_id": "9917e9f0-753a-4673-da3f-ca0de161db03",
+      "label": "COVID-19 Isolation \u2014 Female 28, Inpatient (Anthem)",
+      "encounter": {
+        "encounter_class": "IMP",
+        "setting": "Inpatient",
+        "encounter_date": "2020-08-30",
+        "duration_hours": 336.9,
+        "patient_gender": "Female",
+        "patient_age": 28,
+        "reason": "Disease caused by severe acute respiratory syndrome coronavirus 2 (disorder)"
+      },
+      "suggestions": {
+        "icd10_suggestions": [
+          {
+            "code": "U07.1",
+            "description": "COVID-19",
+            "rationale": "Primary diagnosis based on encounter reason 'Disease caused by severe acute respiratory syndrome coronavirus 2'",
+            "confidence": "high",
+            "code_type": "primary"
+          },
+          {
+            "code": "J12.82",
+            "description": "Pneumonia due to coronavirus disease 2019",
+            "rationale": "COVID-19 related pneumonia documented as resolved condition during encounter",
+            "confidence": "high",
+            "code_type": "secondary"
+          },
+          {
+            "code": "R06.03",
+            "description": "Acute respiratory distress",
+            "rationale": "Respiratory distress documented as resolved finding, supported by low oxygen saturation (78.03%)",
+            "confidence": "high",
+            "code_type": "secondary"
+          },
+          {
+            "code": "R09.02",
+            "description": "Hypoxemia",
+            "rationale": "Hypoxemia documented as resolved, confirmed by arterial oxygen saturation of 78.03%",
+            "confidence": "high",
+            "code_type": "secondary"
+          },
+          {
+            "code": "I82.40",
+            "description": "Acute embolism and thrombosis of unspecified deep veins of lower extremity",
+            "rationale": "Acute deep venous thrombosis documented as resolved, treated with enoxaparin",
+            "confidence": "medium",
+            "code_type": "secondary"
+          }
+        ],
+        "cpt_suggestions": [
+          {
+            "code": "99223",
+            "description": "Initial hospital care, per day, for the evaluation and management of a patient",
+            "rationale": "Initial inpatient admission for COVID-19 with multiple complications requiring high complexity medical decision making",
+            "confidence": "high"
+          },
+          {
+            "code": "71045",
+            "description": "Radiologic examination, chest; single view",
+            "rationale": "Plain X-ray of chest procedure documented",
+            "confidence": "high"
+          },
+          {
+            "code": "94640",
+            "description": "Pressurized or nonpressurized inhalation treatment for acute airway obstruction",
+            "rationale": "Albuterol inhaler treatments administered multiple times for respiratory distress",
+            "confidence": "medium"
+          }
+        ],
+        "prior_auth_assessment": {
+          "required": false,
+          "reason": "COVID-19 hospitalization with respiratory complications typically covered as emergency/urgent care",
+          "supporting_codes": [
+            "U07.1",
+            "J12.82",
+            "R06.03"
+          ]
+        },
+        "medication_review_flag": {
+          "flagged": false,
+          "reason": "Only 4 medications documented, below 5-medication threshold, no high-risk drug classes identified",
+          "action": "Standard medication reconciliation workflow"
+        },
+        "coding_notes": [
+          "Consider additional daily inpatient E&M codes (99231-99233) for the 14-day length of stay",
+          "Prone positioning procedures may warrant additional CPT codes if performed as distinct therapeutic interventions",
+          "DVT location not specified - consider querying for more specific anatomical location for precise ICD-10 coding",
+          "Multiple oxygen administration sessions may support higher complexity E&M coding",
+          "Duration of 336.9 hours suggests approximately 14-day stay requiring subsequent hospital care codes"
+        ]
+      },
+      "evaluation": {
+        "encounter_id": "9917e9f0-753a-4673-da3f-ca0de161db03",
+        "icd10_evaluation": {
+          "suggested_count": 5,
+          "ground_truth_count": 4,
+          "concept_matches": 5,
+          "gt_conditions_matched": 4,
+          "concept_precision": 1.0,
+          "concept_recall": 1.0,
+          "match_details": [
+            {
+              "suggested_code": "U07.1",
+              "suggested_desc": "COVID-19",
+              "confidence": "high",
+              "code_type": "primary",
+              "concept_match": true
+            },
+            {
+              "suggested_code": "J12.82",
+              "suggested_desc": "Pneumonia due to coronavirus disease 2019",
+              "confidence": "high",
+              "code_type": "secondary",
+              "concept_match": true
+            },
+            {
+              "suggested_code": "R06.03",
+              "suggested_desc": "Acute respiratory distress",
+              "confidence": "high",
+              "code_type": "secondary",
+              "concept_match": true
+            },
+            {
+              "suggested_code": "R09.02",
+              "suggested_desc": "Hypoxemia",
+              "confidence": "high",
+              "code_type": "secondary",
+              "concept_match": true
+            },
+            {
+              "suggested_code": "I82.40",
+              "suggested_desc": "Acute embolism and thrombosis of unspecified deep veins of lower extremity",
+              "confidence": "medium",
+              "code_type": "secondary",
+              "concept_match": true
+            }
+          ]
+        },
+        "cpt_evaluation": {
+          "suggested_count": 3,
+          "suggested_codes": [
+            "99223",
+            "71045",
+            "94640"
+          ],
+          "note": "CPT exact match not possible against Synthea SNOMED procedure codes \u2014 manual clinical review required"
+        },
+        "ground_truth": {
+          "conditions": [
+            {
+              "code": "233604007",
+              "display": "Pneumonia (disorder)",
+              "clinical_status": "resolved"
+            },
+            {
+              "code": "389087006",
+              "display": "Hypoxemia (disorder)",
+              "clinical_status": "resolved"
+            },
+            {
+              "code": "271825005",
+              "display": "Respiratory distress (finding)",
+              "clinical_status": "resolved"
+            },
+            {
+              "code": "132281000119108",
+              "display": "Acute deep venous thrombosis (disorder)",
+              "clinical_status": "resolved"
+            }
+          ],
+          "procedures": [
+            {
+              "code": "371908008",
+              "display": "Oxygen administration by mask (procedure)"
+            },
+            {
+              "code": "399208008",
+              "display": "Plain X-ray of chest (procedure)"
+            },
+            {
+              "code": "431182000",
+              "display": "Placing subject in prone position (procedure)"
+            }
+          ]
+        }
+      },
+      "status": "success"
+    },
+    {
+      "encounter_id": "dcbb1003-d8e9-765a-3b63-31305c2a99fe",
+      "label": "COVID-19 Isolation \u2014 Inpatient (Medicaid)",
+      "encounter": {
+        "encounter_class": "IMP",
+        "setting": "Inpatient",
+        "encounter_date": "2021-05-03",
+        "duration_hours": 312.0,
+        "patient_gender": "Male",
+        "patient_age": 45,
+        "reason": "Disease caused by severe acute respiratory syndrome coronavirus 2 (disorder)"
+      },
+      "suggestions": {
+        "icd10_suggestions": [
+          {
+            "code": "U07.1",
+            "description": "COVID-19",
+            "rationale": "Primary diagnosis based on encounter reason 'Disease caused by severe acute respiratory syndrome coronavirus 2'",
+            "confidence": "high",
+            "code_type": "primary"
+          },
+          {
+            "code": "J12.82",
+            "description": "Pneumonia due to coronavirus disease 2019",
+            "rationale": "COVID-19 pneumonia documented as resolved diagnosis during encounter",
+            "confidence": "high",
+            "code_type": "secondary"
+          },
+          {
+            "code": "R06.03",
+            "description": "Acute respiratory distress",
+            "rationale": "Respiratory distress documented as resolved finding, supported by elevated respiratory rate of 35.32",
+            "confidence": "high",
+            "code_type": "secondary"
+          },
+          {
+            "code": "R09.02",
+            "description": "Hypoxemia",
+            "rationale": "Hypoxemia documented as resolved, supported by oxygen saturation of 84.95%",
+            "confidence": "high",
+            "code_type": "secondary"
+          }
+        ],
+        "cpt_suggestions": [
+          {
+            "code": "99223",
+            "description": "Initial hospital care, per day, for the evaluation and management of a patient",
+            "rationale": "Initial inpatient admission for COVID-19 with high complexity due to respiratory complications requiring oxygen therapy and prone positioning",
+            "confidence": "high"
+          },
+          {
+            "code": "99233",
+            "description": "Subsequent hospital care, per day, for the evaluation and management of a patient",
+            "rationale": "Multiple subsequent hospital care days during 216.7 hour stay (approximately 9 days)",
+            "confidence": "high"
+          },
+          {
+            "code": "71045",
+            "description": "Radiologic examination, chest; single view",
+            "rationale": "Plain X-ray of chest procedure documented",
+            "confidence": "high"
+          }
+        ],
+        "prior_auth_assessment": {
+          "required": true,
+          "reason": "COVID-19 hospitalization with respiratory complications requiring oxygen therapy, prone positioning, and extended inpatient stay",
+          "supporting_codes": [
+            "U07.1",
+            "J12.82",
+            "R06.03",
+            "R09.02"
+          ]
+        },
+        "medication_review_flag": {
+          "flagged": false,
+          "reason": "Only 3 medications documented (acetaminophen, enoxaparin, hydroxychloroquine) - below 5 medication threshold",
+          "action": "Standard medication reconciliation workflow"
+        },
+        "coding_notes": [
+          "COVID-19 (U07.1) should be sequenced as primary diagnosis per ICD-10-CM guidelines",
+          "J12.82 (COVID-19 pneumonia) is more specific than general pneumonia code",
+          "Multiple units of oxygen administration and prone positioning suggest intensive monitoring - consider critical care codes if >30 minutes of critical care time documented",
+          "Leukopenia (3.0256 10*3/uL) and lymphopenia (8.4063%) present but not documented as diagnoses - query provider for clinical significance",
+          "Duration of 216.7 hours suggests approximately 9-day stay - ensure appropriate number of subsequent hospital care codes",
+          "Hydroxychloroquine use suggests this encounter occurred during early COVID-19 pandemic when this was experimental treatment"
+        ]
+      },
+      "evaluation": {
+        "encounter_id": "dcbb1003-d8e9-765a-3b63-31305c2a99fe",
+        "icd10_evaluation": {
+          "suggested_count": 4,
+          "ground_truth_count": 3,
+          "concept_matches": 4,
+          "gt_conditions_matched": 3,
+          "concept_precision": 1.0,
+          "concept_recall": 1.0,
+          "match_details": [
+            {
+              "suggested_code": "U07.1",
+              "suggested_desc": "COVID-19",
+              "confidence": "high",
+              "code_type": "primary",
+              "concept_match": true
+            },
+            {
+              "suggested_code": "J12.82",
+              "suggested_desc": "Pneumonia due to coronavirus disease 2019",
+              "confidence": "high",
+              "code_type": "secondary",
+              "concept_match": true
+            },
+            {
+              "suggested_code": "R06.03",
+              "suggested_desc": "Acute respiratory distress",
+              "confidence": "high",
+              "code_type": "secondary",
+              "concept_match": true
+            },
+            {
+              "suggested_code": "R09.02",
+              "suggested_desc": "Hypoxemia",
+              "confidence": "high",
+              "code_type": "secondary",
+              "concept_match": true
+            }
+          ]
+        },
+        "cpt_evaluation": {
+          "suggested_count": 3,
+          "suggested_codes": [
+            "99223",
+            "99233",
+            "71045"
+          ],
+          "note": "CPT exact match not possible against Synthea SNOMED procedure codes \u2014 manual clinical review required"
+        },
+        "ground_truth": {
+          "conditions": [
+            {
+              "code": "233604007",
+              "display": "Pneumonia (disorder)",
+              "clinical_status": "resolved"
+            },
+            {
+              "code": "389087006",
+              "display": "Hypoxemia (disorder)",
+              "clinical_status": "resolved"
+            },
+            {
+              "code": "271825005",
+              "display": "Respiratory distress (finding)",
+              "clinical_status": "resolved"
+            }
+          ],
+          "procedures": [
+            {
+              "code": "371908008",
+              "display": "Oxygen administration by mask (procedure)"
+            },
+            {
+              "code": "399208008",
+              "display": "Plain X-ray of chest (procedure)"
+            },
+            {
+              "code": "431182000",
+              "display": "Placing subject in prone position (procedure)"
+            }
+          ]
+        }
+      },
+      "status": "success"
+    },
+    {
+      "encounter_id": "dc267ebd-eaef-eb60-8ac0-c09fc4083f30",
+      "label": "Renal Transplant \u2014 Inpatient (self-pay)",
+      "encounter": {
+        "encounter_class": "IMP",
+        "setting": "Inpatient",
+        "encounter_date": "1993-05-19",
+        "duration_hours": 323.9,
+        "patient_gender": "Male",
+        "patient_age": 52,
+        "reason": "Admission to surgical transplant department \u2014 kidney transplantation"
+      },
+      "suggestions": {
+        "icd10_suggestions": [
+          {
+            "code": "Z94.0",
+            "description": "Kidney transplant status",
+            "rationale": "Patient has history of renal transplant and is undergoing kidney transplantation procedure",
+            "confidence": "high",
+            "code_type": "primary"
+          },
+          {
+            "code": "N18.6",
+            "description": "End stage renal disease",
+            "rationale": "GFR of 5.7 mL/min indicates end-stage renal disease requiring transplantation",
+            "confidence": "high",
+            "code_type": "secondary"
+          },
+          {
+            "code": "Z51.11",
+            "description": "Encounter for antineoplastic chemotherapy",
+            "rationale": "Patient receiving immunosuppressive therapy (tacrolimus) as part of transplant protocol",
+            "confidence": "medium",
+            "code_type": "additional"
+          }
+        ],
+        "cpt_suggestions": [
+          {
+            "code": "50360",
+            "description": "Renal allotransplantation, implantation of graft; without recipient nephrectomy",
+            "rationale": "Primary procedure code for kidney transplantation performed during this encounter",
+            "confidence": "high"
+          },
+          {
+            "code": "99233",
+            "description": "Subsequent hospital care, per day, for the evaluation and management of a patient",
+            "rationale": "Daily inpatient management during 13+ day hospitalization for transplant care",
+            "confidence": "high"
+          },
+          {
+            "code": "80162",
+            "description": "Digoxin; total",
+            "rationale": "Laboratory monitoring of tacrolimus levels likely performed during transplant management",
+            "confidence": "medium"
+          }
+        ],
+        "prior_auth_assessment": {
+          "required": true,
+          "reason": "Kidney transplantation is a high-cost procedure requiring prior authorization. Patient has end-stage renal disease with GFR 5.7 mL/min justifying medical necessity",
+          "supporting_codes": [
+            "N18.6",
+            "Z94.0"
+          ]
+        },
+        "medication_review_flag": {
+          "flagged": true,
+          "reason": "Patient on tacrolimus immunosuppressive therapy which requires careful monitoring for drug interactions, nephrotoxicity, and therapeutic levels",
+          "action": "Pharmacist consultation recommended for immunosuppressive drug monitoring and patient education"
+        },
+        "coding_notes": [
+          "Duration of 323.9 hours suggests extended inpatient stay - consider multiple daily E&M codes if documented",
+          "Pretransplant evaluation procedure may warrant separate coding if performed as distinct service",
+          "Multiple tacrolimus formulations suggest complex dosing regimen requiring careful documentation",
+          "Elevated creatinine (2.9 mg/dL) post-transplant may indicate acute rejection or delayed graft function - additional diagnosis codes may be needed with more specific documentation",
+          "Consider Z codes for transplant complications if any adverse events documented"
+        ]
+      },
+      "evaluation": {
+        "encounter_id": "dc267ebd-eaef-eb60-8ac0-c09fc4083f30",
+        "icd10_evaluation": {
+          "suggested_count": 3,
+          "ground_truth_count": 1,
+          "concept_matches": 3,
+          "gt_conditions_matched": 1,
+          "concept_precision": 1.0,
+          "concept_recall": 1.0,
+          "match_details": [
+            {
+              "suggested_code": "Z94.0",
+              "suggested_desc": "Kidney transplant status",
+              "confidence": "high",
+              "code_type": "primary",
+              "concept_match": true
+            },
+            {
+              "suggested_code": "N18.6",
+              "suggested_desc": "End stage renal disease",
+              "confidence": "high",
+              "code_type": "secondary",
+              "concept_match": true
+            },
+            {
+              "suggested_code": "Z51.11",
+              "suggested_desc": "Encounter for antineoplastic chemotherapy",
+              "confidence": "medium",
+              "code_type": "additional",
+              "concept_match": true
+            }
+          ]
+        },
+        "cpt_evaluation": {
+          "suggested_count": 3,
+          "suggested_codes": [
+            "50360",
+            "99233",
+            "80162"
+          ],
+          "note": "CPT exact match not possible against Synthea SNOMED procedure codes \u2014 manual clinical review required"
+        },
+        "ground_truth": {
+          "conditions": [
+            {
+              "code": "161665007",
+              "display": "History of renal transplant (situation)",
+              "clinical_status": "active"
+            }
+          ],
+          "procedures": [
+            {
+              "code": "428830000",
+              "display": "Pretransplant evaluation of kidney recipient (procedure)"
+            },
+            {
+              "code": "70536003",
+              "display": "Transplant of kidney (procedure)"
+            },
+            {
+              "code": "711446003",
+              "display": "Transplantation of kidney regime (regime/therapy)"
+            }
+          ]
+        }
+      },
+      "status": "success"
+    },
+    {
+      "encounter_id": "78068a3a-2b8c-f9bc-ce77-abb09f0e9fee",
+      "label": "CABG History \u2014 Inpatient 1981 (self-pay)",
+      "encounter": {
+        "encounter_class": "IMP",
+        "setting": "Inpatient",
+        "encounter_date": "1981-07-25",
+        "duration_hours": 96.0,
+        "patient_gender": "Male",
+        "patient_age": 61,
+        "reason": "Coronary artery bypass grafting (procedure) \u2014 historical"
+      },
+      "suggestions": {
+        "icd10_suggestions": [
+          {
+            "code": "I25.10",
+            "description": "Atherosclerotic heart disease of native coronary artery without angina pectoris",
+            "rationale": "Primary diagnosis for CABG procedure - coronary artery disease requiring surgical intervention",
+            "confidence": "high",
+            "code_type": "primary"
+          },
+          {
+            "code": "Z95.1",
+            "description": "Presence of aortocoronary bypass graft",
+            "rationale": "Post-procedural status code for completed CABG",
+            "confidence": "high",
+            "code_type": "secondary"
+          },
+          {
+            "code": "Z87.891",
+            "description": "Personal history of nicotine dependence",
+            "rationale": "Common risk factor for CAD requiring CABG - should be documented if applicable",
+            "confidence": "medium",
+            "code_type": "additional"
+          }
+        ],
+        "cpt_suggestions": [
+          {
+            "code": "33533",
+            "description": "Coronary artery bypass, using arterial graft(s); single arterial graft",
+            "rationale": "Primary CABG procedure code - specific graft count needs documentation review",
+            "confidence": "medium"
+          },
+          {
+            "code": "33534",
+            "description": "Coronary artery bypass, using arterial graft(s); 2 coronary arterial grafts",
+            "rationale": "Alternative if 2 arterial grafts performed",
+            "confidence": "medium"
+          },
+          {
+            "code": "93318",
+            "description": "Echocardiography, transesophageal (TEE) for monitoring purposes",
+            "rationale": "Intraoperative echocardiography during cardiac surgery",
+            "confidence": "high"
+          }
+        ],
+        "prior_auth_assessment": {
+          "required": true,
+          "reason": "Major cardiac surgery (CABG) typically requires prior authorization for coverage determination",
+          "supporting_codes": [
+            "I25.10",
+            "Z95.1"
+          ]
+        },
+        "medication_review_flag": {
+          "flagged": true,
+          "reason": "9 medications including high-risk anesthetics, anticoagulants, and controlled substances",
+          "action": "Pharmacist review for drug interactions and perioperative medication management"
+        },
+        "coding_notes": [
+          "Documentation must specify number and type of grafts (arterial vs venous) to select appropriate CPT code",
+          "Consider additional codes for comorbidities that may affect surgical risk (diabetes, hypertension)",
+          "Verify if this is initial CABG or redo procedure - affects code selection",
+          "21 procedures listed - many are components of CABG and should not be separately coded",
+          "Missing specific indication for CABG - unstable angina, MI, or failed medical management should be documented",
+          "Consider Z59-Z65 codes if social determinants contributed to delayed care"
+        ]
+      },
+      "evaluation": {
+        "encounter_id": "78068a3a-2b8c-f9bc-ce77-abb09f0e9fee",
+        "icd10_evaluation": {
+          "suggested_count": 3,
+          "ground_truth_count": 1,
+          "concept_matches": 3,
+          "gt_conditions_matched": 1,
+          "concept_precision": 1.0,
+          "concept_recall": 1.0,
+          "match_details": [
+            {
+              "suggested_code": "I25.10",
+              "suggested_desc": "Atherosclerotic heart disease of native coronary artery without angina pectoris",
+              "confidence": "high",
+              "code_type": "primary",
+              "concept_match": true
+            },
+            {
+              "suggested_code": "Z95.1",
+              "suggested_desc": "Presence of aortocoronary bypass graft",
+              "confidence": "high",
+              "code_type": "secondary",
+              "concept_match": true
+            },
+            {
+              "suggested_code": "Z87.891",
+              "suggested_desc": "Personal history of nicotine dependence",
+              "confidence": "medium",
+              "code_type": "additional",
+              "concept_match": true
+            }
+          ]
+        },
+        "cpt_evaluation": {
+          "suggested_count": 3,
+          "suggested_codes": [
+            "33533",
+            "33534",
+            "93318"
+          ],
+          "note": "CPT exact match not possible against Synthea SNOMED procedure codes \u2014 manual clinical review required"
+        },
+        "ground_truth": {
+          "conditions": [
+            {
+              "code": "399261000",
+              "display": "History of coronary artery bypass grafting (situation)",
+              "clinical_status": "active"
+            }
+          ],
+          "procedures": [
+            {
+              "code": "110467000",
+              "display": "Pre-surgery testing (procedure)"
+            },
+            {
+              "code": "223495004",
+              "display": "Preparation of patient for procedure (regime/therapy)"
+            },
+            {
+              "code": "232717009",
+              "display": "Coronary artery bypass grafting (procedure)"
+            },
+            {
+              "code": "233553003",
+              "display": "Vascular cannula removal (procedure)"
+            },
+            {
+              "code": "23745001",
+              "display": "Documentation procedure (procedure)"
+            },
+            {
+              "code": "29303009",
+              "display": "Electrocardiographic procedure (procedure)"
+            },
+            {
+              "code": "301882004",
+              "display": "Placement of aortic cross clamp (procedure)"
+            },
+            {
+              "code": "301884003",
+              "display": "Removal of aortic cross clamp (procedure)"
+            },
+            {
+              "code": "359672006",
+              "display": "Median sternotomy (procedure)"
+            },
+            {
+              "code": "392247006",
+              "display": "Insertion of catheter into artery (procedure)"
+            },
+            {
+              "code": "399208008",
+              "display": "Plain X-ray of chest (procedure)"
+            },
+            {
+              "code": "40701008",
+              "display": "Echocardiography (procedure)"
+            },
+            {
+              "code": "410538000",
+              "display": "Scheduling (procedure)"
+            },
+            {
+              "code": "410770002",
+              "display": "Administration of anesthesia for procedure (procedure)"
+            },
+            {
+              "code": "42825003",
+              "display": "Cannulation (procedure)"
+            },
+            {
+              "code": "44608003",
+              "display": "Blood group typing (procedure)"
+            },
+            {
+              "code": "52765003",
+              "display": "Intubation (procedure)"
+            },
+            {
+              "code": "63697000",
+              "display": "Cardiopulmonary bypass operation (procedure)"
+            },
+            {
+              "code": "65677008",
+              "display": "Pulmonary catheterization with Swan-Ganz catheter (procedure)"
+            },
+            {
+              "code": "709138001",
+              "display": "Notification of treatment plan (procedure)"
+            },
+            {
+              "code": "8290005",
+              "display": "Induced cardioplegia (procedure)"
+            }
+          ]
+        }
+      },
+      "status": "success"
+    },
+    {
+      "encounter_id": "53beb3a8-f127-5329-4026-de1cc62ac908",
+      "label": "CABG History \u2014 Inpatient 2023 (self-pay)",
+      "encounter": {
+        "encounter_class": "IMP",
+        "setting": "Inpatient",
+        "encounter_date": "2023-03-15",
+        "duration_hours": 120.0,
+        "patient_gender": "Male",
+        "patient_age": 75,
+        "reason": "Coronary artery bypass grafting (procedure) \u2014 2023"
+      },
+      "suggestions": {
+        "icd10_suggestions": [
+          {
+            "code": "R93.1",
+            "description": "Abnormal findings on diagnostic imaging of heart and coronary circulation",
+            "rationale": "Primary reason for admission as stated in encounter summary",
+            "confidence": "high",
+            "code_type": "primary"
+          },
+          {
+            "code": "Z95.1",
+            "description": "Presence of aortocoronary bypass graft",
+            "rationale": "History of CABG procedure, relevant to current surgical intervention",
+            "confidence": "high",
+            "code_type": "secondary"
+          },
+          {
+            "code": "N18.6",
+            "description": "End stage renal disease",
+            "rationale": "Creatinine level of 2.6771 mg/dL indicates significant renal impairment",
+            "confidence": "medium",
+            "code_type": "secondary"
+          }
+        ],
+        "cpt_suggestions": [
+          {
+            "code": "33533",
+            "description": "Coronary artery bypass, using arterial graft(s); single arterial graft",
+            "rationale": "Primary CABG procedure performed during admission",
+            "confidence": "high"
+          },
+          {
+            "code": "99223",
+            "description": "Initial hospital care, per day, for the evaluation and management of a patient",
+            "rationale": "Initial inpatient admission with comprehensive evaluation for major cardiac surgery",
+            "confidence": "high"
+          },
+          {
+            "code": "36620",
+            "description": "Arterial catheterization or cannulation for sampling, monitoring or transfusion",
+            "rationale": "Insertion of catheter into artery documented in procedures",
+            "confidence": "medium"
+          }
+        ],
+        "prior_auth_assessment": {
+          "required": true,
+          "reason": "Major cardiac surgery (CABG) typically requires prior authorization for inpatient admission and surgical procedure",
+          "supporting_codes": [
+            "R93.1",
+            "Z95.1"
+          ]
+        },
+        "medication_review_flag": {
+          "flagged": true,
+          "reason": "9 medications administered including high-risk anesthesia drugs (propofol, midazolam, alfentanil) and anticoagulants (heparin)",
+          "action": "Pharmacist review recommended for drug interactions and dosing optimization in cardiac surgery patient"
+        },
+        "coding_notes": [
+          "Documentation lacks specific details about number of grafts performed - may affect CPT code selection (33533 vs 33534-33536)",
+          "Consider additional CPT codes for cardiopulmonary bypass (33945) if separately billable",
+          "Elevated creatinine suggests chronic kidney disease - consider more specific N18 code if stage documented",
+          "Blood transfusion documented but may be included in surgical package depending on payer policy",
+          "Multiple anesthesia procedures documented - verify if separately billable or included in surgical package"
+        ]
+      },
+      "evaluation": {
+        "encounter_id": "53beb3a8-f127-5329-4026-de1cc62ac908",
+        "icd10_evaluation": {
+          "suggested_count": 3,
+          "ground_truth_count": 1,
+          "concept_matches": 2,
+          "gt_conditions_matched": 1,
+          "concept_precision": 0.67,
+          "concept_recall": 1.0,
+          "match_details": [
+            {
+              "suggested_code": "R93.1",
+              "suggested_desc": "Abnormal findings on diagnostic imaging of heart and coronary circulation",
+              "confidence": "high",
+              "code_type": "primary",
+              "concept_match": true
+            },
+            {
+              "suggested_code": "Z95.1",
+              "suggested_desc": "Presence of aortocoronary bypass graft",
+              "confidence": "high",
+              "code_type": "secondary",
+              "concept_match": true
+            },
+            {
+              "suggested_code": "N18.6",
+              "suggested_desc": "End stage renal disease",
+              "confidence": "medium",
+              "code_type": "secondary",
+              "concept_match": false
+            }
+          ]
+        },
+        "cpt_evaluation": {
+          "suggested_count": 3,
+          "suggested_codes": [
+            "33533",
+            "99223",
+            "36620"
+          ],
+          "note": "CPT exact match not possible against Synthea SNOMED procedure codes \u2014 manual clinical review required"
+        },
+        "ground_truth": {
+          "conditions": [
+            {
+              "code": "399261000",
+              "display": "History of coronary artery bypass grafting (situation)",
+              "clinical_status": "active"
+            }
+          ],
+          "procedures": [
+            {
+              "code": "110467000",
+              "display": "Pre-surgery testing (procedure)"
+            },
+            {
+              "code": "223495004",
+              "display": "Preparation of patient for procedure (regime/therapy)"
+            },
+            {
+              "code": "232717009",
+              "display": "Coronary artery bypass grafting (procedure)"
+            },
+            {
+              "code": "233553003",
+              "display": "Vascular cannula removal (procedure)"
+            },
+            {
+              "code": "23745001",
+              "display": "Documentation procedure (procedure)"
+            },
+            {
+              "code": "301882004",
+              "display": "Placement of aortic cross clamp (procedure)"
+            },
+            {
+              "code": "301884003",
+              "display": "Removal of aortic cross clamp (procedure)"
+            },
+            {
+              "code": "359672006",
+              "display": "Median sternotomy (procedure)"
+            },
+            {
+              "code": "392247006",
+              "display": "Insertion of catheter into artery (procedure)"
+            },
+            {
+              "code": "410538000",
+              "display": "Scheduling (procedure)"
+            },
+            {
+              "code": "410770002",
+              "display": "Administration of anesthesia for procedure (procedure)"
+            },
+            {
+              "code": "42825003",
+              "display": "Cannulation (procedure)"
+            },
+            {
+              "code": "44608003",
+              "display": "Blood group typing (procedure)"
+            },
+            {
+              "code": "52765003",
+              "display": "Intubation (procedure)"
+            },
+            {
+              "code": "63697000",
+              "display": "Cardiopulmonary bypass operation (procedure)"
+            },
+            {
+              "code": "65677008",
+              "display": "Pulmonary catheterization with Swan-Ganz catheter (procedure)"
+            },
+            {
+              "code": "709138001",
+              "display": "Notification of treatment plan (procedure)"
+            },
+            {
+              "code": "71493000",
+              "display": "Transfusion of packed red blood cells (procedure)"
+            },
+            {
+              "code": "8290005",
+              "display": "Induced cardioplegia (procedure)"
+            }
+          ]
+        }
+      },
+      "status": "success"
+    },
+    {
+      "encounter_id": "38fc3405-cc74-0d6b-5409-659f0af674f5",
+      "label": "CABG History \u2014 Inpatient 2018 (self-pay)",
+      "encounter": {
+        "encounter_class": "IMP",
+        "setting": "Inpatient",
+        "encounter_date": "2018-02-20",
+        "duration_hours": 108.0,
+        "patient_gender": "Male",
+        "patient_age": 70,
+        "reason": "Coronary artery bypass grafting (procedure) \u2014 2018"
+      },
+      "suggestions": {
+        "icd10_suggestions": [
+          {
+            "code": "I25.10",
+            "description": "Atherosclerotic heart disease of native coronary artery without angina pectoris",
+            "rationale": "Primary reason for CABG procedure based on abnormal cardiac imaging findings and coronary artery disease requiring surgical intervention",
+            "confidence": "high",
+            "code_type": "primary"
+          },
+          {
+            "code": "Z95.1",
+            "description": "Presence of aortocoronary bypass graft",
+            "rationale": "Status code for the CABG procedure performed during this encounter",
+            "confidence": "high",
+            "code_type": "secondary"
+          },
+          {
+            "code": "N18.3",
+            "description": "Chronic kidney disease, stage 3 (moderate)",
+            "rationale": "Elevated creatinine of 2.84 mg/dL indicates moderate CKD which affects perioperative management",
+            "confidence": "medium",
+            "code_type": "secondary"
+          }
+        ],
+        "cpt_suggestions": [
+          {
+            "code": "33533",
+            "description": "Coronary artery bypass, using arterial graft(s); single arterial graft",
+            "rationale": "Primary surgical procedure performed - CABG with likely arterial graft based on procedure complexity",
+            "confidence": "medium"
+          },
+          {
+            "code": "33534",
+            "description": "Coronary artery bypass, using arterial graft(s); 2 coronary arterial grafts",
+            "rationale": "Alternative if multiple arterial grafts were used - documentation unclear on exact number",
+            "confidence": "medium"
+          },
+          {
+            "code": "00566",
+            "description": "Anesthesia for direct coronary artery bypass grafting; with pump oxygenator",
+            "rationale": "Anesthesia code for CABG with cardiopulmonary bypass as documented",
+            "confidence": "high"
+          }
+        ],
+        "prior_auth_assessment": {
+          "required": false,
+          "reason": "CABG is typically covered for documented coronary artery disease with abnormal imaging findings",
+          "supporting_codes": [
+            "I25.10"
+          ]
+        },
+        "medication_review_flag": {
+          "flagged": true,
+          "reason": "Multiple high-risk perioperative medications including controlled substances (sufentanil, midazolam, propofol) and anticoagulants (heparin)",
+          "action": "Pharmacist review recommended for drug interactions and perioperative medication management"
+        },
+        "coding_notes": [
+          "Documentation lacks specificity on number of grafts performed - affects CPT code selection between 33533-33536",
+          "Consider additional codes for cardiopulmonary bypass (33945) if separately billable",
+          "Elevated creatinine suggests CKD but stage needs clinical correlation with eGFR",
+          "History of prior CABG noted but this appears to be initial CABG based on procedure documentation",
+          "Consider Z codes for surgical aftercare in subsequent encounters"
+        ]
+      },
+      "evaluation": {
+        "encounter_id": "38fc3405-cc74-0d6b-5409-659f0af674f5",
+        "icd10_evaluation": {
+          "suggested_count": 3,
+          "ground_truth_count": 1,
+          "concept_matches": 2,
+          "gt_conditions_matched": 1,
+          "concept_precision": 0.67,
+          "concept_recall": 1.0,
+          "match_details": [
+            {
+              "suggested_code": "I25.10",
+              "suggested_desc": "Atherosclerotic heart disease of native coronary artery without angina pectoris",
+              "confidence": "high",
+              "code_type": "primary",
+              "concept_match": true
+            },
+            {
+              "suggested_code": "Z95.1",
+              "suggested_desc": "Presence of aortocoronary bypass graft",
+              "confidence": "high",
+              "code_type": "secondary",
+              "concept_match": true
+            },
+            {
+              "suggested_code": "N18.3",
+              "suggested_desc": "Chronic kidney disease, stage 3 (moderate)",
+              "confidence": "medium",
+              "code_type": "secondary",
+              "concept_match": false
+            }
+          ]
+        },
+        "cpt_evaluation": {
+          "suggested_count": 3,
+          "suggested_codes": [
+            "33533",
+            "33534",
+            "00566"
+          ],
+          "note": "CPT exact match not possible against Synthea SNOMED procedure codes \u2014 manual clinical review required"
+        },
+        "ground_truth": {
+          "conditions": [
+            {
+              "code": "399261000",
+              "display": "History of coronary artery bypass grafting (situation)",
+              "clinical_status": "active"
+            }
+          ],
+          "procedures": [
+            {
+              "code": "110467000",
+              "display": "Pre-surgery testing (procedure)"
+            },
+            {
+              "code": "223495004",
+              "display": "Preparation of patient for procedure (regime/therapy)"
+            },
+            {
+              "code": "232717009",
+              "display": "Coronary artery bypass grafting (procedure)"
+            },
+            {
+              "code": "233553003",
+              "display": "Vascular cannula removal (procedure)"
+            },
+            {
+              "code": "23745001",
+              "display": "Documentation procedure (procedure)"
+            },
+            {
+              "code": "301882004",
+              "display": "Placement of aortic cross clamp (procedure)"
+            },
+            {
+              "code": "301884003",
+              "display": "Removal of aortic cross clamp (procedure)"
+            },
+            {
+              "code": "359672006",
+              "display": "Median sternotomy (procedure)"
+            },
+            {
+              "code": "392247006",
+              "display": "Insertion of catheter into artery (procedure)"
+            },
+            {
+              "code": "410538000",
+              "display": "Scheduling (procedure)"
+            },
+            {
+              "code": "410770002",
+              "display": "Administration of anesthesia for procedure (procedure)"
+            },
+            {
+              "code": "42825003",
+              "display": "Cannulation (procedure)"
+            },
+            {
+              "code": "44608003",
+              "display": "Blood group typing (procedure)"
+            },
+            {
+              "code": "52765003",
+              "display": "Intubation (procedure)"
+            },
+            {
+              "code": "63697000",
+              "display": "Cardiopulmonary bypass operation (procedure)"
+            },
+            {
+              "code": "65677008",
+              "display": "Pulmonary catheterization with Swan-Ganz catheter (procedure)"
+            },
+            {
+              "code": "709138001",
+              "display": "Notification of treatment plan (procedure)"
+            },
+            {
+              "code": "8290005",
+              "display": "Induced cardioplegia (procedure)"
+            }
+          ]
+        }
+      },
+      "status": "success"
+    },
+    {
+      "encounter_id": "af00c0f2-6af8-ea2e-c487-c9f36f89a943",
+      "label": "CABG History \u2014 Inpatient 2021 (self-pay)",
+      "encounter": {
+        "encounter_class": "IMP",
+        "setting": "Inpatient",
+        "encounter_date": "2021-03-27",
+        "duration_hours": 114.0,
+        "patient_gender": "Male",
+        "patient_age": 73,
+        "reason": "Coronary artery bypass grafting (procedure) \u2014 2021"
+      },
+      "suggestions": {
+        "icd10_suggestions": [
+          {
+            "code": "I25.10",
+            "description": "Atherosclerotic heart disease of native coronary artery without angina pectoris",
+            "rationale": "Primary reason for admission is abnormal cardiac imaging findings requiring coronary artery bypass surgery in patient with known CAD",
+            "confidence": "high",
+            "code_type": "primary"
+          },
+          {
+            "code": "Z95.1",
+            "description": "Presence of aortocoronary bypass graft",
+            "rationale": "Patient has history of previous CABG procedure, now undergoing repeat bypass surgery",
+            "confidence": "high",
+            "code_type": "secondary"
+          },
+          {
+            "code": "N18.6",
+            "description": "End stage renal disease",
+            "rationale": "Creatinine level of 2.98 mg/dL indicates significant renal impairment, likely ESRD given the severity",
+            "confidence": "medium",
+            "code_type": "secondary"
+          },
+          {
+            "code": "Z59.4",
+            "description": "Lack of adequate food or safe drinking water",
+            "rationale": "Patient has no insurance coverage which may indicate social determinant affecting healthcare access",
+            "confidence": "low",
+            "code_type": "additional"
+          }
+        ],
+        "cpt_suggestions": [
+          {
+            "code": "33533",
+            "description": "Coronary artery bypass, using arterial graft(s); single arterial graft",
+            "rationale": "Off-pump coronary artery bypass procedure was performed via median sternotomy",
+            "confidence": "high"
+          },
+          {
+            "code": "99223",
+            "description": "Initial hospital care, per day, for the evaluation and management of a patient",
+            "rationale": "Initial inpatient admission for major cardiac surgery with comprehensive evaluation",
+            "confidence": "high"
+          },
+          {
+            "code": "93303",
+            "description": "Transthoracic echocardiography for congenital cardiac anomalies; complete",
+            "rationale": "Echocardiography was performed as part of pre-operative cardiac assessment",
+            "confidence": "medium"
+          }
+        ],
+        "prior_auth_assessment": {
+          "required": true,
+          "reason": "Major cardiac surgery (CABG) typically requires prior authorization for coverage determination and medical necessity review",
+          "supporting_codes": [
+            "I25.10",
+            "Z95.1"
+          ]
+        },
+        "medication_review_flag": {
+          "flagged": true,
+          "reason": "Patient received 10 different medications including high-risk anesthesia drugs, anticoagulants, and insulin requiring careful monitoring",
+          "action": "Pharmacist review recommended for drug interactions and dosing optimization, especially given renal impairment"
+        },
+        "coding_notes": [
+          "Documentation should specify number of grafts and vessels bypassed to select most specific CPT code (33533-33536)",
+          "Consider querying for diabetes diagnosis given insulin administration - may affect DRG assignment",
+          "Elevated creatinine warrants more specific chronic kidney disease staging if available",
+          "Social determinant Z-code assignment based on insurance status may require additional documentation of food/housing insecurity"
+        ]
+      },
+      "evaluation": {
+        "encounter_id": "af00c0f2-6af8-ea2e-c487-c9f36f89a943",
+        "icd10_evaluation": {
+          "suggested_count": 4,
+          "ground_truth_count": 1,
+          "concept_matches": 2,
+          "gt_conditions_matched": 1,
+          "concept_precision": 0.5,
+          "concept_recall": 1.0,
+          "match_details": [
+            {
+              "suggested_code": "I25.10",
+              "suggested_desc": "Atherosclerotic heart disease of native coronary artery without angina pectoris",
+              "confidence": "high",
+              "code_type": "primary",
+              "concept_match": true
+            },
+            {
+              "suggested_code": "Z95.1",
+              "suggested_desc": "Presence of aortocoronary bypass graft",
+              "confidence": "high",
+              "code_type": "secondary",
+              "concept_match": true
+            },
+            {
+              "suggested_code": "N18.6",
+              "suggested_desc": "End stage renal disease",
+              "confidence": "medium",
+              "code_type": "secondary",
+              "concept_match": false
+            },
+            {
+              "suggested_code": "Z59.4",
+              "suggested_desc": "Lack of adequate food or safe drinking water",
+              "confidence": "low",
+              "code_type": "additional",
+              "concept_match": false
+            }
+          ]
+        },
+        "cpt_evaluation": {
+          "suggested_count": 3,
+          "suggested_codes": [
+            "33533",
+            "99223",
+            "93303"
+          ],
+          "note": "CPT exact match not possible against Synthea SNOMED procedure codes \u2014 manual clinical review required"
+        },
+        "ground_truth": {
+          "conditions": [
+            {
+              "code": "399261000",
+              "display": "History of coronary artery bypass grafting (situation)",
+              "clinical_status": "active"
+            }
+          ],
+          "procedures": [
+            {
+              "code": "110467000",
+              "display": "Pre-surgery testing (procedure)"
+            },
+            {
+              "code": "180178009",
+              "display": "Continuous subcutaneous infusion of insulin (procedure)"
+            },
+            {
+              "code": "223495004",
+              "display": "Preparation of patient for procedure (regime/therapy)"
+            },
+            {
+              "code": "23745001",
+              "display": "Documentation procedure (procedure)"
+            },
+            {
+              "code": "29303009",
+              "display": "Electrocardiographic procedure (procedure)"
+            },
+            {
+              "code": "359672006",
+              "display": "Median sternotomy (procedure)"
+            },
+            {
+              "code": "392247006",
+              "display": "Insertion of catheter into artery (procedure)"
+            },
+            {
+              "code": "399208008",
+              "display": "Plain X-ray of chest (procedure)"
+            },
+            {
+              "code": "40701008",
+              "display": "Echocardiography (procedure)"
+            },
+            {
+              "code": "410538000",
+              "display": "Scheduling (procedure)"
+            },
+            {
+              "code": "410770002",
+              "display": "Administration of anesthesia for procedure (procedure)"
+            },
+            {
+              "code": "418824004",
+              "display": "Off-pump coronary artery bypass (procedure)"
+            },
+            {
+              "code": "44608003",
+              "display": "Blood group typing (procedure)"
+            },
+            {
+              "code": "52765003",
+              "display": "Intubation (procedure)"
+            },
+            {
+              "code": "65677008",
+              "display": "Pulmonary catheterization with Swan-Ganz catheter (procedure)"
+            },
+            {
+              "code": "709138001",
+              "display": "Notification of treatment plan (procedure)"
+            }
+          ]
+        }
+      },
+      "status": "success"
+    },
+    {
+      "encounter_id": "4c5ae2f5-7f9f-19ae-8c5b-0ce06c9f529c",
+      "label": "Anemia & Toxoplasmosis \u2014 Ambulatory 1991",
+      "encounter": {
+        "encounter_class": "AMB",
+        "setting": "Ambulatory",
+        "encounter_date": "1991-01-16",
+        "duration_hours": null,
+        "patient_gender": "Female",
+        "patient_age": 34,
+        "reason": "Anemia and Toxoplasmosis \u2014 ambulatory encounter for problem"
+      },
+      "suggestions": {
+        "icd10_suggestions": [
+          {
+            "code": "B20",
+            "description": "Human immunodeficiency virus [HIV] disease",
+            "rationale": "Primary reason for encounter is AIDS/HIV disease as documented in chief complaint",
+            "confidence": "high",
+            "code_type": "primary"
+          },
+          {
+            "code": "D64.9",
+            "description": "Anemia, unspecified",
+            "rationale": "Active anemia documented with supporting lab values (Hgb 9.2 g/dL, Hct 20.4%)",
+            "confidence": "high",
+            "code_type": "secondary"
+          },
+          {
+            "code": "Z87.891",
+            "description": "Personal history of nicotine dependence",
+            "rationale": "Toxoplasma antibody positive finding suggests opportunistic infection history in HIV patient",
+            "confidence": "medium",
+            "code_type": "additional"
+          },
+          {
+            "code": "Z56.0",
+            "description": "Unemployment, unspecified",
+            "rationale": "Full-time employment documented as social determinant - use opposite code if employment is protective factor",
+            "confidence": "low",
+            "code_type": "additional"
+          },
+          {
+            "code": "Z73.3",
+            "description": "Stress, not elsewhere classified",
+            "rationale": "Stress documented as active social determinant affecting patient care",
+            "confidence": "medium",
+            "code_type": "additional"
+          }
+        ],
+        "cpt_suggestions": [
+          {
+            "code": "99215",
+            "description": "Office or other outpatient visit for evaluation and management of established patient",
+            "rationale": "Complex HIV management with extensive screening, assessments, and care coordination over 10+ hours suggests highest level E&M",
+            "confidence": "high"
+          },
+          {
+            "code": "80053",
+            "description": "Comprehensive metabolic panel",
+            "rationale": "Multiple laboratory tests performed including CBC with differential",
+            "confidence": "medium"
+          },
+          {
+            "code": "86703",
+            "description": "HIV-1 and HIV-2, single result",
+            "rationale": "HIV monitoring likely included given primary diagnosis",
+            "confidence": "medium"
+          }
+        ],
+        "prior_auth_assessment": {
+          "required": true,
+          "reason": "HIV disease management with complex care coordination and multiple screening procedures",
+          "supporting_codes": [
+            "B20",
+            "D64.9"
+          ]
+        },
+        "medication_review_flag": {
+          "flagged": true,
+          "reason": "HIV patient with no documented medications raises concern - antiretroviral therapy typically required",
+          "action": "Verify medication reconciliation and document rationale for no current medications"
+        },
+        "coding_notes": [
+          "Consider more specific HIV code if stage/manifestation documented (B20-B24 range)",
+          "Anemia may be HIV-related - consider B20 with manifestation if documented",
+          "Toxoplasma antibody positive may indicate B58.- if active infection vs Z87.891 if history",
+          "Duration of 10.6 hours suggests possible intensive outpatient program - verify setting appropriateness",
+          "21 procedures documented - verify which are separately billable vs included in E&M",
+          "CD4 count procedure suggests need for specific HIV staging if results available"
+        ]
+      },
+      "evaluation": {
+        "encounter_id": "4c5ae2f5-7f9f-19ae-8c5b-0ce06c9f529c",
+        "icd10_evaluation": {
+          "suggested_count": 5,
+          "ground_truth_count": 4,
+          "concept_matches": 5,
+          "gt_conditions_matched": 5,
+          "concept_precision": 1.0,
+          "concept_recall": 1.25,
+          "match_details": [
+            {
+              "suggested_code": "B20",
+              "suggested_desc": "Human immunodeficiency virus [HIV] disease",
+              "confidence": "high",
+              "code_type": "primary",
+              "concept_match": true
+            },
+            {
+              "suggested_code": "D64.9",
+              "suggested_desc": "Anemia, unspecified",
+              "confidence": "high",
+              "code_type": "secondary",
+              "concept_match": true
+            },
+            {
+              "suggested_code": "Z87.891",
+              "suggested_desc": "Personal history of nicotine dependence",
+              "confidence": "medium",
+              "code_type": "additional",
+              "concept_match": true
+            },
+            {
+              "suggested_code": "Z56.0",
+              "suggested_desc": "Unemployment, unspecified",
+              "confidence": "low",
+              "code_type": "additional",
+              "concept_match": true
+            },
+            {
+              "suggested_code": "Z73.3",
+              "suggested_desc": "Stress, not elsewhere classified",
+              "confidence": "medium",
+              "code_type": "additional",
+              "concept_match": true
+            }
+          ]
+        },
+        "cpt_evaluation": {
+          "suggested_count": 3,
+          "suggested_codes": [
+            "99215",
+            "80053",
+            "86703"
+          ],
+          "note": "CPT exact match not possible against Synthea SNOMED procedure codes \u2014 manual clinical review required"
+        },
+        "ground_truth": {
+          "conditions": [
+            {
+              "code": "271737000",
+              "display": "Anemia (disorder)",
+              "clinical_status": "active"
+            },
+            {
+              "code": "428915008",
+              "display": "Toxoplasma gondii antibody detected (finding)",
+              "clinical_status": "active"
+            },
+            {
+              "code": "160903007",
+              "display": "Full-time employment (finding)",
+              "clinical_status": "active"
+            },
+            {
+              "code": "73595000",
+              "display": "Stress (finding)",
+              "clinical_status": "resolved"
+            }
+          ],
+          "procedures": [
+            {
+              "code": "104308009",
+              "display": "Serologic test for Toxoplasma gondii (procedure)"
+            },
+            {
+              "code": "15220000",
+              "display": "Laboratory test (procedure)"
+            },
+            {
+              "code": "171122006",
+              "display": "Hepatitis B screening (procedure)"
+            },
+            {
+              "code": "171126009",
+              "display": "Tuberculosis screening (procedure)"
+            },
+            {
+              "code": "171128005",
+              "display": "Venereal disease screening (procedure)"
+            },
+            {
+              "code": "171207006",
+              "display": "Depression screening (procedure)"
+            },
+            {
+              "code": "225297008",
+              "display": "Care planning and problem solving actions (procedure)"
+            },
+            {
+              "code": "313398001",
+              "display": "Hepatitis antibody test (procedure)"
+            },
+            {
+              "code": "313660005",
+              "display": "Absolute CD4 count procedure (procedure)"
+            },
+            {
+              "code": "410314003",
+              "display": "Health promotion education, guidance, and counseling (procedure)"
+            },
+            {
+              "code": "412809002",
+              "display": "Viral hepatitis screening test (procedure)"
+            },
+            {
+              "code": "413107006",
+              "display": "Hepatitis C screening (procedure)"
+            },
+            {
+              "code": "428211000124100",
+              "display": "Assessment of substance use (procedure)"
+            },
+            {
+              "code": "63332003",
+              "display": "History AND physical examination (procedure)"
+            },
+            {
+              "code": "709506004",
+              "display": "Assessment of readiness for disclosure of health status (procedure)"
+            },
+            {
+              "code": "710824005",
+              "display": "Assessment of health and social care needs (procedure)"
+            },
+            {
+              "code": "710841007",
+              "display": "Assessment of anxiety (procedure)"
+            },
+            {
+              "code": "711018006",
+              "display": "Assessment of social support (procedure)"
+            },
+            {
+              "code": "711069006",
+              "display": "Coordination of care plan (procedure)"
+            },
+            {
+              "code": "733863009",
+              "display": "Assessment of readiness for self-management (procedure)"
+            },
+            {
+              "code": "763302001",
+              "display": "Assessment using Alcohol Use Disorders Identification Test - Consumption (procedure)"
+            }
+          ]
+        }
+      },
+      "status": "success"
+    },
+    {
+      "encounter_id": "51716af3-8671-a19b-ed20-3006e887392d",
+      "label": "Diabetic CKD \u2014 General Exam Ambulatory 2023",
+      "encounter": {
+        "encounter_class": "AMB",
+        "setting": "Ambulatory",
+        "encounter_date": "2023-10-10",
+        "duration_hours": null,
+        "patient_gender": "Male",
+        "patient_age": 58,
+        "reason": "Diabetic CKD \u2014 general examination of patient"
+      },
+      "suggestions": {
+        "icd10_suggestions": [
+          {
+            "code": "Z00.00",
+            "description": "Encounter for general adult medical examination without abnormal findings",
+            "rationale": "Primary reason for encounter is general examination as documented in encounter type",
+            "confidence": "high",
+            "code_type": "primary"
+          },
+          {
+            "code": "N18.1",
+            "description": "Chronic kidney disease, stage 1",
+            "rationale": "Active chronic condition documented in diagnoses with GFR >90 supporting stage 1",
+            "confidence": "high",
+            "code_type": "secondary"
+          },
+          {
+            "code": "E11.22",
+            "description": "Type 2 diabetes mellitus with diabetic chronic kidney disease",
+            "rationale": "Disorder of kidney due to diabetes mellitus documented, insulin therapy suggests diabetes",
+            "confidence": "high",
+            "code_type": "secondary"
+          },
+          {
+            "code": "Z91.120",
+            "description": "Patient's intentional underdosing of medication regimen due to financial hardship",
+            "rationale": "Medication review due situation flagged as social determinant",
+            "confidence": "medium",
+            "code_type": "additional"
+          },
+          {
+            "code": "Z60.2",
+            "description": "Problems related to living alone",
+            "rationale": "Limited social contact documented as social determinant",
+            "confidence": "medium",
+            "code_type": "additional"
+          },
+          {
+            "code": "Z56.4",
+            "description": "Discord with boss and workmates",
+            "rationale": "Part-time employment and stress documented as social determinants",
+            "confidence": "low",
+            "code_type": "additional"
+          },
+          {
+            "code": "Z91.19",
+            "description": "Patient's noncompliance with other medical treatment and regimen",
+            "rationale": "Reports of violence in environment may affect treatment compliance",
+            "confidence": "low",
+            "code_type": "additional"
+          }
+        ],
+        "cpt_suggestions": [
+          {
+            "code": "99395",
+            "description": "Periodic comprehensive preventive medicine reevaluation and management of an individual including an age and gender appropriate history, examination, counseling/anticipatory guidance/risk factor reduction interventions, and the ordering of laboratory/diagnostic procedures, established patient; 65 years and older",
+            "rationale": "General examination encounter for 76-year-old established patient with comprehensive assessment including substance use, anxiety screening, and fall risk assessment",
+            "confidence": "high"
+          },
+          {
+            "code": "96160",
+            "description": "Administration of patient-focused health risk assessment instrument with scoring and documentation, per standardized instrument",
+            "rationale": "Morse Fall Scale assessment performed as documented procedure",
+            "confidence": "medium"
+          }
+        ],
+        "prior_auth_assessment": {
+          "required": false,
+          "reason": "Routine preventive care encounter with standard screening procedures and established chronic conditions under management",
+          "supporting_codes": []
+        },
+        "medication_review_flag": {
+          "flagged": true,
+          "reason": "Four medications present including insulin and tramadol (controlled substance), plus medication review due documented as social determinant",
+          "action": "Conduct comprehensive medication reconciliation and review for drug interactions, especially with tramadol and diabetes medications"
+        },
+        "coding_notes": [
+          "Reason for visit not documented - assumed preventive care based on encounter type and procedures performed",
+          "GFR of 114.16 mL/min supports CKD stage 1 coding but conflicts with elevated creatinine of 1.5773 mg/dL",
+          "Glucose level of 65.69 mg/dL suggests possible hypoglycemia - consider additional ICD-10 code if symptomatic",
+          "Violence in environment social determinant may warrant more specific Z-code if additional documentation available",
+          "Consider depression screening codes if anxiety assessment was positive"
+        ]
+      },
+      "evaluation": {
+        "encounter_id": "51716af3-8671-a19b-ed20-3006e887392d",
+        "icd10_evaluation": {
+          "suggested_count": 7,
+          "ground_truth_count": 7,
+          "concept_matches": 7,
+          "gt_conditions_matched": 6,
+          "concept_precision": 1.0,
+          "concept_recall": 0.86,
+          "match_details": [
+            {
+              "suggested_code": "Z00.00",
+              "suggested_desc": "Encounter for general adult medical examination without abnormal findings",
+              "confidence": "high",
+              "code_type": "primary",
+              "concept_match": true
+            },
+            {
+              "suggested_code": "N18.1",
+              "suggested_desc": "Chronic kidney disease, stage 1",
+              "confidence": "high",
+              "code_type": "secondary",
+              "concept_match": true
+            },
+            {
+              "suggested_code": "E11.22",
+              "suggested_desc": "Type 2 diabetes mellitus with diabetic chronic kidney disease",
+              "confidence": "high",
+              "code_type": "secondary",
+              "concept_match": true
+            },
+            {
+              "suggested_code": "Z91.120",
+              "suggested_desc": "Patient's intentional underdosing of medication regimen due to financial hardship",
+              "confidence": "medium",
+              "code_type": "additional",
+              "concept_match": true
+            },
+            {
+              "suggested_code": "Z60.2",
+              "suggested_desc": "Problems related to living alone",
+              "confidence": "medium",
+              "code_type": "additional",
+              "concept_match": true
+            },
+            {
+              "suggested_code": "Z56.4",
+              "suggested_desc": "Discord with boss and workmates",
+              "confidence": "low",
+              "code_type": "additional",
+              "concept_match": true
+            },
+            {
+              "suggested_code": "Z91.19",
+              "suggested_desc": "Patient's noncompliance with other medical treatment and regimen",
+              "confidence": "low",
+              "code_type": "additional",
+              "concept_match": true
+            }
+          ]
+        },
+        "cpt_evaluation": {
+          "suggested_count": 2,
+          "suggested_codes": [
+            "99395",
+            "96160"
+          ],
+          "note": "CPT exact match not possible against Synthea SNOMED procedure codes \u2014 manual clinical review required"
+        },
+        "ground_truth": {
+          "conditions": [
+            {
+              "code": "314529007",
+              "display": "Medication review due (situation)",
+              "clinical_status": "resolved"
+            },
+            {
+              "code": "431855005",
+              "display": "Chronic kidney disease stage 1 (disorder)",
+              "clinical_status": "active"
+            },
+            {
+              "code": "127013003",
+              "display": "Disorder of kidney due to diabetes mellitus (disorder)",
+              "clinical_status": "active"
+            },
+            {
+              "code": "160904001",
+              "display": "Part-time employment (finding)",
+              "clinical_status": "resolved"
+            },
+            {
+              "code": "423315002",
+              "display": "Limited social contact (finding)",
+              "clinical_status": "resolved"
+            },
+            {
+              "code": "73595000",
+              "display": "Stress (finding)",
+              "clinical_status": "resolved"
+            },
+            {
+              "code": "424393004",
+              "display": "Reports of violence in the environment (finding)",
+              "clinical_status": "resolved"
+            }
+          ],
+          "procedures": [
+            {
+              "code": "103697008",
+              "display": "Patient referral for dental care (procedure)"
+            },
+            {
+              "code": "171207006",
+              "display": "Depression screening (procedure)"
+            },
+            {
+              "code": "428211000124100",
+              "display": "Assessment of substance use (procedure)"
+            },
+            {
+              "code": "430193006",
+              "display": "Medication reconciliation (procedure)"
+            },
+            {
+              "code": "710824005",
+              "display": "Assessment of health and social care needs (procedure)"
+            },
+            {
+              "code": "710841007",
+              "display": "Assessment of anxiety (procedure)"
+            },
+            {
+              "code": "713106006",
+              "display": "Screening for drug abuse (procedure)"
+            },
+            {
+              "code": "762993000",
+              "display": "Assessment using Morse Fall Scale (procedure)"
+            }
+          ]
+        }
+      },
+      "status": "success"
+    },
+    {
+      "encounter_id": "633d2472-8519-8a45-5473-23758e741f0f",
+      "label": "Gingivitis & Stress \u2014 Check-up Ambulatory 2018",
+      "encounter": {
+        "encounter_class": "AMB",
+        "setting": "Ambulatory",
+        "encounter_date": "2018-04-25",
+        "duration_hours": null,
+        "patient_gender": "Female",
+        "patient_age": 42,
+        "reason": "Gingivitis and stress \u2014 routine check-up"
+      },
+      "suggestions": {
+        "icd10_suggestions": [
+          {
+            "code": "Z00.00",
+            "description": "Encounter for general adult medical examination without abnormal findings",
+            "rationale": "Primary reason for encounter is documented as 'check up (procedure)' in ambulatory setting",
+            "confidence": "high",
+            "code_type": "primary"
+          },
+          {
+            "code": "N18.5",
+            "description": "Chronic kidney disease, stage 5 (severe)",
+            "rationale": "GFR of 17.231 mL/min/1.73m2 indicates stage 5 CKD (GFR <15), elevated creatinine 2.43 mg/dL supports this",
+            "confidence": "high",
+            "code_type": "secondary"
+          },
+          {
+            "code": "E11.9",
+            "description": "Type 2 diabetes mellitus without complications",
+            "rationale": "Patient on insulin (Humulin) and metformin, glucose monitoring performed, consistent with diabetes management",
+            "confidence": "high",
+            "code_type": "secondary"
+          },
+          {
+            "code": "J45.9",
+            "description": "Asthma, unspecified",
+            "rationale": "Patient prescribed albuterol and budesonide inhalers, typical asthma controller and rescue medications",
+            "confidence": "medium",
+            "code_type": "secondary"
+          },
+          {
+            "code": "I10",
+            "description": "Essential hypertension",
+            "rationale": "Patient on lisinopril (ACE inhibitor) and hydrochlorothiazide (diuretic), standard hypertension medications",
+            "confidence": "medium",
+            "code_type": "secondary"
+          },
+          {
+            "code": "Z91.19",
+            "description": "Patient's noncompliance with other medical treatment and regimen",
+            "rationale": "Medication review due situation documented, suggesting potential compliance issues",
+            "confidence": "medium",
+            "code_type": "additional"
+          },
+          {
+            "code": "Z65.5",
+            "description": "Exposure to disaster, war and other hostilities",
+            "rationale": "Reports of violence in the environment documented as social determinant",
+            "confidence": "medium",
+            "code_type": "additional"
+          }
+        ],
+        "cpt_suggestions": [
+          {
+            "code": "99395",
+            "description": "Periodic comprehensive preventive medicine reevaluation and management of an individual including an age and gender appropriate history, examination, counseling/anticipatory guidance/risk factor reduction interventions, and the ordering of laboratory/diagnostic procedures, established patient; 40-64 years",
+            "rationale": "Preventive care visit for 56-year-old established patient with comprehensive screening procedures performed",
+            "confidence": "high"
+          },
+          {
+            "code": "96160",
+            "description": "Administration of patient-focused health risk assessment instrument with scoring and documentation, per standardized instrument",
+            "rationale": "AUDIT-C screening tool administered as documented procedure",
+            "confidence": "medium"
+          }
+        ],
+        "prior_auth_assessment": {
+          "required": false,
+          "reason": "Routine preventive care visit with standard screening procedures, no high-cost interventions or specialized treatments",
+          "supporting_codes": []
+        },
+        "medication_review_flag": {
+          "flagged": true,
+          "reason": "Patient has 8 medications including high-risk drug classes (insulin, multiple chronic disease medications) and medication review due situation is documented",
+          "action": "Conduct comprehensive medication reconciliation and review for drug interactions, especially given CKD stage 5"
+        },
+        "coding_notes": [
+          "Consider querying provider for more specific diabetes type and complications given severe CKD",
+          "Gingivitis listed as resolved - not coded as it's not active during this encounter",
+          "Elevated creatinine and low GFR strongly suggest advanced CKD - consider nephrology referral documentation",
+          "Multiple screening procedures performed suggest this may qualify for additional preventive care codes",
+          "Documentation lacks specific reason for visit beyond 'check up' - more specific chief complaint would improve coding accuracy"
+        ]
+      },
+      "evaluation": {
+        "encounter_id": "633d2472-8519-8a45-5473-23758e741f0f",
+        "icd10_evaluation": {
+          "suggested_count": 7,
+          "ground_truth_count": 4,
+          "concept_matches": 5,
+          "gt_conditions_matched": 3,
+          "concept_precision": 0.71,
+          "concept_recall": 0.75,
+          "match_details": [
+            {
+              "suggested_code": "Z00.00",
+              "suggested_desc": "Encounter for general adult medical examination without abnormal findings",
+              "confidence": "high",
+              "code_type": "primary",
+              "concept_match": true
+            },
+            {
+              "suggested_code": "N18.5",
+              "suggested_desc": "Chronic kidney disease, stage 5 (severe)",
+              "confidence": "high",
+              "code_type": "secondary",
+              "concept_match": false
+            },
+            {
+              "suggested_code": "E11.9",
+              "suggested_desc": "Type 2 diabetes mellitus without complications",
+              "confidence": "high",
+              "code_type": "secondary",
+              "concept_match": false
+            },
+            {
+              "suggested_code": "J45.9",
+              "suggested_desc": "Asthma, unspecified",
+              "confidence": "medium",
+              "code_type": "secondary",
+              "concept_match": true
+            },
+            {
+              "suggested_code": "I10",
+              "suggested_desc": "Essential hypertension",
+              "confidence": "medium",
+              "code_type": "secondary",
+              "concept_match": true
+            },
+            {
+              "suggested_code": "Z91.19",
+              "suggested_desc": "Patient's noncompliance with other medical treatment and regimen",
+              "confidence": "medium",
+              "code_type": "additional",
+              "concept_match": true
+            },
+            {
+              "suggested_code": "Z65.5",
+              "suggested_desc": "Exposure to disaster, war and other hostilities",
+              "confidence": "medium",
+              "code_type": "additional",
+              "concept_match": true
+            }
+          ]
+        },
+        "cpt_evaluation": {
+          "suggested_count": 2,
+          "suggested_codes": [
+            "99395",
+            "96160"
+          ],
+          "note": "CPT exact match not possible against Synthea SNOMED procedure codes \u2014 manual clinical review required"
+        },
+        "ground_truth": {
+          "conditions": [
+            {
+              "code": "314529007",
+              "display": "Medication review due (situation)",
+              "clinical_status": "resolved"
+            },
+            {
+              "code": "160903007",
+              "display": "Full-time employment (finding)",
+              "clinical_status": "resolved"
+            },
+            {
+              "code": "424393004",
+              "display": "Reports of violence in the environment (finding)",
+              "clinical_status": "resolved"
+            },
+            {
+              "code": "66383009",
+              "display": "Gingivitis (disorder)",
+              "clinical_status": "resolved"
+            }
+          ],
+          "procedures": [
+            {
+              "code": "103697008",
+              "display": "Patient referral for dental care (procedure)"
+            },
+            {
+              "code": "171207006",
+              "display": "Depression screening (procedure)"
+            },
+            {
+              "code": "428211000124100",
+              "display": "Assessment of substance use (procedure)"
+            },
+            {
+              "code": "710824005",
+              "display": "Assessment of health and social care needs (procedure)"
+            },
+            {
+              "code": "710841007",
+              "display": "Assessment of anxiety (procedure)"
+            },
+            {
+              "code": "763302001",
+              "display": "Assessment using Alcohol Use Disorders Identification Test - Consumption (procedure)"
+            },
+            {
+              "code": "866148006",
+              "display": "Screening for domestic abuse (procedure)"
+            }
+          ]
+        }
+      },
+      "status": "success"
+    },
+    {
+      "encounter_id": "ab585563-a667-be77-37b0-e36396b22486",
+      "label": "Diabetic CKD \u2014 Urgent Care Ambulatory 1998",
+      "encounter": {
+        "encounter_class": "AMB",
+        "setting": "Ambulatory",
+        "encounter_date": "1998-03-20",
+        "duration_hours": null,
+        "patient_gender": "Male",
+        "patient_age": 48,
+        "reason": "Diabetic CKD \u2014 urgent care visit"
+      },
+      "suggestions": {
+        "icd10_suggestions": [
+          {
+            "code": "E11.21",
+            "description": "Type 2 diabetes mellitus with diabetic nephropathy",
+            "rationale": "Primary diagnosis - patient has active microalbuminuria due to type 2 diabetes mellitus, which is diabetic nephropathy",
+            "confidence": "high",
+            "code_type": "primary"
+          },
+          {
+            "code": "N18.2",
+            "description": "Chronic kidney disease, stage 2 (mild)",
+            "rationale": "Secondary diagnosis - GFR of 65.353 mL/min/1.73m\u00b2 indicates stage 2 CKD, though noted as resolved in encounter",
+            "confidence": "medium",
+            "code_type": "secondary"
+          },
+          {
+            "code": "Z56.6",
+            "description": "Other physical and mental strain related to work",
+            "rationale": "Social determinant - stress finding documented in full-time employed patient",
+            "confidence": "medium",
+            "code_type": "additional"
+          }
+        ],
+        "cpt_suggestions": [
+          {
+            "code": "99213",
+            "description": "Office or other outpatient visit for the evaluation and management of an established patient",
+            "rationale": "Urgent care visit with multiple assessments, lab review, and medication management for established conditions - moderate complexity",
+            "confidence": "high"
+          },
+          {
+            "code": "80053",
+            "description": "Comprehensive metabolic panel",
+            "rationale": "Lab work includes glucose, BUN, creatinine, electrolytes, and other components of CMP",
+            "confidence": "high"
+          },
+          {
+            "code": "81001",
+            "description": "Urinalysis, by dip stick or tablet reagent for bilirubin, glucose, hemoglobin, ketones, leukocytes, nitrite, pH, protein, specific gravity, urobilinogen, any number of these constituents; automated, with microscopy",
+            "rationale": "Urine glucose and other urinalysis components documented",
+            "confidence": "medium"
+          }
+        ],
+        "prior_auth_assessment": {
+          "required": false,
+          "reason": "Standard diabetes management with routine medications and monitoring - no high-cost interventions",
+          "supporting_codes": []
+        },
+        "medication_review_flag": {
+          "flagged": true,
+          "reason": "Patient on 5 medications including insulin, which requires careful monitoring and coordination",
+          "action": "Comprehensive medication review recommended due to diabetes management complexity and multiple antihypertensive agents"
+        },
+        "coding_notes": [
+          "Reason for visit not documented - impacts E&M code selection accuracy",
+          "Gingivitis noted as resolved but dental referral performed - consider if active diagnosis warranted",
+          "Multiple screening procedures performed suggest preventive care component",
+          "GFR value suggests stage 2 CKD but encounter notes it as resolved - clinical correlation needed",
+          "Consider if this is new patient vs established patient for CPT code selection"
+        ]
+      },
+      "evaluation": {
+        "encounter_id": "ab585563-a667-be77-37b0-e36396b22486",
+        "icd10_evaluation": {
+          "suggested_count": 3,
+          "ground_truth_count": 5,
+          "concept_matches": 3,
+          "gt_conditions_matched": 3,
+          "concept_precision": 1.0,
+          "concept_recall": 0.6,
+          "match_details": [
+            {
+              "suggested_code": "E11.21",
+              "suggested_desc": "Type 2 diabetes mellitus with diabetic nephropathy",
+              "confidence": "high",
+              "code_type": "primary",
+              "concept_match": true
+            },
+            {
+              "suggested_code": "N18.2",
+              "suggested_desc": "Chronic kidney disease, stage 2 (mild)",
+              "confidence": "medium",
+              "code_type": "secondary",
+              "concept_match": true
+            },
+            {
+              "suggested_code": "Z56.6",
+              "suggested_desc": "Other physical and mental strain related to work",
+              "confidence": "medium",
+              "code_type": "additional",
+              "concept_match": true
+            }
+          ]
+        },
+        "cpt_evaluation": {
+          "suggested_count": 3,
+          "suggested_codes": [
+            "99213",
+            "80053",
+            "81001"
+          ],
+          "note": "CPT exact match not possible against Synthea SNOMED procedure codes \u2014 manual clinical review required"
+        },
+        "ground_truth": {
+          "conditions": [
+            {
+              "code": "431856006",
+              "display": "Chronic kidney disease stage 2 (disorder)",
+              "clinical_status": "resolved"
+            },
+            {
+              "code": "90781000119102",
+              "display": "Microalbuminuria due to type 2 diabetes mellitus (disorder)",
+              "clinical_status": "active"
+            },
+            {
+              "code": "160903007",
+              "display": "Full-time employment (finding)",
+              "clinical_status": "resolved"
+            },
+            {
+              "code": "73595000",
+              "display": "Stress (finding)",
+              "clinical_status": "resolved"
+            },
+            {
+              "code": "66383009",
+              "display": "Gingivitis (disorder)",
+              "clinical_status": "resolved"
+            }
+          ],
+          "procedures": [
+            {
+              "code": "103697008",
+              "display": "Patient referral for dental care (procedure)"
+            },
+            {
+              "code": "171207006",
+              "display": "Depression screening (procedure)"
+            },
+            {
+              "code": "428211000124100",
+              "display": "Assessment of substance use (procedure)"
+            },
+            {
+              "code": "430193006",
+              "display": "Medication reconciliation (procedure)"
+            },
+            {
+              "code": "710824005",
+              "display": "Assessment of health and social care needs (procedure)"
+            },
+            {
+              "code": "710841007",
+              "display": "Assessment of anxiety (procedure)"
+            },
+            {
+              "code": "713106006",
+              "display": "Screening for drug abuse (procedure)"
+            },
+            {
+              "code": "866148006",
+              "display": "Screening for domestic abuse (procedure)"
+            }
+          ]
+        }
+      },
+      "status": "success"
+    },
+    {
+      "encounter_id": "fcdec534-36f9-6899-77c9-1fe0eb549f50",
+      "label": "Stress & SDOH \u2014 Check-up Ambulatory 1992",
+      "encounter": {
+        "encounter_class": "AMB",
+        "setting": "Ambulatory",
+        "encounter_date": "1992-11-15",
+        "duration_hours": null,
+        "patient_gender": "Female",
+        "patient_age": 38,
+        "reason": "Stress and social determinants of health \u2014 routine check-up"
+      },
+      "suggestions": {
+        "icd10_suggestions": [
+          {
+            "code": "Z00.00",
+            "description": "Encounter for general adult medical examination without abnormal findings",
+            "rationale": "Primary reason for encounter is documented as 'check up (procedure)' in ambulatory setting",
+            "confidence": "high",
+            "code_type": "primary"
+          },
+          {
+            "code": "Z56.0",
+            "description": "Unemployment, unspecified",
+            "rationale": "Social determinant documented as 'Not in labor force (finding)'",
+            "confidence": "medium",
+            "code_type": "secondary"
+          },
+          {
+            "code": "Z73.3",
+            "description": "Stress, not elsewhere classified",
+            "rationale": "Social determinant documented as 'Stress (finding)'",
+            "confidence": "medium",
+            "code_type": "additional"
+          }
+        ],
+        "cpt_suggestions": [
+          {
+            "code": "99395",
+            "description": "Periodic comprehensive preventive medicine reevaluation and management of an individual including an age and gender appropriate history, examination, counseling/anticipatory guidance/risk factor reduction interventions, and the ordering of laboratory/diagnostic procedures, established patient; 65-39 years",
+            "rationale": "69-year-old male established patient for preventive care check-up with comprehensive screening assessments performed",
+            "confidence": "high"
+          },
+          {
+            "code": "45378",
+            "description": "Colonoscopy, flexible; diagnostic, including collection of specimen(s) by brushing or washing, when performed (separate procedure)",
+            "rationale": "Digital rectal examination was performed as part of screening procedures",
+            "confidence": "low"
+          }
+        ],
+        "prior_auth_assessment": {
+          "required": false,
+          "reason": "Routine preventive care encounter with standard screening procedures",
+          "supporting_codes": []
+        },
+        "medication_review_flag": {
+          "flagged": true,
+          "reason": "Patient has 7 medications including high-risk drugs: insulin (hypoglycemia risk), digoxin (narrow therapeutic index), warfarin (bleeding risk), and tacrolimus (immunosuppressant)",
+          "action": "Comprehensive medication review recommended due to polypharmacy and multiple high-risk medications requiring monitoring"
+        },
+        "coding_notes": [
+          "No specific diagnoses documented despite patient on multiple chronic disease medications (insulin, ACE inhibitor, diuretic, calcium channel blocker, anticoagulant, immunosuppressant)",
+          "Elevated creatinine (1.95 mg/dL) and reduced GFR (69.987) suggest possible chronic kidney disease but not documented as diagnosis",
+          "Multiple screening assessments performed suggest comprehensive preventive visit rather than problem-focused encounter",
+          "Consider querying provider for chronic conditions that would justify current medication regimen",
+          "Digital rectal exam code selection depends on whether this was screening or diagnostic - insufficient documentation to determine appropriate CPT code"
+        ]
+      },
+      "evaluation": {
+        "encounter_id": "fcdec534-36f9-6899-77c9-1fe0eb549f50",
+        "icd10_evaluation": {
+          "suggested_count": 3,
+          "ground_truth_count": 3,
+          "concept_matches": 3,
+          "gt_conditions_matched": 2,
+          "concept_precision": 1.0,
+          "concept_recall": 0.67,
+          "match_details": [
+            {
+              "suggested_code": "Z00.00",
+              "suggested_desc": "Encounter for general adult medical examination without abnormal findings",
+              "confidence": "high",
+              "code_type": "primary",
+              "concept_match": true
+            },
+            {
+              "suggested_code": "Z56.0",
+              "suggested_desc": "Unemployment, unspecified",
+              "confidence": "medium",
+              "code_type": "secondary",
+              "concept_match": true
+            },
+            {
+              "suggested_code": "Z73.3",
+              "suggested_desc": "Stress, not elsewhere classified",
+              "confidence": "medium",
+              "code_type": "additional",
+              "concept_match": true
+            }
+          ]
+        },
+        "cpt_evaluation": {
+          "suggested_count": 2,
+          "suggested_codes": [
+            "99395",
+            "45378"
+          ],
+          "note": "CPT exact match not possible against Synthea SNOMED procedure codes \u2014 manual clinical review required"
+        },
+        "ground_truth": {
+          "conditions": [
+            {
+              "code": "314529007",
+              "display": "Medication review due (situation)",
+              "clinical_status": "resolved"
+            },
+            {
+              "code": "741062008",
+              "display": "Not in labor force (finding)",
+              "clinical_status": "resolved"
+            },
+            {
+              "code": "73595000",
+              "display": "Stress (finding)",
+              "clinical_status": "resolved"
+            }
+          ],
+          "procedures": [
+            {
+              "code": "171207006",
+              "display": "Depression screening (procedure)"
+            },
+            {
+              "code": "410006001",
+              "display": "Digital examination of rectum (procedure)"
+            },
+            {
+              "code": "428211000124100",
+              "display": "Assessment of substance use (procedure)"
+            },
+            {
+              "code": "430193006",
+              "display": "Medication reconciliation (procedure)"
+            },
+            {
+              "code": "710824005",
+              "display": "Assessment of health and social care needs (procedure)"
+            },
+            {
+              "code": "710841007",
+              "display": "Assessment of anxiety (procedure)"
+            },
+            {
+              "code": "762993000",
+              "display": "Assessment using Morse Fall Scale (procedure)"
+            },
+            {
+              "code": "763302001",
+              "display": "Assessment using Alcohol Use Disorders Identification Test - Consumption (procedure)"
+            },
+            {
+              "code": "866148006",
+              "display": "Screening for domestic abuse (procedure)"
+            }
+          ]
+        }
+      },
+      "status": "success"
+    }
+  ]
+}
