@@ -35,11 +35,13 @@ st.markdown(
     """
 )
 
-col_gh, col_yt = st.columns([1, 5])
-with col_gh:
-    st.link_button("GitHub", "https://github.com/nileshacharya/health-ai-portfolio")
-with col_yt:
-    st.link_button("▶ Demo Video", "https://youtu.be/H5mB_1b4DD8")
+st.link_button("GitHub", "https://github.com/nileshacharya/health-ai-portfolio")
+
+# ── Sidebar ───────────────────────────────────────────────────────────────────
+with st.sidebar:
+    st.markdown("### 🎬 Demo Video")
+    st.caption("Clinical Coding Assistant — full walkthrough")
+    st.video("https://youtu.be/H5mB_1b4DD8")
 
 st.divider()
 
