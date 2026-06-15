@@ -46,4 +46,4 @@ HTML_PATH = Path(__file__).parent.parent / "ganu.html"
 with open(HTML_PATH, "r") as f:
     html_content = f.read()
 
-st.iframe(html_content, height=750, scrolling=False)
+st.iframe(html_content, height=750)
