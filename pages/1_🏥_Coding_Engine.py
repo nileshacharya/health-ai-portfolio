@@ -61,12 +61,17 @@ def render_cpt(items):
 
 def render_prior_auth(pa):
     st.markdown("### 🔐 Prior Authorization Assessment")
-    if not pa: return
+    if not pa:
+        return
     req = pa.get("required") or pa.get("encounter_requires_auth", False)
-    msg = pa.get("reason") or pa.get("summary","")
-    st.error(f"⚠️ **Authorization required** — {msg}") if req else st.success(f"✅ {msg}")
-    codes = pa.get("supporting_codes",[])
-    if codes: st.caption(f"Supporting codes: {', '.join(codes)}")
+    msg = str(pa.get("reason") or pa.get("summary") or "")
+    if req:
+        st.error(f"⚠️ **Authorization required** — {msg}")
+    else:
+        st.success(f"✅ {msg}")
+    codes = pa.get("supporting_codes", [])
+    if codes:
+        st.caption(f"Supporting codes: {', '.join(codes)}")
 
 def render_med_review(flag):
     st.markdown("### 💊 Medication Review")
