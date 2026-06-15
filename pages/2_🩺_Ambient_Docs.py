@@ -76,7 +76,7 @@ if mode == "📋 Demo Mode":
     try:
         demo_data = load_data()
     except FileNotFoundError:
-        st.error("demo_data.json not found. Please ensure the file is in the repo root.")
+        st.error("demo_data.json not found at repo root.")
         st.stop()
 
     cases = demo_data.get("cases", [])
@@ -84,7 +84,7 @@ if mode == "📋 Demo Mode":
         st.error("No cases found in demo_data.json.")
         st.stop()
 
-    # Defensive label building — fallback if keys missing
+    # Defensive label — fallback chain if expected keys missing
     def case_label(c):
         name = c.get("sample_name") or c.get("id") or c.get("conversation_id", "Unknown")
         cat  = c.get("category", "")
@@ -101,12 +101,18 @@ if mode == "📋 Demo Mode":
     st.caption(selected.get("description", ""))
     st.success("✓ Pre-generated results loaded")
 
-    show_metrics(selected["statistics"])
+    # Defensive stats access
+    stats = selected.get("statistics")
+    if not stats:
+        st.error("Statistics missing from this case. Please re-generate demo_data.json.")
+        st.stop()
+
+    show_metrics(stats)
     st.divider()
     show_results(
-        selected["conversation"],
-        selected["soap_note"],
-        selected["attributions"]
+        selected.get("conversation", ""),
+        selected.get("soap_note", ""),
+        selected.get("attributions", [])
     )
 
 # ── LIVE MODE ─────────────────────────────────────────────────────────────────
