@@ -11,13 +11,6 @@ st.set_page_config(
     initial_sidebar_state="collapsed",
 )
 
-# Optional live mode
-try:
-    from orchestrate_minimal import generate_soap_with_attribution
-    LIVE_MODE_AVAILABLE = True
-except ImportError:
-    LIVE_MODE_AVAILABLE = False
-
 # ── Load demo data ────────────────────────────────────────────────────────────
 DATA_PATH = Path(__file__).parent.parent / "demo_data.json"
 
@@ -64,7 +57,6 @@ def show_results(conversation, soap_note, attributions):
     with col_left:
         st.subheader("Conversation")
         st.text(conversation)
-
     with col_right:
         tab_soap, tab_attr = st.tabs(["SOAP Note", "Attributions"])
         with tab_soap:
@@ -76,48 +68,50 @@ def show_results(conversation, soap_note, attributions):
             st.divider()
             for attr in attributions:
                 icon   = "⚠️" if attr["is_hallucination"] else "✅"
-                source = attr["source_text"] or "not found in conversation"
+                source = attr.get("source_text") or "not found in conversation"
                 st.write(f"{icon} **{attr['soap_text']}** → {source}")
 
 # ── DEMO MODE ─────────────────────────────────────────────────────────────────
 if mode == "📋 Demo Mode":
-    demo_data = load_data()
-    cases     = demo_data["cases"]
-    options   = {f"{c['sample_name']}  [{c['category']}]": c for c in cases}
+    try:
+        demo_data = load_data()
+    except FileNotFoundError:
+        st.error("demo_data.json not found. Please ensure the file is in the repo root.")
+        st.stop()
+
+    cases = demo_data.get("cases", [])
+    if not cases:
+        st.error("No cases found in demo_data.json.")
+        st.stop()
+
+    # Defensive label building — fallback if keys missing
+    def case_label(c):
+        name = c.get("sample_name") or c.get("id") or c.get("conversation_id", "Unknown")
+        cat  = c.get("category", "")
+        return f"{name}  [{cat}]" if cat else name
+
+    options = {case_label(c): c for c in cases}
 
     selected_label = st.selectbox(
         "Medical Sample",
         list(options.keys()),
-        index=2,
+        index=min(2, len(options) - 1),
     )
     selected = options[selected_label]
-    st.caption(selected["description"])
+    st.caption(selected.get("description", ""))
     st.success("✓ Pre-generated results loaded")
 
     show_metrics(selected["statistics"])
     st.divider()
-    show_results(selected["conversation"], selected["soap_note"], selected["attributions"])
+    show_results(
+        selected["conversation"],
+        selected["soap_note"],
+        selected["attributions"]
+    )
 
 # ── LIVE MODE ─────────────────────────────────────────────────────────────────
 else:
-    if not LIVE_MODE_AVAILABLE:
-        st.error("orchestrate_minimal.py not found. Live mode requires local setup.")
-        st.stop()
-    if not os.getenv("ANTHROPIC_API_KEY"):
-        st.warning("ANTHROPIC_API_KEY not set. Add it to your .env file to use Live Mode.")
-        st.stop()
-
-    conversation = st.text_area("Paste Conversation:", height=200)
-    if st.button("Generate SOAP + Attributions"):
-        if not conversation.strip():
-            st.error("Please enter a conversation")
-        else:
-            with st.spinner("Processing..."):
-                result = generate_soap_with_attribution(conversation)
-            if result["success"]:
-                st.success("✓ Generated successfully")
-                show_metrics(result["data"]["statistics"])
-                st.divider()
-                show_results(conversation, result["data"]["soap_note"], result["data"]["attributions"])
-            else:
-                st.error(f"Error: {result['error']}")
+    st.info(
+        "⚡ **Live Mode** requires a local setup with `ANTHROPIC_API_KEY` configured. "
+        "Use **Demo Mode** to explore pre-generated results without any setup."
+    )

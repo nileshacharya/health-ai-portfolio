@@ -39,9 +39,8 @@ st.link_button("GitHub", "https://github.com/nileshacharya/health-ai-portfolio")
 
 # ── Sidebar ───────────────────────────────────────────────────────────────────
 with st.sidebar:
-    st.markdown("### 🎬 Demo Video")
-    st.caption("Clinical Coding Assistant — full walkthrough")
-    st.video("https://youtu.be/H5mB_1b4DD8")
+    with st.expander("🎬 Clinical Coding Assistant — Demo Video"):
+        st.video("https://youtu.be/H5mB_1b4DD8")
 
 st.divider()
 
