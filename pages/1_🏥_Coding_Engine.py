@@ -10,205 +10,160 @@ st.set_page_config(
     initial_sidebar_state="collapsed",
 )
 
-# ── Load demo data ────────────────────────────────────────────────────────────
 DATA_PATH = Path(__file__).parent.parent / "coding_demo_data.json"
 
-@st.cache_data
-def load_data():
+# Cache busted with ttl=0 to always read fresh from disk
+@st.cache_data(ttl=0)
+def load_coding_data():
     with open(DATA_PATH) as f:
-        return json.load(f)
+        raw = json.load(f)
+    return raw["cases"]
 
-try:
-    data = load_data()
-except FileNotFoundError:
-    st.error("coding_demo_data.json not found at repo root.")
-    st.stop()
+# ── Constants ──────────────────────────────────────────────────────────────────
+CONF  = {"high": "🟢", "medium": "🟡", "low": "🔴"}
+CTYPE = {"primary": "PRIMARY", "secondary": "SECONDARY", "additional": "ADDITIONAL"}
 
-cases = data.get("cases", [])
-if not cases:
-    st.error("No cases found in coding_demo_data.json.")
-    st.stop()
-
-# Defensive label — fallback to encounter_id if label missing
-def case_label(c):
-    return c.get("label") or c.get("encounter_id", "Unknown")
-
-label_to_case = {case_label(c): c for c in cases}
-
-# ── Constants ─────────────────────────────────────────────────────────────────
-CONFIDENCE_COLORS = {"high": "🟢", "medium": "🟡", "low": "🔴"}
-CODE_TYPE_LABELS  = {"primary": "PRIMARY", "secondary": "SECONDARY", "additional": "ADDITIONAL"}
-
-# ── Renderers ────────────────────────────────────────────────────────────────
-
+# ── Renderers ──────────────────────────────────────────────────────────────────
 def render_header():
-    st.markdown(
-        """
-        <div style='background:#1F3864;padding:16px 20px;
-                    border-radius:8px;margin-bottom:20px'>
-            <h2 style='color:white;margin:0;font-size:1.4rem'>
-                🏥 Clinical Coding Assistant
-            </h2>
-            <p style='color:#A8C8E8;margin:4px 0 0 0;font-size:0.85rem'>
-                AI-powered ICD-10 &amp; CPT suggestion engine
-                with prior authorization assessment
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
+    st.markdown("""
+    <div style='background:#1F3864;padding:16px 20px;border-radius:8px;margin-bottom:20px'>
+        <h2 style='color:white;margin:0;font-size:1.4rem'>🏥 Clinical Coding Assistant</h2>
+        <p style='color:#A8C8E8;margin:4px 0 0 0;font-size:0.85rem'>
+            AI-powered ICD-10 &amp; CPT suggestion engine with prior authorization assessment
+        </p>
+    </div>""", unsafe_allow_html=True)
 
 def render_encounter_header(enc):
-    col1, col2, col3, col4, col5 = st.columns(5)
-    col1.metric("Setting",  enc.get("setting", enc.get("encounter_class", "—")))
-    col2.metric("Date",     enc.get("encounter_date", "—"))
-    col3.metric("Duration", f"{enc['duration_hours']}h" if enc.get("duration_hours") else "—")
-    col4.metric("Gender",   enc.get("patient_gender", "—"))
-    col5.metric("Age",      enc.get("patient_age", "—"))
-    st.caption(f"**Reason:** {enc.get('reason', 'Not documented')}")
+    c1,c2,c3,c4,c5 = st.columns(5)
+    c1.metric("Setting",  enc.get("setting","—"))
+    c2.metric("Date",     enc.get("encounter_date","—"))
+    c3.metric("Duration", f"{enc['duration_hours']}h" if enc.get("duration_hours") else "—")
+    c4.metric("Gender",   enc.get("patient_gender","—"))
+    c5.metric("Age",      enc.get("patient_age","—"))
+    st.caption(f"**Reason:** {enc.get('reason','Not documented')}")
 
-def render_icd10(icd10_suggestions):
+def render_icd10(items):
     st.markdown("### 📋 ICD-10 Diagnosis Codes")
-    if not icd10_suggestions:
-        st.warning("No ICD-10 suggestions returned")
-        return
-    for s in icd10_suggestions:
-        conf  = CONFIDENCE_COLORS.get(s["confidence"], "⚪")
-        ctype = CODE_TYPE_LABELS.get(s.get("code_type", ""), s.get("code_type", ""))
-        with st.expander(f"{conf} **{s['code']}** — {s['description']}  `{ctype}`", expanded=True):
+    if not items: st.warning("No ICD-10 suggestions"); return
+    for s in items:
+        ct = CTYPE.get(s.get("code_type",""), s.get("code_type",""))
+        with st.expander(f"{CONF.get(s['confidence'],'⚪')} **{s['code']}** — {s['description']}  `{ct}`", expanded=True):
             st.caption(f"**Rationale:** {s['rationale']}")
-            st.caption(f"**Confidence:** {s['confidence'].title()}  |  **Code type:** {ctype}")
+            st.caption(f"**Confidence:** {s['confidence'].title()}  |  **Code type:** {ct}")
 
-def render_cpt(cpt_suggestions):
+def render_cpt(items):
     st.markdown("### 🔧 CPT Procedure Codes")
-    if not cpt_suggestions:
-        st.warning("No CPT suggestions returned")
-        return
-    for s in cpt_suggestions:
-        conf = CONFIDENCE_COLORS.get(s["confidence"], "⚪")
-        with st.expander(f"{conf} **{s['code']}** — {s['description']}", expanded=True):
+    if not items: st.warning("No CPT suggestions"); return
+    for s in items:
+        with st.expander(f"{CONF.get(s['confidence'],'⚪')} **{s['code']}** — {s['description']}", expanded=True):
             st.caption(f"**Rationale:** {s['rationale']}")
             st.caption(f"**Confidence:** {s['confidence'].title()}")
 
-def render_prior_auth(prior_auth):
+def render_prior_auth(pa):
     st.markdown("### 🔐 Prior Authorization Assessment")
-    if not prior_auth:
-        return
-    required = prior_auth.get("required") or prior_auth.get("encounter_requires_auth", False)
-    summary  = prior_auth.get("reason") or prior_auth.get("summary", "")
-    if required:
-        st.error(f"⚠️ **Authorization required** — {summary}")
-    else:
-        st.success(f"✅ {summary}")
-    supporting = prior_auth.get("supporting_codes", [])
-    if supporting:
-        st.caption(f"Supporting codes: {', '.join(supporting)}")
+    if not pa: return
+    req = pa.get("required") or pa.get("encounter_requires_auth", False)
+    msg = pa.get("reason") or pa.get("summary","")
+    st.error(f"⚠️ **Authorization required** — {msg}") if req else st.success(f"✅ {msg}")
+    codes = pa.get("supporting_codes",[])
+    if codes: st.caption(f"Supporting codes: {', '.join(codes)}")
 
-def render_medication_review(flag):
+def render_med_review(flag):
     st.markdown("### 💊 Medication Review")
-    if not flag:
-        return
+    if not flag: return
     if flag.get("flagged"):
         st.warning(f"⚠️ **Review recommended** — {flag['reason']}")
         st.caption(f"**Action:** {flag['action']}")
     else:
-        st.success(f"✅ No review required — {flag.get('reason', '')}")
+        st.success(f"✅ No review required — {flag.get('reason','')}")
 
-def render_coding_notes(notes):
-    if not notes:
-        return
+def render_notes(notes):
+    if not notes: return
     st.markdown("### 📝 Coding Notes")
-    for note in notes:
-        st.info(f"ℹ️ {note}")
+    for n in notes: st.info(f"ℹ️ {n}")
 
-def render_evaluation(evaluation):
+def render_evaluation(ev_block):
     st.markdown("### 📊 Evaluation vs Ground Truth")
-    ev = evaluation.get("icd10_evaluation", {})
-    col1, col2, col3, col4 = st.columns(4)
-    col1.metric("Precision",    f"{ev.get('concept_precision', 0):.0%}")
-    col2.metric("Recall",       f"{ev.get('concept_recall', 0):.0%}")
-    col3.metric("Suggested",    ev.get("suggested_count", 0))
-    col4.metric("Ground truth", ev.get("ground_truth_count", 0))
+    ev = ev_block.get("icd10_evaluation", {})
+    c1,c2,c3,c4 = st.columns(4)
+    c1.metric("Precision",    f"{ev.get('concept_precision',0):.0%}")
+    c2.metric("Recall",       f"{ev.get('concept_recall',0):.0%}")
+    c3.metric("Suggested",    ev.get("suggested_count",0))
+    c4.metric("Ground truth", ev.get("ground_truth_count",0))
     with st.expander("View match details"):
-        for m in ev.get("match_details", []):
+        for m in ev.get("match_details",[]):
             icon = "✅" if m["concept_match"] else "❌"
-            st.markdown(f"{icon} `{m['suggested_code']}` — {m['suggested_desc']}  _{m['confidence']} confidence_")
+            st.markdown(f"{icon} `{m['suggested_code']}` — {m['suggested_desc']}  _{m['confidence']}_")
     with st.expander("View ground truth conditions"):
-        for gt in evaluation.get("ground_truth", {}).get("conditions", []):
+        for gt in ev_block.get("ground_truth",{}).get("conditions",[]):
             st.markdown(f"- {gt['display']}  `{gt['code']}`")
 
-# ── Main ──────────────────────────────────────────────────────────────────────
-
+# ── Main ───────────────────────────────────────────────────────────────────────
 render_header()
 
-col_select, col_run, col_spacer = st.columns([3, 1, 2])
-with col_select:
-    selected_label = st.selectbox(
-        "Select encounter",
-        options=list(label_to_case.keys()),
-        index=0,
-        label_visibility="collapsed",
-    )
-with col_run:
-    run_clicked = st.button("▶ Run engine", type="primary", use_container_width=True)
+cases = load_coding_data()
+labels = [c["label"] for c in cases]
+label_map = {c["label"]: c for c in cases}
+
+col_sel, col_btn, col_sp = st.columns([3,1,2])
+with col_sel:
+    selected_label = st.selectbox("Select encounter", labels, index=0, label_visibility="collapsed")
+with col_btn:
+    run = st.button("▶ Run engine", type="primary", use_container_width=True)
 
 st.divider()
 
-if "coding_result" not in st.session_state:
-    st.session_state.coding_result = None
+if "coding_case" not in st.session_state:
+    st.session_state.coding_case = None
 
-if run_clicked:
-    case = label_to_case[selected_label]
-    icd_count = len(case["suggestions"].get("icd10_suggestions", []))
-    cpt_count = len(case["suggestions"].get("cpt_suggestions", []))
-    st.session_state.coding_result = case
-    st.success(f"✅ Engine completed — {icd_count} ICD-10 codes, {cpt_count} CPT codes suggested")
+if run:
+    st.session_state.coding_case = label_map[selected_label]
 
-if st.session_state.coding_result:
-    case = st.session_state.coding_result
+case = st.session_state.coding_case
+
+if case:
     enc  = case["encounter"]
-    render_encounter_header(enc)
+    sugg = case["suggestions"]
+    ev   = case["evaluation"]
 
-    left, right = st.columns([1, 1], gap="large")
+    icd_n = len(sugg.get("icd10_suggestions",[]))
+    cpt_n = len(sugg.get("cpt_suggestions",[]))
+    st.success(f"✅ Engine completed — {icd_n} ICD-10 codes, {cpt_n} CPT codes suggested")
+
+    render_encounter_header(enc)
+    left, right = st.columns(2, gap="large")
+
     with left:
         st.markdown("## Clinical Context")
         st.divider()
-        st.info("ℹ️ Full clinical context requires a database connection. Run locally with `coding_app.py` for the complete view.")
-        st.markdown("#### 🔴 Diagnoses (from ICD-10 suggestions)")
-        for s in case["suggestions"].get("icd10_suggestions", []):
-            ctype = CODE_TYPE_LABELS.get(s.get("code_type", ""), "")
-            conf  = CONFIDENCE_COLORS.get(s["confidence"], "⚪")
-            st.markdown(f"- {conf} **{s['description']}** `{s['code']}` _{ctype}_")
+        st.info("ℹ️ Full clinical context requires DB. Run `coding_app.py` locally for the complete view.")
+        st.markdown("#### 🔴 Diagnoses")
+        for s in sugg.get("icd10_suggestions",[]):
+            st.markdown(f"- {CONF.get(s['confidence'],'⚪')} **{s['description']}** `{s['code']}` _{CTYPE.get(s.get('code_type',''),'')}_")
         st.divider()
-        st.markdown("#### ⚕️ Procedures (from CPT suggestions)")
-        for s in case["suggestions"].get("cpt_suggestions", []):
-            conf = CONFIDENCE_COLORS.get(s["confidence"], "⚪")
-            st.markdown(f"- {conf} {s['description']} `{s['code']}`")
+        st.markdown("#### ⚕️ Procedures")
+        for s in sugg.get("cpt_suggestions",[]):
+            st.markdown(f"- {CONF.get(s['confidence'],'⚪')} {s['description']} `{s['code']}`")
         st.divider()
         st.markdown("#### 📋 Ground Truth (Synthea)")
-        for gt in case["evaluation"].get("ground_truth", {}).get("conditions", []):
+        for gt in ev.get("ground_truth",{}).get("conditions",[]):
             st.markdown(f"- {gt['display']}  `{gt['code']}`")
 
     with right:
         st.markdown("## Coding Suggestions")
-        render_icd10(case["suggestions"].get("icd10_suggestions", []))
+        render_icd10(sugg.get("icd10_suggestions",[]))
         st.divider()
-        render_cpt(case["suggestions"].get("cpt_suggestions", []))
+        render_cpt(sugg.get("cpt_suggestions",[]))
         st.divider()
-        render_prior_auth(case["suggestions"].get("prior_auth_assessment", {}))
+        render_prior_auth(sugg.get("prior_auth_assessment",{}))
         st.divider()
-        render_medication_review(case["suggestions"].get("medication_review_flag", {}))
+        render_med_review(sugg.get("medication_review_flag",{}))
         st.divider()
-        render_coding_notes(case["suggestions"].get("coding_notes", []))
+        render_notes(sugg.get("coding_notes",[]))
         st.divider()
-        render_evaluation(case["evaluation"])
+        render_evaluation(ev)
 else:
-    st.markdown(
-        """
-        <div style='text-align:center;padding:60px;color:#888;font-size:1.1rem'>
-            Select an encounter above and click
-            <strong>▶ Run engine</strong> to begin
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
+    st.markdown("""
+    <div style='text-align:center;padding:60px;color:#888;font-size:1.1rem'>
+        Select an encounter above and click <strong>▶ Run engine</strong> to begin
+    </div>""", unsafe_allow_html=True)
