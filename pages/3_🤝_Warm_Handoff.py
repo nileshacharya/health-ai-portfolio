@@ -1,6 +1,5 @@
 # pages/3_🤝_Warm_Handoff.py
 import streamlit as st
-import streamlit.components.v1 as components
 from pathlib import Path
 
 st.set_page_config(
@@ -26,7 +25,6 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# ── How it works ──────────────────────────────────────────────────────────────
 with st.expander("ℹ️ How it works", expanded=False):
     col1, col2, col3 = st.columns(3)
     with col1:
@@ -34,24 +32,18 @@ with st.expander("ℹ️ How it works", expanded=False):
         st.markdown("Ganu (the support bot) resolves common issues autonomously.")
     with col2:
         st.markdown("**2. Evaluator watches silently**")
-        st.markdown(
-            "After every turn, a second AI evaluates sentiment, frustration, "
-            "and escalation confidence — invisibly."
-        )
+        st.markdown("After every turn, a second AI evaluates sentiment, frustration, and escalation confidence — invisibly.")
     with col3:
         st.markdown("**3. Handoff fires with full context**")
-        st.markdown(
-            "When escalation threshold is met, the human agent receives a "
-            "structured brief: issue summary, steps tried, sentiment, urgency, recommended first action."
-        )
+        st.markdown("When escalation threshold is met, the human agent receives a structured brief: issue summary, steps tried, sentiment, urgency, recommended first action.")
 
 st.caption("⚠️ Requires your own Anthropic API key — enter it in the app below.")
 st.divider()
 
-# ── Embed the HTML app ────────────────────────────────────────────────────────
+# ── Embed via st.iframe ───────────────────────────────────────────────────────
 HTML_PATH = Path(__file__).parent.parent / "ganu.html"
 
 with open(HTML_PATH, "r") as f:
     html_content = f.read()
 
-components.html(html_content, height=750, scrolling=False)
+st.iframe(html_content, height=750, scrolling=False)
